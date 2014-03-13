@@ -1,0 +1,18 @@
+function init(self)
+	-- Magic don't last forever. This object will be killed in half a second.
+	self.lifespan = 0.5
+	
+	-- Set parent to the wand so we're tagging along if it moves.
+	msg.post(".", "set_parent", { parent_id = go.get_id("wand") })	
+end
+
+function update(self, dt)
+	-- Reduce lifespan timer with the time that passed since the last time update() was called,
+	-- which was one frame ago.
+	self.lifespan = self.lifespan - dt
+
+	-- If the timer has reached zero, remove this game object
+	if self.lifespan <= 0 then
+		go.delete()
+	end	
+end

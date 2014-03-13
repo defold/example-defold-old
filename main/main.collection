@@ -1,7 +1,72 @@
-name: "parallax"
+name: "magic"
 instances {
+  id: "wand"
+  prototype: "/main/wand.go"
+  position {
+    x: 400.0
+    y: 180.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.57286745
+    w: 0.819648
+  }
+  scale: 1.0
+}
+instances {
+  id: "wizard"
+  prototype: "/main/wizard.go"
+  position {
+    x: 194.85712
+    y: 263.48578
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "cage"
+  collection: "/main/cage.collection"
+  position {
+    x: 587.18365
+    y: 614.22723
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+scale_along_z: 0
+embedded_instances {
+  id: "instructions"
+  data: "components {\n  id: \"gui\"\n  component: \"/main/instructions.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 390.04892
+    y: 362.48914
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
   id: "main"
-  prototype: "/main/main.go"
+  data: "components {\n  id: \"script\"\n  component: \"/main/main.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
   position {
     x: 0.0
     y: 0.0
@@ -13,94 +78,5 @@ instances {
     z: 0.0
     w: 1.0
   }
-}
-instances {
-  id: "large_clouds1"
-  prototype: "/background/large_clouds.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-instances {
-  id: "small_clouds1"
-  prototype: "/background/small_clouds.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-instances {
-  id: "spaceship"
-  prototype: "/spaceship/spaceship.go"
-  position {
-    x: 60.0
-    y: 400.0
-    z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-instances {
-  id: "large_clouds2"
-  prototype: "/background/large_clouds.go"
-  position {
-    x: 2560.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-instances {
-  id: "small_clouds2"
-  prototype: "/background/small_clouds.go"
-  position {
-    x: 1280.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-instances {
-  id: "factory"
-  prototype: "/stars/factory.go"
-  position {
-    x: 1312.0
-    y: 360.0
-    z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
+  scale: 1.0
 }

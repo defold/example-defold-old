@@ -1,0 +1,53 @@
+images {
+  image: "/images/cage.png"
+}
+images {
+  image: "/images/wand.png"
+}
+images {
+  image: "/images/wizard.png"
+}
+images {
+  image: "/images/rope.png"
+}
+animations {
+  id: "butterfly_orange"
+  images {
+    image: "/images/butterfly1.png"
+  }
+  images {
+    image: "/images/butterfly2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 9
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "magic"
+  images {
+    image: "/images/magic1.png"
+  }
+  images {
+    image: "/images/magic2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 12
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "butterfly_blue"
+  images {
+    image: "/images/butterfly3.png"
+  }
+  images {
+    image: "/images/butterfly4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 11
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0

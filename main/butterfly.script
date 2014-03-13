@@ -1,0 +1,14 @@
+go.property("container", hash(""))
+go.property("center", vmath.vector3())
+go.property("radius", 0)
+
+function init(self)
+	-- Set position to a random position within a circle with center self.center and radius self.radius	
+	local rand_angle = math.random(0, 3.141592 * 2)
+	local rand_radius = math.random(self.radius)
+	local offset = vmath.rotate(vmath.quat_rotation_z(rand_angle), vmath.vector3(rand_radius, 0, 0))
+	go.set_position(self.center + offset)
+end
+
+function on_message(self, message_id, message, sender)
+end

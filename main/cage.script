@@ -1,0 +1,24 @@
+function init(self)
+	-- Add a swinging motion. Two functions do the animations. Call either one of them to start.
+	swing_left(self)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("summon_animal") then
+		local position = go.get_position()
+		position.y = position.y - 250
+		factory.create("#butterfly_factory", nil, nil, { container = go.get_id(), center = position, radius = 70 })
+	elseif message_id == hash("colorchange") then
+			
+	end
+end
+
+function swing_left(self)
+	-- Animate left swing and call swing_right() when we're done.
+	go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -3), go.EASING_INOUTSINE, 1, 0, swing_right)
+end
+
+function swing_right(self)
+	-- Animate right swing, then swing back.
+	go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, 3), go.EASING_INOUTSINE, 1, 0, swing_left)
+end

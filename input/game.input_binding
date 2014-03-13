@@ -1,10 +1,30 @@
 key_trigger {
-  input: KEY_UP
-  action: "up"
+  input: KEY_1
+  action: "spell_come"
 }
 key_trigger {
-  input: KEY_DOWN
-  action: "down"
+  input: KEY_2
+  action: "spell_sit"
+}
+key_trigger {
+  input: KEY_3
+  action: "spell_summon_animal"
+}
+key_trigger {
+  input: KEY_4
+  action: "spell_colorchange"
+}
+key_trigger {
+  input: KEY_5
+  action: "spell_jail_me"
+}
+key_trigger {
+  input: KEY_LEFT
+  action: "move_left"
+}
+key_trigger {
+  input: KEY_RIGHT
+  action: "move_right"
 }
 gamepad_trigger {
   input: GAMEPAD_LPAD_UP

@@ -1,0 +1,58 @@
+function init(self)
+	-- Send message to myself to acquire input messages. This is a built in message that
+	-- all game objects react to.
+	msg.post(".", "acquire_input_focus")
+	
+	-- We start magically weak.
+	self.magically_empowered = false
+	
+	-- We're not jailed
+	self.jailed = false
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("magically_empower") then
+		self.magically_empowered = true
+	elseif message_id == hash("magically_weaken") then
+		self.magically_empowered = false
+	end
+end
+
+function on_input(self, action_id, action)
+	-- The game system sends us input messages. These are sent to this separate function
+	-- rather than to on_message() for convenience.
+	if action_id == hash("spell_come") and action.pressed then
+		-- Let's send a message to the wand to come to my hand.
+		msg.post("wand", "come_to_hand")
+	elseif action_id == hash("spell_sit") and action.pressed then
+		-- Send a message to the wand to sit on the floor.
+		msg.post("wand", "sit_on_floor")
+	elseif action_id == hash("spell_summon_animal") and action.pressed then
+		-- If we're magically empowered (holding the wand) we can send this spell, otherwize not.
+		if self.magically_empowered then
+			msg.post("wand", "summon_animal", { target = hash("/cage/cage") })
+		end
+	elseif action_id == hash("spell_colorchange") and action.pressed then
+		-- If we're magically empowered (holding the wand) we can send this spell, otherwize not.
+		if self.magically_empowered then
+			msg.post("wand", "colorchange", { target = hash("/cage/cage") })
+		end
+	elseif action_id == hash("spell_jail_me") and action.pressed then
+		-- If we're magically empowered (holding the wand) we can send this spell, otherwize not.
+		if self.magically_empowered then
+			-- Only one place to jail me... The cage.
+			msg.post("wand", "jail_into", { target = hash("/cage/cage") })
+			self.jailed = true
+		end
+	elseif action_id == hash("move_left") and action.pressed and not self.jailed then
+		-- The wizard shuffles his feet a bit to the left (if not jailed)
+		local newpos = go.get_position()
+		newpos.x = newpos.x - 50
+		go.set_position(newpos)
+	elseif action_id == hash("move_right") and action.pressed and not self.jailed then
+		-- The wizard shuffles his feet a bit to the right (if not jailed)
+		local newpos = go.get_position()
+		newpos.x = newpos.x + 50
+		go.set_position(newpos)
+	end
+end
