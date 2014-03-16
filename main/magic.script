@@ -7,8 +7,8 @@ function init(self)
 end
 
 function update(self, dt)
-	-- Reduce lifespan timer with the time that passed since the last time update() was called,
-	-- which was one frame ago.
+	-- Reduce lifespan timer with the time that passed since the last time update() was called (dt),
+	-- which was one frame ago or 1/60s.
 	self.lifespan = self.lifespan - dt
 
 	-- If the timer has reached zero, remove this game object

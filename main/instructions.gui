@@ -152,7 +152,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Press 1 to cast spell \"come\" - press 2 to cast spell \"sit\""
+  text: "Press 1 to cast spell \"come to hand\" - press 2 to cast spell \"sit\""
   font: "system_font"
   id: "text3"
   xanchor: XANCHOR_NONE

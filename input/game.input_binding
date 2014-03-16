@@ -1,6 +1,6 @@
 key_trigger {
   input: KEY_1
-  action: "spell_come"
+  action: "spell_come_to_hand"
 }
 key_trigger {
   input: KEY_2

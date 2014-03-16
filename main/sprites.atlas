@@ -10,6 +10,9 @@ images {
 images {
   image: "/images/rope.png"
 }
+images {
+  image: "/images/painting.png"
+}
 animations {
   id: "butterfly_orange"
   images {

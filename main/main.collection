@@ -1,4 +1,4 @@
-name: "magic"
+name: "default"
 instances {
   id: "wand"
   prototype: "/main/wand.go"
@@ -32,8 +32,8 @@ instances {
   scale: 1.0
 }
 collection_instances {
-  id: "cage"
-  collection: "/main/cage.collection"
+  id: "interior"
+  collection: "/main/interior.collection"
   position {
     x: 587.18365
     y: 614.22723
