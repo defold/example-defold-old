@@ -9,6 +9,3 @@ function init(self)
 	local offset = vmath.rotate(vmath.quat_rotation_z(rand_angle), vmath.vector3(rand_radius, 0, 0))
 	go.set_position(self.center + offset)
 end
-
-function on_message(self, message_id, message, sender)
-end

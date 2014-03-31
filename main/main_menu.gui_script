@@ -28,7 +28,7 @@ function menu_select(self, x, y)
 	-- Get the nodes we're gonna test against.
 	local hudnode = gui.get_node("hud")
 	local cardsnode = gui.get_node("cards")
-	local magiciannode = gui.get_node("magician")
+	local magiciannode = gui.get_node("magic")
 
 	-- Test if user has touched one of the valid text nodes.
 	if gui.pick_node(hudnode, x, y) then
@@ -38,7 +38,7 @@ function menu_select(self, x, y)
 		-- Load the Cards collection
 		msg.post("/loader#cardsproxy", "load")
 	elseif gui.pick_node(magiciannode, x, y) then
-		-- Load the magician collection
-		msg.post("/loader#magicianproxy", "load")
+		-- Load the magic collection
+		msg.post("/loader#magicproxy", "load")
 	end
 end

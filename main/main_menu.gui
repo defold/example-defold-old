@@ -97,9 +97,9 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Magician"
+  text: "Magic"
   font: "headline"
-  id: "magician"
+  id: "magic"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_W
