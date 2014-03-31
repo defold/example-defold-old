@@ -1,0 +1,82 @@
+name: "cards"
+collection_instances {
+  id: "hearttree"
+  collection: "/cards/hearttree.collection"
+  position {
+    x: 798.75354
+    y: 319.18457
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "hearttree1"
+  collection: "/cards/hearttree.collection"
+  position {
+    x: 540.15607
+    y: 440.12073
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "hearttree2"
+  collection: "/cards/hearttree.collection"
+  position {
+    x: 231.10162
+    y: 418.18784
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+scale_along_z: 0
+embedded_instances {
+  id: "clubmaster"
+  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/cards/cards_sprites.atlas\\\"\\ndefault_animation: \\\"clubmaster\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 227.79755\n    y: 230.38986\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 367.18945
+    y: -38.251984
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "heartson"
+  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/cards/cards_sprites.atlas\\\"\\ndefault_animation: \\\"heartson\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 211.84634\n    y: 224.40816\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 132.96756
+    y: -33.24189
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}

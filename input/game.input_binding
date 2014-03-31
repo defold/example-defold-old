@@ -26,6 +26,10 @@ key_trigger {
   input: KEY_RIGHT
   action: "move_right"
 }
+mouse_trigger {
+  input: MOUSE_BUTTON_1
+  action: "mouse_press"
+}
 gamepad_trigger {
   input: GAMEPAD_LPAD_UP
   action: "up"
@@ -33,4 +37,8 @@ gamepad_trigger {
 gamepad_trigger {
   input: GAMEPAD_RPAD_DOWN
   action: "down"
+}
+touch_trigger {
+  input: TOUCH_MULTI
+  action: "touch"
 }

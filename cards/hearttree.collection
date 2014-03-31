@@ -1,0 +1,102 @@
+name: "default"
+instances {
+  id: "heart1"
+  prototype: "/cards/heart.go"
+  position {
+    x: 67.9894
+    y: 128.28326
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0799147
+    w: 0.99680173
+  }
+  scale: 0.82787496
+}
+instances {
+  id: "heart2"
+  prototype: "/cards/heart.go"
+  position {
+    x: -40.44939
+    y: 118.81638
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.009999833
+    w: 0.99995
+  }
+  scale: 0.6127186
+}
+instances {
+  id: "heart3"
+  prototype: "/cards/heart.go"
+  position {
+    x: 40.44939
+    y: 183.36328
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0799147
+    w: 0.99680173
+  }
+  scale: 0.4836248
+}
+instances {
+  id: "heart4"
+  prototype: "/cards/heart.go"
+  position {
+    x: -16.280048
+    y: 172.36368
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.059964005
+    w: 0.99820054
+  }
+  scale: 0.82787496
+}
+scale_along_z: 0
+embedded_instances {
+  id: "pot"
+  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/cards/cards_sprites.atlas\\\"\\ndefault_animation: \\\"pot\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: -6.5084743\n    y: -129.245\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 7.285178
+    y: 92.52176
+    z: 0.5
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "tree"
+  children: "heart1"
+  children: "heart2"
+  children: "heart3"
+  children: "heart4"
+  data: "components {\n  id: \"script\"\n  component: \"/cards/hearttree.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/cards/cards_sprites.atlas\\\"\\ndefault_animation: \\\"tree\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 5.8281426\n    y: 113.44093\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}

@@ -1,15 +1,4 @@
-go.property("dummy", 0)
-
-function init(self)
-	self.doing_magic = false
-end
-
 function on_message(self, message_id, message, sender)
-	-- If we are in the midst of doing magic we're gonna ignore any messages.
-	if self.doing_magic then
-		return
-	end
-
 	if message_id == hash("come_to_hand") then
 		-- First, unleash the magic effect. We do that by sending ourself the "show_magic" message.
 		msg.post(".", "show_magic")
@@ -21,8 +10,8 @@ function on_message(self, message_id, message, sender)
 		msg.post(".", "set_parent", { parent_id = parent })
 		
 		-- Animate the wand into place in the sender's hands (assuming it's always the same). Position and rotation
-		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(65, 85, -1), go.EASING_INOUTSINE, 0.5)
-		go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -2), go.EASING_INOUTSINE, 0.5, 0, magic_done)
+		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(65, 85, -0.1), go.EASING_INOUTSINE, 0.5)
+		go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -2), go.EASING_INOUTSINE, 0.5, 0)
 		
 		-- Now, whoever holds the wand will get magically empowered.
 		msg.post(sender, "magically_empower")		
@@ -34,29 +23,22 @@ function on_message(self, message_id, message, sender)
 		msg.post(".", "set_parent")
 		
 		-- Animate the wand back to the floor. Position and rotation
-		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(400, 180, -1), go.EASING_INOUTSINE, 0.5)
-		go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -70), go.EASING_INOUTSINE, 0.5, 0, magic_done)
+		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(530, 240, -0.1), go.EASING_INOUTSINE, 0.5)
+		go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -70), go.EASING_INOUTSINE, 0.5, 0)
 
 		-- Whoever held the wand will get magically weakened.
 		msg.post(sender, "magically_weaken")
 	elseif message_id == hash("summon_animal") then
 		-- Magic effect.
 		msg.post(".", "show_magic")
+		-- Relay a message to the target object that it should summon an animal.
 		msg.post(message.target, "summon_animal")
-		-- Animate a dummy that we're using as magic timer so we can't do magic until in half a second.
-		go.animate("#", "dummy", go.PLAYBACK_ONCE_FORWARD, 1, go.EASING_LINEAR, 0.5, 0, magic_done)
 	elseif message_id == hash("jail_into") then
 		local prisoner = sender.path
 		msg.post(prisoner, "set_parent", { parent_id = message.target })
-		go.animate(prisoner, "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, -250, -1), go.EASING_LINEAR, 0.1)
+		go.animate(prisoner, "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, -250, -0.1), go.EASING_LINEAR, 0.1)
 	elseif message_id == hash("show_magic")	then
-		-- Now we're doing magic
-		self.doing_magic = true
+		-- Show magic effect
 		local magic_id = factory.create("#magic_factory", nil, nil)
 	end
-end
-
-function magic_done(self)
-	-- Magic is done.
-	self.doing_magic = false
 end

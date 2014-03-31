@@ -1,0 +1,5 @@
+images {
+  image: "/main/images/octopus background.png"
+}
+margin: 0
+extrude_borders: 0

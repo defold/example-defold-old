@@ -1,0 +1,14 @@
+function init(self)
+	-- Add a swaying motion. Two functions do the animations. Call either one of them to start.
+	sway_left(self)
+end
+
+function sway_left(self)
+	-- Animate left swing and call sway_right() when we're done.
+	go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -2), go.EASING_INOUTSINE, 2, 0, sway_right)
+end
+
+function sway_right(self)
+	-- Animate right swing, then sway back.
+	go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, 2), go.EASING_INOUTSINE, 2, 0, sway_left)
+end

@@ -1,0 +1,44 @@
+function init(self)
+	msg.post(nil, "acquire_input_focus")	
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("proxy_loaded") then
+        -- The collection has loaded and it's time to enable it.
+        msg.post(sender, "enable")
+
+		-- Let the loaded collection take over.
+    	msg.post(nil, "release_input_focus")
+    	-- Disable us (the main menu) and the background
+		msg.post(nil, "disable")
+		msg.post("/background", "disable")
+    end
+end
+
+function on_input(self, action_id, action)
+	if (action_id == hash("touch") or action_id == hash("mouse_press")) and action.pressed == true then
+		local x = action.x
+		local y = action.y
+		menu_select(self, x, y)
+	end	
+end
+
+
+function menu_select(self, x, y)
+	-- Get the nodes we're gonna test against.
+	local hudnode = gui.get_node("hud")
+	local cardsnode = gui.get_node("cards")
+	local magiciannode = gui.get_node("magician")
+
+	-- Test if user has touched one of the valid text nodes.
+	if gui.pick_node(hudnode, x, y) then
+		-- Load the HUD collection
+		msg.post("/loader#hudproxy", "load")			
+	elseif gui.pick_node(cardsnode, x, y) then
+		-- Load the Cards collection
+		msg.post("/loader#cardsproxy", "load")
+	elseif gui.pick_node(magiciannode, x, y) then
+		-- Load the magician collection
+		msg.post("/loader#magicianproxy", "load")
+	end
+end

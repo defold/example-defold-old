@@ -1,0 +1,8 @@
+function init(self)
+    -- Add initialization code here
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	pprint(message_id)
+end

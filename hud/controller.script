@@ -1,0 +1,5 @@
+function init(self)
+	-- Let's send our HUD some data to present.
+	local msgdata = { score = 4711, stars = 3, health = 6 }		
+	msg.post("hud#gui", "set_stats", msgdata)
+end

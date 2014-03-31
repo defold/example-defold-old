@@ -1,4 +1,4 @@
-script: ""
+script: "/magic/instructions.gui_script"
 fonts {
   name: "system_font"
   font: "/builtins/fonts/system_font.font"
@@ -11,8 +11,8 @@ background_color {
 }
 nodes {
   position {
-    x: 27.561098
-    y: 97.82919
+    x: 72.08046
+    y: 107.183525
     z: 0.0
     w: 1.0
   }
@@ -66,8 +66,8 @@ nodes {
 }
 nodes {
   position {
-    x: 27.561098
-    y: 45.455093
+    x: 74.057686
+    y: 53.93436
     z: 0.0
     w: 1.0
   }
@@ -90,16 +90,16 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.5058824
-    y: 0.0
-    z: 0.023529414
+    x: 0.14509805
+    y: 0.38431376
+    z: 0.14901961
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Press 3 to cast spell \"summon animal\" - press 4 to cast spell \"colorchange\""
   font: "system_font"
-  id: "text2"
+  id: "powerspell1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_W
@@ -121,8 +121,8 @@ nodes {
 }
 nodes {
   position {
-    x: 27.561098
-    y: 71.03314
+    x: 72.08046
+    y: 80.387474
     z: 0.0
     w: 1.0
   }
@@ -152,7 +152,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Press 1 to cast spell \"come to hand\" - press 2 to cast spell \"sit\""
+  text: "Press 1 to order wand \"come to hand\" - press 2 to order wand \"sit\""
   font: "system_font"
   id: "text3"
   xanchor: XANCHOR_NONE
@@ -176,8 +176,8 @@ nodes {
 }
 nodes {
   position {
-    x: 27.561098
-    y: 18.659044
+    x: 74.057686
+    y: 27.138308
     z: 0.0
     w: 1.0
   }
@@ -200,16 +200,16 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.5058824
-    y: 0.0
-    z: 0.023529414
+    x: 0.14509805
+    y: 0.38431376
+    z: 0.14901961
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Press 5 to cast spell \"jail me\""
   font: "system_font"
-  id: "text4"
+  id: "powerspell2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_W

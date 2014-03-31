@@ -1,0 +1,17 @@
+images {
+  image: "/cards/images/clubmaster.png"
+}
+images {
+  image: "/cards/images/heartson.png"
+}
+images {
+  image: "/cards/images/tree.png"
+}
+images {
+  image: "/cards/images/pot.png"
+}
+images {
+  image: "/cards/images/heart.png"
+}
+margin: 0
+extrude_borders: 0

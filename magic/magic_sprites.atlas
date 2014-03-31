@@ -1,0 +1,61 @@
+images {
+  image: "/magic/images/cage.png"
+}
+images {
+  image: "/magic/images/wand.png"
+}
+images {
+  image: "/magic/images/wizard.png"
+}
+images {
+  image: "/magic/images/rope.png"
+}
+images {
+  image: "/magic/images/painting.png"
+}
+images {
+  image: "/cards/images/clubmaster.png"
+}
+images {
+  image: "/cards/images/heartson.png"
+}
+images {
+  image: "/cards/images/tree.png"
+}
+images {
+  image: "/magic/images/heart.png"
+}
+animations {
+  id: "butterfly_orange"
+  images {
+    image: "/magic/images/butterfly1.png"
+  }
+  images {
+    image: "/magic/images/butterfly2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 9
+}
+animations {
+  id: "magic"
+  images {
+    image: "/magic/images/magic1.png"
+  }
+  images {
+    image: "/magic/images/magic2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 12
+}
+animations {
+  id: "butterfly_blue"
+  images {
+    image: "/magic/images/butterfly3.png"
+  }
+  images {
+    image: "/magic/images/butterfly4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 11
+}
+extrude_borders: 1

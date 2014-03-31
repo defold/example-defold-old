@@ -1,0 +1,82 @@
+name: "magic"
+instances {
+  id: "wand"
+  prototype: "/magic/wand.go"
+  position {
+    x: 530.0
+    y: 240.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.57286745
+    w: 0.819648
+  }
+  scale: 1.0
+}
+instances {
+  id: "wizard"
+  prototype: "/magic/wizard.go"
+  position {
+    x: 324.0594
+    y: 326.1293
+    z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "interior"
+  collection: "/magic/interior.collection"
+  position {
+    x: 716.3859
+    y: 676.8708
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+scale_along_z: 0
+embedded_instances {
+  id: "instructions"
+  data: "components {\n  id: \"gui\"\n  component: \"/magic/instructions.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 519.2512
+    y: 425.13266
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "main"
+  data: "components {\n  id: \"script\"\n  component: \"/magic/main.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 129.20229
+    y: 62.643528
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}

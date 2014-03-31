@@ -1,0 +1,14 @@
+function init(self)
+	-- Inform the render system that we want white clear color (background)
+	msg.post("@render:", "clear_color", { color = vmath.vector4(1, 1, 1, 1) } )
+end
+
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("proxy_loaded") then
+        -- The collection has loaded and it's time to enable it.
+        msg.post(sender, "enable")
+        -- Send a message to someone in the loaded collection
+        msg.post("cards:/clubmaster#script", "wake_up")
+    end
+end
