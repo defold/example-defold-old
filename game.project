@@ -3,6 +3,7 @@ title = Documentation
 
 [bootstrap]
 main_collection = /main/main.collectionc
+render = /builtins/render/default.renderc
 
 [input]
 game_binding = /input/game.input_bindingc
@@ -13,4 +14,6 @@ height = 768
 
 [physics]
 scale = 0.02
+gravity_y = -1000
+debug = 0
 

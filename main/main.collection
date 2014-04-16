@@ -2,10 +2,10 @@ name: "main"
 scale_along_z: 0
 embedded_instances {
   id: "background"
-  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/main/main_menu_sprites.atlas\\\"\\ndefault_animation: \\\"octopus background\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 512.0\n    y: 384.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/main/main_menu_sprites.atlas\\\"\\ndefault_animation: \\\"octopus background\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
   position {
-    x: 0.0
-    y: 0.0
+    x: 512.0
+    y: 384.0
     z: 0.0
   }
   rotation {
@@ -18,7 +18,7 @@ embedded_instances {
 }
 embedded_instances {
   id: "loader"
-  data: "components {\n  id: \"script\"\n  component: \"/main/loader.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"cardsproxy\"\n  type: \"collectionproxy\"\n  data: \"collection: \\\"/cards/cards.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"hudproxy\"\n  type: \"collectionproxy\"\n  data: \"collection: \\\"/hud/hud.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"magicproxy\"\n  type: \"collectionproxy\"\n  data: \"collection: \\\"/magic/magic.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n  id: \"script\"\n  component: \"/main/loader.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"cardsproxy\"\n  type: \"collectionproxy\"\n  data: \"collection: \\\"/cards/cards.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"hudproxy\"\n  type: \"collectionproxy\"\n  data: \"collection: \\\"/hud/hud.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"magicproxy\"\n  type: \"collectionproxy\"\n  data: \"collection: \\\"/magic/magic.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"worldsproxy\"\n  type: \"collectionproxy\"\n  data: \"collection: \\\"/worlds/worlds.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
   position {
     x: 400.0
     y: 300.0

@@ -1,0 +1,37 @@
+function init(self)
+	-- Let's tell the input script (gui) that it should send commands to me. This is necessary since
+	-- there is a separate player object in each world that is dynamically loaded. 
+	msg.post("worlds:/gui#input", "control_me")
+
+	-- We use this value to trigger a position change.
+	self.new_position = nil
+end
+
+function update(self, dt)
+	if self.new_position ~= nil then
+		-- It's time to set the position of out dynamic physics fellow.
+		-- We have to disable to the dynamic collision object before we can move the object.
+		msg.post("#collisionobject", "disable")
+		go.set_position(self.new_position)		
+		msg.post("#collisionobject", "enable")
+		self.new_position = nil
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("move_left") then
+		-- Move left by applying force to a dynamic physics object. This is not recommended since it gives very little
+		-- control over our player, but it's simple to implement and enough for this example.
+		msg.post("#collisionobject", "apply_force", { force = vmath.vector3(-100000, 0, 0), position = go.get_world_position() })
+	elseif message_id == hash("move_right") then
+		-- Move right by applying force.
+		msg.post("#collisionobject", "apply_force", { force = vmath.vector3(100000, 0, 0), position = go.get_world_position() })	
+	elseif message_id == hash("request_player") then
+		-- We're asked to provide our position...
+		msg.post(sender, "player_response", { position = go.get_position() })
+	elseif message_id == hash("inherit_player") then
+		-- We're asked to inherit speed and position of another player object.
+		-- We have to wait until next frame until we can disable the collision and move, hence the ugly hack.
+		self.new_position = message.position
+	end
+end

@@ -1,0 +1,7 @@
+function init(self)
+	-- Acquire input so collection objects will receive it.
+	msg.post(".", "acquire_input_focus")
+	-- Load world 1.
+	msg.post("loader#world1", "load")
+	msg.post("loader#world1", "enable")
+end

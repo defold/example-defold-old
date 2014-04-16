@@ -1,0 +1,5 @@
+images {
+  image: "/worlds/images/p1_stand.png"
+}
+margin: 0
+extrude_borders: 0

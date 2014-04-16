@@ -1,0 +1,59 @@
+-- These two properties allows us to use this object as world switcher between any world
+-- that has a proxy in the "loader" object in the "worlds" main collection.
+-- We're using the same name for the collections and the proxies so we can use the name
+-- both as proxy and then as socket name to communicate between the collections.
+go.property("selfworld", hash(""))
+go.property("otherworld", hash(""))
+
+function init(self)
+	-- Construct an url for the other world's proxy. We're gonna use this later.
+	self.url = msg.url()
+	self.url.socket = "worlds"
+	self.url.path = hash("/loader")
+	self.url.fragment = self.otherworld
+    -- Add initialization code here
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") and message.enter then
+		-- Player hits the world switch trigger.
+		-- Load the next world as referenced through the previously constructed url.
+		msg.post(self.url, "load")
+	elseif message_id == hash("proxy_loaded") then
+		-- New world is loded. Enable it.
+		msg.post(self.url, "enable")
+		-- Setup an url to the current world's proxy
+		local currenturl = msg.url()
+		currenturl.socket = "worlds"
+		currenturl.path = hash("/loader")
+		currenturl.fragment = self.selfworld
+		-- We have to transfer the position and movement of the player in the current
+		-- world to the player in the other world.
+		local currentsocket = ""
+		-- We can't use a hash directly as socket so we need a translation step:
+		if self.selfworld == hash("world1") then
+			currentsocket = "world1"
+		elseif self.selfworld == hash("world2") then
+			currentsocket = "world2"
+		end
+		msg.post(currentsocket .. ":" .. "/player#script", "request_player")
+		-- Now it's time to ditch the world we left behind.
+		-- Normally you wouldn't do this on-screen but we're doing just that
+		-- to make the whole process clearer and clearly visible.
+		msg.post(currenturl, "disable")
+		msg.post(currenturl, "final")
+		msg.post(currenturl, "unload")
+	elseif message_id == hash("player_response") then
+		-- We're getting player velocity and position back from current world.
+		-- Now we have to apply it to the other world's player.
+		local othersocket = ""
+		if self.otherworld == hash("world1") then
+			othersocket = "world1"
+		elseif self.otherworld == hash("world2") then
+			othersocket = "world2"
+		end
+		-- Pass along the message we got back.
+		msg.post(othersocket .. ":" .. "/player#script", "inherit_player", message)
+	end
+end
