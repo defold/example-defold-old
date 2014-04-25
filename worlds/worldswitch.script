@@ -6,29 +6,27 @@ go.property("selfworld", hash(""))
 go.property("otherworld", hash(""))
 
 function init(self)
-	-- Construct an url for the other world's proxy. We're gonna use this later.
-	self.url = msg.url()
-	self.url.socket = "worlds"
-	self.url.path = hash("/loader")
-	self.url.fragment = self.otherworld
-    -- Add initialization code here
-    -- Remove this function if not needed
+	-- Construct urls for the proxies. We're gonna use these later.
+	self.selfurl = msg.url()
+	self.selfurl.socket = "worlds"
+	self.selfurl.path = hash("/loader")
+	self.selfurl.fragment = self.selfworld
+
+	self.otherurl = msg.url()
+	self.otherurl.socket = "worlds"
+	self.otherurl.path = hash("/loader")
+	self.otherurl.fragment = self.otherworld
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") and message.enter then
 		-- Player hits the world switch trigger.
 		-- Load the next world as referenced through the previously constructed url.
-		msg.post(self.url, "load")
+		msg.post(self.otherurl, "load")
 	elseif message_id == hash("proxy_loaded") then
 		-- New world is loded. Enable it.
-		msg.post(self.url, "enable")
-		-- Setup an url to the current world's proxy
-		local currenturl = msg.url()
-		currenturl.socket = "worlds"
-		currenturl.path = hash("/loader")
-		currenturl.fragment = self.selfworld
-		-- We have to transfer the position and movement of the player in the current
+		msg.post(sender, "enable")
+		-- We have to transfer the position of the player in the current
 		-- world to the player in the other world.
 		local currentsocket = ""
 		-- We can't use a hash directly as socket so we need a translation step:
@@ -41,9 +39,9 @@ function on_message(self, message_id, message, sender)
 		-- Now it's time to ditch the world we left behind.
 		-- Normally you wouldn't do this on-screen but we're doing just that
 		-- to make the whole process clearer and clearly visible.
-		msg.post(currenturl, "disable")
-		msg.post(currenturl, "final")
-		msg.post(currenturl, "unload")
+		msg.post(self.selfurl, "disable")
+		msg.post(self.selfurl, "final")
+		msg.post(self.selfurl, "unload")
 	elseif message_id == hash("player_response") then
 		-- We're getting player velocity and position back from current world.
 		-- Now we have to apply it to the other world's player.
