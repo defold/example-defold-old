@@ -1,0 +1,17 @@
+function init(self)
+	print("Collider init()")
+end
+
+function final(self)
+	print("Collider final()")
+end
+
+function update(self, dt)
+	print("Collider update()")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("collision_response") then
+		print("Collider @physics message 'collision_response' received.")
+	end
+end

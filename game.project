@@ -17,3 +17,6 @@ scale = 0.02
 gravity_y = -1000
 debug = 0
 
+[particle_fx]
+max_count = 256
+

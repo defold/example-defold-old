@@ -1,0 +1,5 @@
+images {
+  image: "/input_example/images/wizard.png"
+}
+margin: 0
+extrude_borders: 0

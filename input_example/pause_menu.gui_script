@@ -1,0 +1,50 @@
+function init(self)
+	-- Fetch background node and disable. Everything is childed under it.
+	local node = gui.get_node("background")
+	gui.set_enabled(node, false)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("show") then
+		-- First, show the pause menu.
+		local node = gui.get_node("background")
+		gui.set_enabled(node, true)
+		
+		-- Tell the hud to hide while we're at the front
+		msg.post("hud", "hide")
+		
+		-- Now, acquire input. We're gonna land on top of the input stack.
+		msg.post(".", "acquire_input_focus")
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("mouse_press") and action.pressed then
+		local x = action.x
+		local y = action.y
+
+		-- Get the nodes and see if we have pressed any.
+		local loadnode = gui.get_node("load")
+		local savenode = gui.get_node("save")
+		local resumenode = gui.get_node("resume")
+		if gui.pick_node(loadnode, x, y) then
+			print("THE GAME WILL LOAD...")
+		elseif gui.pick_node(savenode, x, y) then
+			print("THE GAME WILL SAVE...")
+		elseif gui.pick_node(resumenode, x, y) then
+			-- First, hide the pause menu.
+			local node = gui.get_node("background")
+			gui.set_enabled(node, false)
+
+			-- Tell the hud to show again.
+			msg.post("hud", "show")
+		
+			-- Finally, release input.
+			msg.post(".", "release_input_focus")	
+		end
+	end
+	
+	-- As long as we're listening to input, we're gonna consume it. This disables game controls while
+	-- the pause menu is showing.
+	return true
+end

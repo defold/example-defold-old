@@ -1,0 +1,26 @@
+function init(self)
+	print("Inproxy init()")
+	msg.post(".", "acquire_input_focus")
+	print("Inproxy sends 'hello' to spawner in lifecycle collection.")
+	msg.post("lifecycle:/spawner", "hello")
+end
+
+function final(self)
+	print("Inproxy final()")
+	msg.post("#", "fromfinal")
+end
+
+function update(self, dt)
+	print("Inproxy update()")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("fromfinal") then
+		-- This message will never be dispatched, which is currently a bug.
+		print("Inproxy receives message 'fromfinal'.")
+	end		
+end
+
+function on_input(self, action_id, action)
+	print("Inproxy on_input()")
+end

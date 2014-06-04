@@ -1,0 +1,19 @@
+--fly = require "modules_example/flying"
+
+function init(self)
+end
+
+function update(self, dt)
+	
+end
+
+function monkeyisland_blue_global()
+	for k, y in pairs(getfenv()) do
+		print(k)
+	end
+end
+
+
+local function monkeyisland_blue_local()
+	print("TEST")
+end

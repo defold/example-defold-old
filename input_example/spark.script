@@ -1,0 +1,10 @@
+go.property("dummy", 0)
+
+function init(self)
+ 	particlefx.play("#spark")
+ 	go.animate("#", "dummy", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.8, 0.0, goodbye)
+end
+
+function goodbye(self)
+	go.delete()
+end

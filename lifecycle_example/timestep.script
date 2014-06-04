@@ -1,0 +1,8 @@
+function init(self)
+	print("Timestep init()")
+end
+
+function update(self, dt)
+	print("Timestep update() with timestep (dt) " .. dt)
+end
+

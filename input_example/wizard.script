@@ -1,0 +1,30 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+    -- Add message-handling code here
+    -- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and #action.touch == 1 then
+		-- Allow the player to drag the wizard left and right with one finger. (discard dy)
+		local pos = go.get_position()
+		pos.x = action.x
+		go.set_position(pos)
+	elseif action_id == hash("move_left") and action.pressed then
+		local pos = go.get_position()
+		pos.x = pos.x - 100
+		go.set_position(pos)
+	elseif action_id == hash("move_right") and action.pressed then
+		local pos = go.get_position()
+		pos.x = pos.x + 100
+		go.set_position(pos)
+	end
+end
+
+function on_reload(self)
+    -- Add reload-handling code here
+    -- Remove this function if not needed
+end

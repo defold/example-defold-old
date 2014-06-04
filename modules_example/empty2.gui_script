@@ -1,0 +1,3 @@
+function init(self)
+	update_gui()
+end

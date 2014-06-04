@@ -1,0 +1,14 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and #action.touch > 1 and #action.touch < 4 then
+		-- If there's 2-3 touch point we're gonna spawn magic sparks at each
+		-- point.
+		for i, tpoint in ipairs(action.touch) do
+			local pos = vmath.vector3(tpoint.x, tpoint.y, 0)
+			factory.create("#factory", pos)	
+		end
+	end
+end

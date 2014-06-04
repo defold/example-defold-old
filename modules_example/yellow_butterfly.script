@@ -1,0 +1,20 @@
+--local anim = require "modules/animate"
+local mystate = 10
+
+local function monkeyisland_local()
+	for k, y in pairs(getfenv()) do
+		print(k)
+	end
+end
+
+function init(self)
+--	fly.fly(".")
+--	monkeyisland_local()
+end
+
+function update(self, dt)
+end
+
+
+function on_reload(self)
+end

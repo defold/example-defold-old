@@ -1,0 +1,13 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("text") then
+		-- Concatenate the input text to the "text" node...
+		local node = gui.get_node("text")
+		local text = gui.get_text(node)
+		text = text .. action.text
+		gui.set_text(node, text)
+	end
+end

@@ -1,0 +1,34 @@
+name: "default"
+instances {
+  id: "blue_butterfly"
+  prototype: "/modules_example/blue_butterfly.go"
+  position {
+    x: 342.43005
+    y: 367.727
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "yellow_butterfly"
+  prototype: "/modules_example/yellow_butterfly.go"
+  position {
+    x: 705.3491
+    y: 345.63614
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+scale_along_z: 0

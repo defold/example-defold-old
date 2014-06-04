@@ -26,6 +26,7 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("proxy_loaded") then
 		-- New world is loded. Enable it.
 		msg.post(sender, "enable")
+		
 		-- We have to transfer the position of the player in the current
 		-- world to the player in the other world.
 		local currentsocket = ""

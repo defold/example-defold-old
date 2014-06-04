@@ -1,0 +1,33 @@
+function init(self)
+	print("Spawn init()")
+	msg.post(".", "acquire_input_focus")
+	print("Spawn sends 'hello' to spawner.")
+	msg.post("spawner", "hello")
+	print("Spawn sends message to kill itself.")
+end
+
+function final(self)
+	print("Spawn final()")
+	msg.post("#", "fromfinal")
+end
+
+function update(self, dt)
+	-- The spawn object kills itself via a message in init() so it will never reach update()
+	-- even once.
+	print("Spawn update()")
+	msg.post("#", "killme")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("killme") then
+		print("Spawn receives message 'killme'.") 
+		go.delete()
+		print("Spawn has called go.delete().") 
+	elseif message_id == hash("fromfinal") then
+		print("Spawn received message 'fromfinal'")
+	end		
+end
+
+function on_input(self, action_id, action)
+	print("Spawn on_input()")
+end
