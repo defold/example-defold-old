@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/magic/magic.script"
+  component: "/magic_example/butterfly.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,7 +16,7 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/magic/magic_sprites.atlas\"\ndefault_animation: \"magic\"\n"
+  data: "tile_set: \"/magic_example/magic_sprites.atlas\"\ndefault_animation: \"butterfly_orange\"\n"
   position {
     x: 0.0
     y: 0.0

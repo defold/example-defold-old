@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/magic/wand.script"
+  component: "/magic_example/wand.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,7 +16,7 @@ components {
 embedded_components {
   id: "magic_factory"
   type: "factory"
-  data: "prototype: \"/magic/magic.go\"\n"
+  data: "prototype: \"/magic_example/magic.go\"\n"
   position {
     x: 0.0
     y: 0.0
@@ -32,7 +32,7 @@ embedded_components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/magic/magic_sprites.atlas\"\ndefault_animation: \"wand\"\n"
+  data: "tile_set: \"/magic_example/magic_sprites.atlas\"\ndefault_animation: \"wand\"\n"
   position {
     x: 0.0
     y: 0.0
