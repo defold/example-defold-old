@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/worlds/worldswitch.script"
+  component: "/worlds_example/worldswitch.script"
   position {
     x: 0.0
     y: 0.0

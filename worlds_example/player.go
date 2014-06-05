@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/worlds/player.script"
+  component: "/worlds_example/player.script"
   position {
     x: 0.0
     y: 0.0
@@ -32,7 +32,7 @@ embedded_components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/worlds/sprites.atlas\"\ndefault_animation: \"p1_stand\"\nmaterial: \"/builtins/materials/sprite.material\"\nblend_mode: BLEND_MODE_ALPHA\n"
+  data: "tile_set: \"/worlds_example/sprites.atlas\"\ndefault_animation: \"p1_stand\"\n"
   position {
     x: 0.0
     y: 0.0
