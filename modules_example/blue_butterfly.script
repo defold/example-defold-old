@@ -1,19 +1,11 @@
---fly = require "modules_example/flying"
+fly = require "modules_example/flying"
 
 function init(self)
+	fly.fly_randomly()
 end
 
-function update(self, dt)
-	
-end
-
-function monkeyisland_blue_global()
-	for k, y in pairs(getfenv()) do
-		print(k)
+function on_message(self, message_id, message, sender)
+	if message_id == hash("fly_randomly_done") then
+		fly.fly_randomly()
 	end
-end
-
-
-local function monkeyisland_blue_local()
-	print("TEST")
 end

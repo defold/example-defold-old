@@ -6,7 +6,7 @@ animations {
   images {
     image: "/modules_example/images/butterfly2.png"
   }
-  playback: PLAYBACK_ONCE_FORWARD
+  playback: PLAYBACK_LOOP_FORWARD
   fps: 15
   flip_horizontal: 0
   flip_vertical: 0
@@ -19,7 +19,7 @@ animations {
   images {
     image: "/modules_example/images/butterfly4.png"
   }
-  playback: PLAYBACK_ONCE_FORWARD
+  playback: PLAYBACK_LOOP_FORWARD
   fps: 15
   flip_horizontal: 1
   flip_vertical: 0

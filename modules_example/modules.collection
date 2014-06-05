@@ -3,8 +3,40 @@ instances {
   id: "blue_butterfly"
   prototype: "/modules_example/blue_butterfly.go"
   position {
-    x: 342.43005
-    y: 367.727
+    x: 261.30316
+    y: 272.49106
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "blue_butterfly1"
+  prototype: "/modules_example/blue_butterfly.go"
+  position {
+    x: 457.29218
+    y: 410.75574
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "blue_butterfly2"
+  prototype: "/modules_example/blue_butterfly.go"
+  position {
+    x: 683.0366
+    y: 578.3004
     z: 0.0
   }
   rotation {
@@ -21,6 +53,38 @@ instances {
   position {
     x: 705.3491
     y: 345.63614
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "yellow_butterfly1"
+  prototype: "/modules_example/yellow_butterfly.go"
+  position {
+    x: 273.87485
+    y: 532.4461
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "yellow_butterfly2"
+  prototype: "/modules_example/yellow_butterfly.go"
+  position {
+    x: 513.7283
+    y: 165.61142
     z: 0.0
   }
   rotation {

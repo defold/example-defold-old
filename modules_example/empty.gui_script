@@ -1,7 +1,0 @@
-function init(self)
-	print("INIT!!!!!!")
-end
-
-function update_gui()
-	print("Update GUI")
-end
