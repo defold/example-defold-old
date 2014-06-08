@@ -1,15 +1,15 @@
--- fly = require "modules_example/flying"
+-- flying = require "modules_example/flying"
 -- Note that we don't have to require the module in more than
 -- one game object. This is because all game objects in the same
 -- collection share the same Lua context.
 
 function init(self)
 	-- Yellow butterflies have a wider flying range.
-	fly.fly_randomly(200)
+	flying.fly_randomly(200)
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("fly_randomly_done") then
-		fly.fly_randomly(200)
+		flying.fly_randomly(200)
 	end
 end

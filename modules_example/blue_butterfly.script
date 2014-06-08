@@ -1,11 +1,18 @@
-fly = require "modules_example/flying"
+flying = require "modules_example/flying"
 
 function init(self)
-	fly.fly_randomly()
+	flying.fly_randomly()
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("fly_randomly_done") then
-		fly.fly_randomly()
+		flying.fly_randomly()
 	end
+end
+
+
+function on_reload(self)
+	package.loaded["modules_example/flying"] = nil
+	flying = {}
+	flying = require "modules_example/flying"
 end

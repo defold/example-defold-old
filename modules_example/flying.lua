@@ -1,3 +1,4 @@
+-- The table “flying” contains the module.
 local flying = {}
 
 -- We use a table to store original positions. Note that the module becomes part
@@ -7,6 +8,7 @@ flying.origins = {}
 
 -- Crudely fly to a random position at "radius" distance from the original position
 -- This function sends back a "fly_randomly_done" message when it's done.
+
 function flying.fly_randomly(radius)
 	-- Radius is 100 unless specified
 	radius = radius or 100
