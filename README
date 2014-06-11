@@ -16,6 +16,7 @@ Cards
 HUD
 ===
 
+
 Worlds
 ======
 
@@ -23,10 +24,27 @@ Worlds
 Lifecycle
 =========
 
+
 Input
 =====
 
+
 Modules
 =======
+This example shows how to share code through the use of a Lua module. The module stores some data
+internally which is a potential source of coupling between the users of the module.
+
+Behaviors
+=========
+This example implements a simple flight behavior for butterflies (and other flying critters) in
+three different manners.
+
+Blue butterflies	Use a Lua module that contains animation behavior and stores data internally
+
+Yellow butterflies	Interact with a GO that implements the behavior totally decoupled from the user
+
+Green butterflies	Are controlled by an autonomous game object that implements the behavior and stores
+					data internally
+					
 
 

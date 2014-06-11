@@ -12,7 +12,7 @@ end
 
 
 function on_reload(self)
+	pprint(package.loaded["modules_example/flying"])
 	package.loaded["modules_example/flying"] = nil
-	flying = {}
 	flying = require "modules_example/flying"
 end

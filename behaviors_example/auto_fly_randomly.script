@@ -1,0 +1,35 @@
+-- This implementation of the fly_randomly behavior
+-- is encapsulated in a game object. It controls an
+-- object in the same collection with name "critter".
+--
+-- The radius can be set through a go property.
+--
+-- This behavior is extremely easy to use since it
+-- requires zero code.
+go.property("radius", 100)
+
+function init(self)
+	self.origin = nil
+	msg.post("#", "fly_randomly")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("fly_randomly") then
+		if self.origin == nil then
+			self.origin = go.get_world_position("critter")
+		end
+		
+		-- Figure out a random position at max distance "radius" from origin
+		local rand_angle = math.random(0, 3.141592 * 2)
+		local rand_radius = math.random(self.radius)
+		local offset = vmath.rotate(vmath.quat_rotation_z(rand_angle), vmath.vector3(rand_radius, 0, 0))
+		local rand_pos = self.origin + offset
+		local rand_duration = math.random(self.radius) / 100 + (self.radius / 200)
+
+		-- Animate forever
+		go.animate("critter", "position", go.PLAYBACK_ONCE_FORWARD, rand_pos, go.EASING_INOUTSINE, rand_duration, 0.0, 
+			function ()
+				msg.post("#", "fly_randomly")
+			end)
+	end	
+end

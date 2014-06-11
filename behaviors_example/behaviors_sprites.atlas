@@ -1,0 +1,41 @@
+animations {
+  id: "yellow_butterfly"
+  images {
+    image: "/behaviors_example/images/butterfly1.png"
+  }
+  images {
+    image: "/behaviors_example/images/butterfly2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 15
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "blue_butterfly"
+  images {
+    image: "/behaviors_example/images/butterfly3.png"
+  }
+  images {
+    image: "/behaviors_example/images/butterfly4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 15
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "green_butterfly"
+  images {
+    image: "/behaviors_example/images/butterfly5.png"
+  }
+  images {
+    image: "/behaviors_example/images/butterfly6.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 15
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0

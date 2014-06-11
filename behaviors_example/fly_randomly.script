@@ -1,0 +1,26 @@
+-- This implementation of the fly_randomly behavior
+-- is encapsulated in a game object. It is controlled
+-- strictly through messaging. Note that we have chosen
+-- to avoid storing any state in this behavior to make
+-- its behavior totally predictable.
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("fly_randomly") then
+		local id = message.id
+		local radius = message.radius or 100
+		local origin = message.origin
+		
+		-- Figure out a random position at max distance "radius" from origin
+		local rand_angle = math.random(0, 3.141592 * 2)
+		local rand_radius = math.random(radius)
+		local offset = vmath.rotate(vmath.quat_rotation_z(rand_angle), vmath.vector3(rand_radius, 0, 0))
+		local rand_pos = origin + offset
+		local rand_duration = math.random(radius) / 100 + (radius / 200)
+
+		-- Animate, then send "fly_randomly_done" back to sender
+		go.animate(id, "position", go.PLAYBACK_ONCE_FORWARD, rand_pos, go.EASING_INOUTSINE, rand_duration, 0.0, 
+			function ()
+				msg.post(sender, "fly_randomly_done")
+			end)
+	end	
+end

@@ -1,0 +1,146 @@
+name: "default"
+instances {
+  id: "blue_butterfly"
+  prototype: "/behaviors_example/blue_butterfly.go"
+  position {
+    x: 252.92262
+    y: 233.88544
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "blue_butterfly1"
+  prototype: "/behaviors_example/blue_butterfly.go"
+  position {
+    x: 662.22217
+    y: 205.32965
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "blue_butterfly2"
+  prototype: "/behaviors_example/blue_butterfly.go"
+  position {
+    x: 541.2
+    y: 530.32166
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "green_butterfly"
+  collection: "/behaviors_example/green_butterfly.collection"
+  position {
+    x: 364.443
+    y: 562.76086
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "green_butterfly1"
+  collection: "/behaviors_example/green_butterfly.collection"
+  position {
+    x: 533.9842
+    y: 311.98123
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "green_butterfly2"
+  collection: "/behaviors_example/green_butterfly.collection"
+  position {
+    x: 715.88776
+    y: 562.76086
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "yellow_butterfly"
+  collection: "/behaviors_example/yellow_butterfly.collection"
+  position {
+    x: 345.0164
+    y: 398.51785
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "yellow_butterfly1"
+  collection: "/behaviors_example/yellow_butterfly.collection"
+  position {
+    x: 447.44754
+    y: 168.93085
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+collection_instances {
+  id: "yellow_butterfly2"
+  collection: "/behaviors_example/yellow_butterfly.collection"
+  position {
+    x: 669.97034
+    y: 405.5821
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+scale_along_z: 0

@@ -1,0 +1,13 @@
+-- The blue butterflies use the flying module to get their behavior
+
+flying = require "behaviors_example/flying"
+
+function init(self)
+	flying.fly_randomly()
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("fly_randomly_done") then
+		flying.fly_randomly()
+	end
+end
