@@ -4,7 +4,7 @@ instances {
   prototype: "/magic_example/wand.go"
   position {
     x: 530.0
-    y: 240.0
+    y: 79.0618
     z: 0.0
   }
   rotation {
@@ -20,7 +20,7 @@ instances {
   prototype: "/magic_example/wizard.go"
   position {
     x: 324.0594
-    y: 326.1293
+    y: 165.1911
     z: 1.0
   }
   rotation {
@@ -36,7 +36,7 @@ collection_instances {
   collection: "/magic_example/interior.collection"
   position {
     x: 716.3859
-    y: 676.8708
+    y: 515.9326
     z: 0.0
   }
   rotation {
@@ -49,8 +49,8 @@ collection_instances {
 }
 scale_along_z: 0
 embedded_instances {
-  id: "instructions"
-  data: "components {\n  id: \"gui\"\n  component: \"/magic_example/instructions.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  id: "input"
+  data: "components {\n  id: \"gui\"\n  component: \"/magic_example/input.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
   position {
     x: 519.2512
     y: 425.13266

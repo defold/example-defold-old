@@ -23,7 +23,7 @@ function on_message(self, message_id, message, sender)
 		msg.post(".", "set_parent")
 		
 		-- Animate the wand back to the floor. Position and rotation
-		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(530, 240, -0.1), go.EASING_INOUTSINE, 0.5)
+		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(530, 79, -0.1), go.EASING_INOUTSINE, 0.5)
 		go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -70), go.EASING_INOUTSINE, 0.5, 0)
 
 		-- Whoever held the wand will get magically weakened.

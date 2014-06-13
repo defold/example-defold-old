@@ -1,8 +1,4 @@
 function init(self)
-	-- Send message to myself to acquire input messages. This is a built in message that
-	-- all game objects react to.
-	msg.post(".", "acquire_input_focus")
-
 	-- We start magically weak, without the wand.
 	self.magically_empowered = false
 	
@@ -11,54 +7,38 @@ function init(self)
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("magically_empower") then
-		self.magically_empowered = true
-		-- Since we're magically empowered we show the new magic skills in the UI instructions
-		msg.post("instructions#gui", "show_powerspells")
-	elseif message_id == hash("magically_weaken") then
-		self.magically_empowered = false
-		-- Since we're magically weak we hide the good magic skills from the UI instructions
-		msg.post("instructions#gui", "hide_powerspells")
-	end
-end
-
-function on_input(self, action_id, action)
-	-- The game system sends us input messages. These are sent to this separate function
-	-- rather than to on_message() for convenience.
-	if action_id == hash("spell_come_to_hand") and action.pressed then
-		-- Let's send a message to the wand to come to my hand.
-		msg.post("wand#script", "come_to_hand")		
-	elseif action_id == hash("spell_sit") and action.pressed then
-		-- Send a message to the wand to sit on the floor.
-		msg.post("wand#script", "sit_on_floor")
-	elseif action_id == hash("spell_summon_animal") and action.pressed then
-		-- If we're magically empowered (holding the wand) we can send this spell, otherwise not.
-		if self.magically_empowered then
-			-- This spell takes a target object.
-			msg.post("wand#script", "summon_animal", { target = hash("/interior/cage") })
-		end
-	elseif action_id == hash("spell_colorchange") and action.pressed then
-		-- If we're magically empowered (holding the wand) we can send this spell, otherwise not.
-		if self.magically_empowered then
-			-- This spell takes a target object.
-			msg.post("wand#script", "colorchange", { target = hash("/interior/cage") })
-		end
-	elseif action_id == hash("spell_jail_me") and action.pressed then
-		-- If we're magically empowered (holding the wand) we can send this spell, otherwise not.
-		if self.magically_empowered then
-			-- Only one place to jail me... The cage.
-			msg.post("wand#script", "jail_into", { target = hash("/interior/cage") })
-			self.jailed = true
-		end
-	elseif action_id == hash("move_left") and action.pressed and not self.jailed then
+	if message_id == hash("move_left") then
 		-- The wizard shuffles his feet a bit to the left (if not jailed)
 		local newpos = go.get_position()
 		newpos.x = newpos.x - 50
 		go.set_position(newpos)
-	elseif action_id == hash("move_right") and action.pressed and not self.jailed then
+	elseif message_id == hash("move_right") then
 		-- The wizard shuffles his feet a bit to the right (if not jailed)
 		local newpos = go.get_position()
 		newpos.x = newpos.x + 50
 		go.set_position(newpos)
+	elseif message_id == hash("wand") then
+		print(self.magically_empowered)
+		if self.magically_empowered == false then
+			-- Let's send a message to the wand to come to my hand.
+			msg.post("wand#script", "come_to_hand")
+			self.magically_empowered = true
+			-- Since we're magically empowered we show the new magic skills in the UI instructions
+			msg.post("input#gui", "show_powerspells")
+		else
+			-- Send a message to the wand to sit on the floor.
+			msg.post("wand#script", "sit_on_floor")
+			self.magically_empowered = false
+			-- Since we're magically weak we hide the good magic skills from the UI instructions
+			msg.post("input#gui", "hide_powerspells")
+		end
+	elseif message_id == hash("summon") then
+		-- This spell takes a target object.
+		msg.post("wand#script", "summon_animal", { target = hash("/interior/cage") })
+	elseif message_id == hash("jail") then
+		-- Only one place to jail me... The cage.
+		msg.post("wand#script", "jail_into", { target = hash("/interior/cage") })
+		-- Can't move when caged.
+		msg.post("input#gui", "hide_movement")
 	end
 end
