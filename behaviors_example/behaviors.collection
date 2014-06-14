@@ -47,6 +47,70 @@ instances {
   }
   scale: 1.0
 }
+instances {
+  id: "fly_randomly"
+  prototype: "/behaviors_example/fly_randomly.go"
+  position {
+    x: 447.44754
+    y: 168.93085
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "yellow_butterfly"
+  prototype: "/behaviors_example/yellow_butterfly.go"
+  position {
+    x: 435.95868
+    y: 247.71165
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "yellow_butterfly1"
+  prototype: "/behaviors_example/yellow_butterfly.go"
+  position {
+    x: 367.02545
+    y: 424.96848
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "yellow_butterfly2"
+  prototype: "/behaviors_example/yellow_butterfly.go"
+  position {
+    x: 629.6282
+    y: 420.04468
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
 collection_instances {
   id: "green_butterfly"
   collection: "/behaviors_example/green_butterfly.collection"
@@ -85,54 +149,6 @@ collection_instances {
   position {
     x: 715.88776
     y: 562.76086
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-collection_instances {
-  id: "yellow_butterfly"
-  collection: "/behaviors_example/yellow_butterfly.collection"
-  position {
-    x: 345.0164
-    y: 398.51785
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-collection_instances {
-  id: "yellow_butterfly1"
-  collection: "/behaviors_example/yellow_butterfly.collection"
-  position {
-    x: 447.44754
-    y: 168.93085
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-collection_instances {
-  id: "yellow_butterfly2"
-  collection: "/behaviors_example/yellow_butterfly.collection"
-  position {
-    x: 669.97034
-    y: 405.5821
     z: 0.0
   }
   rotation {

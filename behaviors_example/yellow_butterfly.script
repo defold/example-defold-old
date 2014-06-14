@@ -1,10 +1,10 @@
 function init(self)
 	self.origin = go.get_world_position()
-	msg.post("fly_randomly", "fly_randomly", { id = go.get_id(), origin = self.origin } )
+	msg.post("/fly_randomly#script", "fly_randomly", { id = go.get_id(), origin = self.origin } )
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("fly_randomly_done") then
-		msg.post("fly_randomly", "fly_randomly", { id = go.get_id(), origin = self.origin } )
+		msg.post("/fly_randomly#script", "fly_randomly", { id = go.get_id(), origin = self.origin } )
 	end
 end
