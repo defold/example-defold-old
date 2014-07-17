@@ -1,0 +1,205 @@
+images {
+  image: "/physics_example/images/star.png"
+}
+animations {
+  id: "idle_right"
+  images {
+    image: "/physics_example/images/p1_stand.png"
+  }
+  playback: PLAYBACK_NONE
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "run_right"
+  images {
+    image: "/physics_example/images/p1_walk01.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk02.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk03.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk04.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk05.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk06.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk07.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk08.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk09.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk10.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk11.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "run_left"
+  images {
+    image: "/physics_example/images/p1_walk01.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk02.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk03.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk04.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk05.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk06.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk07.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk08.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk09.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk10.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk11.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "jump_right"
+  images {
+    image: "/physics_example/images/p1_jump.png"
+  }
+  playback: PLAYBACK_NONE
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "walk_right"
+  images {
+    image: "/physics_example/images/p1_walk01.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk02.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk03.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk04.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk05.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk06.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk07.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk08.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk09.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk10.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk11.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 15
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "walk_left"
+  images {
+    image: "/physics_example/images/p1_walk01.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk02.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk03.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk04.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk05.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk06.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk07.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk08.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk09.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk10.png"
+  }
+  images {
+    image: "/physics_example/images/p1_walk11.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 15
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "idle_left"
+  images {
+    image: "/physics_example/images/p1_stand.png"
+  }
+  playback: PLAYBACK_NONE
+  fps: 30
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+animations {
+  id: "jump_left"
+  images {
+    image: "/physics_example/images/p1_jump.png"
+  }
+  playback: PLAYBACK_NONE
+  fps: 30
+  flip_horizontal: 1
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0

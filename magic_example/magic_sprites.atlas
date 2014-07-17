@@ -14,13 +14,13 @@ images {
   image: "/magic_example/images/painting.png"
 }
 images {
-  image: "/cards/images/clubmaster.png"
+  image: "/cards_example/images/clubmaster.png"
 }
 images {
-  image: "/cards/images/heartson.png"
+  image: "/cards_example/images/heartson.png"
 }
 images {
-  image: "/cards/images/tree.png"
+  image: "/cards_example/images/tree.png"
 }
 images {
   image: "/magic_example/images/heart.png"

@@ -1,0 +1,197 @@
+-- The player world collision box size
+local player_height = 88
+local player_width = 40
+
+-- Parameters
+local gravity = 1500
+local acceleration = 10
+local max_speed = 40
+local jump_speed = 800
+local max_fall_speed = 800
+local damping = 0.1
+
+local STATE_ONGROUND = hash("onground")
+local STATE_INAIR = hash("inair")
+
+function init(self)
+	msg.post(nil, "acquire_input_focus")
+	msg.post("player_camera#camera", "acquire_camera_focus")
+
+    self.velocity = vmath.vector3()
+    self.acceleration = vmath.vector3()
+	self.verticalvelocity = vmath.vector3()
+	self.gluevec = vmath.vector3()
+	self.groundslope = 0
+	self.groundtouch = true
+	self.direction = 0
+	self.prev_anim = 0
+	-- The player's state
+	self.state = STATE_ONGROUND
+
+    self.correction = vmath.vector3()
+end
+
+function update(self, dt)
+	-- Rotate accelleration according to ground slope
+	local rotacc = vmath.rotate(vmath.quat_rotation_z(self.groundslope), self.acceleration)
+	
+	-- Smoothe the input movement with lerp
+	local target_movement = rotacc * max_speed
+	self.velocity = vmath.lerp(damping, self.velocity, target_movement)
+
+	if not self.groundtouch then
+		self.state = STATE_INAIR
+	end
+	
+	-- Animate
+	local anim = 0
+	if math.abs(self.velocity.x) < 10 then
+		if self.direction == 1 then
+			anim = hash("idle_right")
+		else
+			anim = hash("idle_left")
+		end
+	elseif self.velocity.x > 200 then
+		self.direction = 1
+		anim = hash("run_right")
+	elseif self.velocity.x > 10 then
+		self.direction = 1
+		anim = hash("walk_right")
+	elseif self.velocity.x < -200 then
+		self.direction = -1
+		anim = hash("run_left")
+	elseif self.velocity.x < -10 then
+		self.direction = -1
+		anim = hash("walk_left")
+	end
+	
+	if self.state == STATE_INAIR then
+		if self.direction == 1 then
+			anim = hash("jump_right")
+		else
+			anim = hash("jump_left")
+		end	
+	end
+	
+	if anim ~= self.prev_anim then
+		msg.post("#sprite", "play_animation", {id = anim})
+		self.prev_anim = anim
+	end
+
+	-- Gravity only when airborne
+	if self.state == STATE_INAIR then
+		self.verticalvelocity.y = self.verticalvelocity.y - gravity * dt
+		-- Max fall velocity speed 
+	    if self.verticalvelocity.y < -max_fall_speed then
+	        self.verticalvelocity.y = -max_fall_speed
+	    end
+		-- No rotation in air
+		go.set_rotation(vmath.quat_rotation_z(0))
+		-- No gluing to the ground while airborne
+		self.gluevec.x = 0
+		self.gluevec.y = 0
+		self.gluevec.z = 0
+	else
+		-- Rotate character against ground slope
+		go.set_rotation(vmath.quat_rotation_z(self.groundslope))
+	end
+
+	-- Ray cast down at each edge of the character
+	local pos1 = go.get_position() + vmath.vector3(player_width / 2, 0, 0)
+	physics.ray_cast(pos1, pos1 + vmath.vector3(0, -player_height * 2, 0), {hash("world")}, 0)
+	local pos2 = go.get_position() - vmath.vector3(player_width / 2, 0, 0)
+	physics.ray_cast(pos2, pos2 + vmath.vector3(0, -player_height * 2, 0), {hash("world")}, 1)
+
+    -- Update position
+	local move_offset = (self.velocity + self.verticalvelocity) * dt
+	local new_pos = go.get_position() + move_offset + self.gluevec
+	go.set_position(new_pos)
+
+	-- Move camera
+	local cam_off = vmath.vector3(-512, -383, 0)
+	go.set_position(new_pos + cam_off, "/player_camera")
+		
+	-- Reset values
+	self.acceleration = vmath.vector3()
+	self.correction = vmath.vector3()
+	self.ground_contact = false
+	self.gluevec = vmath.vector3()
+	self.groundtouch = false
+	
+	self.cpoints = 0
+end
+
+function on_message(self, message_id, message, sender)
+	-- Handle collision
+	if message_id == hash("contact_point_response") and message.group ~= hash("balls") then
+        -- Get the info needed to move out of collision. We might 
+        -- get several contact points back and have to calculate
+        -- how to move out of all accumulatively:
+
+       	if message.distance > 0 then
+	       	-- First, project the penetration vector on accumulated correction
+	       	local proj = vmath.project(self.correction, message.normal * message.distance)
+	        if proj < 1 then
+	        	-- Only care for projections that does not overshoot.
+		       	local comp = (message.distance - message.distance * proj) * message.normal
+			    -- Apply compensation
+			    go.set_position(go.get_position() + comp)
+		    
+		        -- Accumulate the corrections
+		    	self.correction = self.correction + comp
+		    end
+		    proj = vmath.dot(self.velocity, message.normal)
+		    -- Cancel out the part of the player velocity that moves towards the contact point
+		    if proj < 0 then
+		    	self.velocity = self.velocity - proj * message.normal
+			end
+			
+			proj = vmath.dot(vmath.vector3(0, 10, 0), message.normal)
+			-- We have hit ground.
+			if proj > 0 then
+				self.state = STATE_ONGROUND
+				self.verticalvelocity.y = 0
+			end
+			-- We have hit roof
+			if proj < 0 then
+				self.verticalvelocity.y = 0
+			end
+	    end
+	-- Give a nudge to the ball
+	elseif message_id == hash("contact_point_response") and message.group == hash("balls") then
+		msg.post(message.other_id, "apply_force", {force = vmath.vector3(self.velocity.x, 150, 0), position = go.get_world_position(message.other_id)})
+	-- Glue raycast
+	elseif message_id == hash("ray_cast_response") then
+		-- How far is it to ground?
+		local vec = message.position - go.get_position() + vmath.vector3(0, player_height / 2, 0)
+		-- Only glue straight down, otherwise it will affect velocity.
+		vec.x = 0
+		local s = math.atan2(-message.normal.x, message.normal.y)
+		if message.request_id == 0 then
+			self.groundtouch = true
+			self.gluevec = vec
+			self.groundslope = s
+		elseif vmath.length(vec) < vmath.length(self.gluevec) then
+			self.groundtouch = true
+			self.gluevec = vec
+			self.groundslope = s
+		end
+    -- Movement
+    elseif message_id == hash("move_left") then
+        self.acceleration = vmath.vector3(-acceleration, 0, 0) 
+    elseif message_id == hash("move_right") then
+        self.acceleration = vmath.vector3(acceleration, 0, 0)
+    elseif message_id == hash("move_up") then
+        self.acceleration = vmath.vector3(0, acceleration, 0)
+    elseif message_id == hash("move_down") then
+        self.acceleration = vmath.vector3(0, -acceleration, 0)
+    elseif message_id == hash("jump") and self.state == STATE_ONGROUND then    	
+		self.state = STATE_INAIR
+        self.verticalvelocity.y = jump_speed
+	end
+end
+
+function on_reload(self)
+    -- Add reload-handling code here
+    -- Remove this function if not needed
+end

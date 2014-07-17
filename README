@@ -7,27 +7,33 @@ These are the examples:
 
 Magic
 =====
-
+This example illustrates message passing as a means of communicating between objects in a game or app.
 
 Cards
 =====
-
+This example illustrates URL:s and paths, child-parent vs. collection-object hierarchies. See the
+"Message passing" documentation.
 
 HUD
 ===
-
+This example shows a simple HUD implementation with a controller object. See the "HUD" documentation.
 
 Worlds
 ======
+This example implements a very simple streaming setup using collection proxies and triggers. See the
+"Collection proxies" documentation.
 
 
 Lifecycle
 =========
+This example runs through a full lifecycle of an application. Each step on the way is logged through
+a console printout so you can study it in parallel to the code.
 
 
 Input
 =====
-
+This example illustrates how to handle touch and keyboard (text) input. It implements a pause menu
+that consumes input to shift input focus dynamically.
 
 Modules
 =======
@@ -45,6 +51,27 @@ Yellow butterflies	Interact with a GO that implements the behavior totally decou
 
 Green butterflies	Are controlled by an autonomous game object that implements the behavior and stores
 					data internally
-					
+
+Physics
+=======
+This example is a simple implementation of a platformer with slopes. There are some dynamic physics
+objects in addition to the character. Note that there are some edge cases that causes glitches and 
+unwanted side effects in the player movement. These have been left as an exercise for you to track 
+down and solve.
 
 
+
+
+###############################################################################
+
+	Platformer graphics (Deluxe) by Kenney Vleugels (www.kenney.nl)
+
+			------------------------------
+
+			        License (CC0)
+	       http://creativecommons.org/publicdomain/zero/1.0/
+
+	You may use these graphics in personal and commercial projects.
+	Credit (Kenney or www.kenney.nl) would be nice but is not mandatory.
+
+###############################################################################

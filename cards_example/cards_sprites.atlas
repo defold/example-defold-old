@@ -1,0 +1,15 @@
+images {
+  image: "/cards_example/images/clubmaster.png"
+}
+images {
+  image: "/cards_example/images/heartson.png"
+}
+images {
+  image: "/cards_example/images/tree.png"
+}
+images {
+  image: "/cards_example/images/pot.png"
+}
+images {
+  image: "/cards_example/images/heart.png"
+}

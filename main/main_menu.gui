@@ -5,25 +5,18 @@ fonts {
 }
 textures {
   name: "clubmaster"
-  texture: "/cards/images/clubmaster.png"
+  texture: "/cards_example/images/clubmaster.png"
 }
 background_color {
-  x: 0.0
-  y: 0.0
-  z: 0.0
   w: 1.0
 }
 nodes {
   position {
     x: 200.0
     y: 400.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -35,7 +28,6 @@ nodes {
   size {
     x: 100.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -45,13 +37,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "HUD"
   font: "headline"
   id: "hud"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -64,21 +52,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 200.0
     y: 600.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -90,7 +72,6 @@ nodes {
   size {
     x: 150.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -100,13 +81,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Magic"
   font: "headline"
   id: "magic"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -119,21 +96,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 200.0
     y: 500.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -145,7 +116,6 @@ nodes {
   size {
     x: 150.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -155,13 +125,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Cards"
   font: "headline"
   id: "cards"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -174,21 +140,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 200.0
     y: 200.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -200,7 +160,6 @@ nodes {
   size {
     x: 100.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -210,13 +169,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Lifecycle"
   font: "headline"
   id: "lifecycle"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -229,21 +184,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 200.0
     y: 700.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -255,7 +204,6 @@ nodes {
   size {
     x: 150.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -265,13 +213,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "EXAMPLES"
   font: "headline"
   id: "header"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -284,21 +228,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 200.0
     y: 300.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -310,7 +248,6 @@ nodes {
   size {
     x: 100.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -320,13 +257,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Worlds"
   font: "headline"
   id: "worlds"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -339,21 +272,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 200.0
     y: 100.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -365,7 +292,6 @@ nodes {
   size {
     x: 100.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -375,13 +301,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Input"
   font: "headline"
   id: "input"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -394,21 +316,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 500.0
     y: 600.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -420,7 +336,6 @@ nodes {
   size {
     x: 100.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -430,13 +345,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Modules"
   font: "headline"
   id: "modules"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -449,21 +360,15 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
   layer: "layer"
 }
 nodes {
   position {
     x: 500.0
     y: 500.0
-    z: 0.0
     w: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
     w: 1.0
   }
   scale {
@@ -475,7 +380,6 @@ nodes {
   size {
     x: 100.0
     y: 50.0
-    z: 0.0
     w: 1.0
   }
   color {
@@ -485,13 +389,9 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Behaviors"
   font: "headline"
   id: "behaviors"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -504,8 +404,50 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
+  layer: "layer"
+}
+nodes {
+  position {
+    x: 800.0
+    y: 600.0
+    w: 1.0
+  }
+  rotation {
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 100.0
+    y: 50.0
+    w: 1.0
+  }
+  color {
+    x: 0.29803923
+    y: 0.29803923
+    z: 0.29803923
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  text: "Physics"
+  font: "headline"
+  id: "physics"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
   layer: "layer"
 }
 layers {

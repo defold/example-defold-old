@@ -29,6 +29,7 @@ function on_input(self, action_id, action)
 		local inputnode = gui.get_node("input")
 		local modulesnode = gui.get_node("modules")
 		local behaviorsnode = gui.get_node("behaviors")
+		local physicsnode = gui.get_node("physics")
 		-- Test if user has touched one of the valid text nodes.
 		if gui.pick_node(hudnode, x, y) then
 			-- Load the HUD collection
@@ -54,6 +55,9 @@ function on_input(self, action_id, action)
 		elseif gui.pick_node(behaviorsnode, x, y) then
 			-- Load the behaviors collection
 			msg.post("/loader#behaviorsproxy", "load")
+		elseif gui.pick_node(physicsnode, x, y) then
+			-- Load the physics collection
+			msg.post("/loader#physicsproxy", "load")
 		end
 	end	
 end

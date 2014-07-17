@@ -20,6 +20,11 @@ instances {
       value: "300.0"
       type: PROPERTY_TYPE_NUMBER
     }
+    properties {
+      id: "critter"
+      value: "critter"
+      type: PROPERTY_TYPE_URL
+    }
   }
   scale: 1.0
 }

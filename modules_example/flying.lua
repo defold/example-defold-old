@@ -1,22 +1,16 @@
--- The table “flying” contains the module.
-local flying = {}
-
-print(flying)
+-- The table “M” contains the module.
+local M = {}
 
 -- We use a table to store original positions. Note that the module becomes part
 -- of all game objects' shared Lua context so we can't just store the origin in
 -- a variable straight - it would be overwritten if more than one GO used this module.
 -- Beware that this internal state could be a potential source of bugs since it
 -- introduces coupling between the users of the module.
-flying.origins = {}
+M.origins = {}
 
 -- Crudely fly to a random position at "radius" distance from the original position
 -- This function sends back a "fly_randomly_done" message when it's done.
-
-flying.fly_randomly = 4711
-flying.fly_randomly2 = 4711
-
-test = function(radius)
+M.fly_randomly = function (radius)
 	-- Radius is 100 unless specified
 	radius = radius or 100
 	-- We need current object id to index the original position. Can't use "."
@@ -24,7 +18,7 @@ test = function(radius)
 
 	-- Store origin position if it's not already stored.
 	if flying.origins[go_id] == nil then
-		flying.origins[go_id] = go.get_world_position(go_id)
+		M.origins[go_id] = go.get_world_position(go_id)
 	end
 	
 	-- Figure out a random position at max distance "radius" from origin
@@ -43,5 +37,4 @@ test = function(radius)
 		end)
 end
 
-return flying
-
+return M
