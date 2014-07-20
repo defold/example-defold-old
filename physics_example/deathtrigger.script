@@ -1,0 +1,7 @@
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") and message.enter == true then
+		-- Kill the player
+		msg.post("/player", "die")
+	end
+end
+

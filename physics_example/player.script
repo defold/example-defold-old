@@ -17,6 +17,9 @@ function init(self)
 	msg.post(nil, "acquire_input_focus")
 	msg.post("player_camera#camera", "acquire_camera_focus")
 
+	-- Store init position for simple respawn on death.
+	self.spawnpos = go.get_world_position()
+
     self.velocity = vmath.vector3()
     self.acceleration = vmath.vector3()
 	self.verticalvelocity = vmath.vector3()
@@ -117,8 +120,6 @@ function update(self, dt)
 	self.ground_contact = false
 	self.gluevec = vmath.vector3()
 	self.groundtouch = false
-	
-	self.cpoints = 0
 end
 
 function on_message(self, message_id, message, sender)
@@ -127,7 +128,6 @@ function on_message(self, message_id, message, sender)
         -- Get the info needed to move out of collision. We might 
         -- get several contact points back and have to calculate
         -- how to move out of all accumulatively:
-
        	if message.distance > 0 then
 	       	-- First, project the penetration vector on accumulated correction
 	       	local proj = vmath.project(self.correction, message.normal * message.distance)
@@ -176,6 +176,12 @@ function on_message(self, message_id, message, sender)
 			self.gluevec = vec
 			self.groundslope = s
 		end
+	-- DEATH
+	elseif message_id == hash("die") then
+		self.acceleration = vmath.vector3()
+		self.velocity = vmath.vector3()
+		self.vertical_velocity = vmath.vector3()			
+		go.set_position(self.spawnpos)
     -- Movement
     elseif message_id == hash("move_left") then
         self.acceleration = vmath.vector3(-acceleration, 0, 0) 
