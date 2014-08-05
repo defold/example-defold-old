@@ -3,7 +3,7 @@ of Defold development. Each example is contained within a separate folder and th
 main menu interface (under folder "main") that present a GUI interface to the examples and
 allows the user to select which example to run.
 
-Added in test branch.
+Added in test branch. Here is a change in main.
 
 These are the examples:
 
