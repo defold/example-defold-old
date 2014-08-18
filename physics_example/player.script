@@ -25,6 +25,7 @@ function init(self)
 	self.verticalvelocity = vmath.vector3()
 	self.gluevec = vmath.vector3()
 	self.groundslope = 0
+	self.characterslope = 0
 	self.groundtouch = true
 	self.direction = 0
 	self.prev_anim = 0
@@ -35,8 +36,11 @@ function init(self)
 end
 
 function update(self, dt)
-	-- Rotate accelleration according to ground slope
-	local rotacc = vmath.rotate(vmath.quat_rotation_z(self.groundslope), self.acceleration)
+	-- Rotate accelleration according to ground slope -- in on ground
+	local rotacc = self.acceleration
+	if self.state == STATE_ONGROUND then
+		rotacc = vmath.rotate(vmath.quat_rotation_z(self.groundslope), self.acceleration)
+	end
 	
 	-- Smoothe the input movement with lerp
 	local target_movement = rotacc * max_speed
@@ -80,7 +84,7 @@ function update(self, dt)
 		msg.post("#sprite", "play_animation", {id = anim})
 		self.prev_anim = anim
 	end
-
+	
 	-- Gravity only when airborne
 	if self.state == STATE_INAIR then
 		self.verticalvelocity.y = self.verticalvelocity.y - gravity * dt
@@ -95,15 +99,21 @@ function update(self, dt)
 		self.gluevec.y = 0
 		self.gluevec.z = 0
 	else
-		-- Rotate character against ground slope
-		go.set_rotation(vmath.quat_rotation_z(self.groundslope))
+		-- Rotate character against ground slope, but lerp it for smoother anim
+		self.characterslope = vmath.lerp(0.5, self.characterslope, self.groundslope)		
+		go.set_rotation(vmath.quat_rotation_z(self.characterslope))
 	end
 
-	-- Ray cast down at each edge of the character
+	-- Ray cast down at each edge of the character. Used to find edges
+	
 	local pos1 = go.get_position() + vmath.vector3(player_width / 2, 0, 0)
-	physics.ray_cast(pos1, pos1 + vmath.vector3(0, -player_height * 2, 0), {hash("world")}, 0)
 	local pos2 = go.get_position() - vmath.vector3(player_width / 2, 0, 0)
+
+	physics.ray_cast(pos1, pos1 + vmath.vector3(0, -player_height * 2, 0), {hash("world")}, 0)
 	physics.ray_cast(pos2, pos2 + vmath.vector3(0, -player_height * 2, 0), {hash("world")}, 1)
+
+	msg.post("@render:", "draw_line", { start_point = pos1, end_point = pos1 + vmath.vector3(0, -player_height * 2, 0), color = vmath.vector4(1, 1, 0, 1) } )
+	msg.post("@render:", "draw_line", { start_point = pos2, end_point = pos2 + vmath.vector3(0, -player_height * 2, 0), color = vmath.vector4(1, 1, 1, 1) } )
 
     -- Update position
 	local move_offset = (self.velocity + self.verticalvelocity) * dt
@@ -115,10 +125,15 @@ function update(self, dt)
 	go.set_position(new_pos + cam_off, "/player_camera")
 		
 	-- Reset values
-	self.acceleration = vmath.vector3()
-	self.correction = vmath.vector3()
-	self.ground_contact = false
-	self.gluevec = vmath.vector3()
+	self.acceleration.x = 0
+	self.acceleration.y = 0
+	self.acceleration.y = 0
+	self.correction.x = 0
+	self.correction.y = 0
+	self.correction.z = 0
+	self.gluevec.x = 0
+	self.gluevec.y = 0
+	self.gluevec.z = 0
 	self.groundtouch = false
 end
 
@@ -159,20 +174,23 @@ function on_message(self, message_id, message, sender)
 	    end
 	-- Give a nudge to the ball
 	elseif message_id == hash("contact_point_response") and message.group == hash("balls") then
-		msg.post(message.other_id, "apply_force", {force = vmath.vector3(self.velocity.x, 150, 0), position = go.get_world_position(message.other_id)})
+		msg.post(message.other_id, "apply_force", {force = vmath.vector3(self.velocity.x, math.abs(self.velocity.x), 0), position = go.get_world_position(message.other_id)})
 	-- Glue raycast
 	elseif message_id == hash("ray_cast_response") then
 		-- How far is it to ground?
 		local vec = message.position - go.get_position() + vmath.vector3(0, player_height / 2, 0)
 		-- Only glue straight down, otherwise it will affect velocity.
 		vec.x = 0
+		-- Slope below cast
 		local s = math.atan2(-message.normal.x, message.normal.y)
-		if message.request_id == 0 then
+				
+		-- First vector to hit ground sets ground touch and inital gluevector and slope.
+		if self.groundtouch == false then
 			self.groundtouch = true
 			self.gluevec = vec
 			self.groundslope = s
+		-- If second ray has shorter ground distance, set gluevector and groundslope according to it.
 		elseif vmath.length(vec) < vmath.length(self.gluevec) then
-			self.groundtouch = true
 			self.gluevec = vec
 			self.groundslope = s
 		end
@@ -187,17 +205,15 @@ function on_message(self, message_id, message, sender)
         self.acceleration = vmath.vector3(-acceleration, 0, 0) 
     elseif message_id == hash("move_right") then
         self.acceleration = vmath.vector3(acceleration, 0, 0)
-    elseif message_id == hash("move_up") then
-        self.acceleration = vmath.vector3(0, acceleration, 0)
-    elseif message_id == hash("move_down") then
-        self.acceleration = vmath.vector3(0, -acceleration, 0)
     elseif message_id == hash("jump") and self.state == STATE_ONGROUND then    	
+        print(self.verticalvelocity)
+        print(self.velocity)
+        print(self.acceleration)
 		self.state = STATE_INAIR
-        self.verticalvelocity.y = jump_speed
+        self.verticalvelocity.y = jump_speed     
 	end
 end
 
 function on_reload(self)
-    -- Add reload-handling code here
-    -- Remove this function if not needed
+	self.maxy = 0
 end

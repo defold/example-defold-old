@@ -25,12 +25,10 @@ Worlds
 This example implements a very simple streaming setup using collection proxies and triggers. See the
 "Collection proxies" documentation.
 
-
 Lifecycle
 =========
 This example runs through a full lifecycle of an application. Each step on the way is logged through
 a console printout so you can study it in parallel to the code.
-
 
 Input
 =====
@@ -58,8 +56,8 @@ Physics
 =======
 This example is a simple implementation of a platformer with slopes. There are some dynamic physics
 objects in addition to the character. Note that there are some edge cases that causes glitches and 
-unwanted side effects in the player movement. These have been left as an exercise for you to track 
-down and solve.
+unwanted side effects in the player movement, particularly at slope edges. These have been left as 
+an exercise for you to track down and solve.
 
 
 

@@ -18,7 +18,7 @@ function on_input(self, action_id, action)
 		local y = action.y
 
 		-- Get the pause node and see if we have pressed it.
-		local pausenode = gui.get_node("pause")
+		local pausenode = gui.get_node("pause") 
 		if gui.pick_node(pausenode, x, y) then
 			-- Tell the pause menu to take over.
 			msg.post("pause_menu", "show")
