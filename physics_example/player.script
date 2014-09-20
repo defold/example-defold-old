@@ -16,6 +16,11 @@ local STATE_INAIR = hash("inair")
 function init(self)
 	msg.post(nil, "acquire_input_focus")
 	msg.post("player_camera#camera", "acquire_camera_focus")
+	
+	-- Replace the two door-tiles with "open door" tiles.
+--	local doorpos = vmath.vector3(174, 305, 0)
+--	msg.post("/level#tilemap", "set_tile", { layer_id = hash("layer1"), position = doorpos, tile = 58 })
+--	msg.post("/level#tilemap", "set_tile", { layer_id = hash("layer1"), position = doorpos, tile = 46, dy = 1 })
 
 	-- Store init position for simple respawn on death.
 	self.spawnpos = go.get_world_position()
@@ -112,8 +117,8 @@ function update(self, dt)
 	physics.ray_cast(pos1, pos1 + vmath.vector3(0, -player_height * 2, 0), {hash("world")}, 0)
 	physics.ray_cast(pos2, pos2 + vmath.vector3(0, -player_height * 2, 0), {hash("world")}, 1)
 
-	msg.post("@render:", "draw_line", { start_point = pos1, end_point = pos1 + vmath.vector3(0, -player_height * 2, 0), color = vmath.vector4(1, 1, 0, 1) } )
-	msg.post("@render:", "draw_line", { start_point = pos2, end_point = pos2 + vmath.vector3(0, -player_height * 2, 0), color = vmath.vector4(1, 1, 1, 1) } )
+--	msg.post("@render:", "draw_line", { start_point = pos1, end_point = pos1 + vmath.vector3(0, -player_height * 2, 0), color = vmath.vector4(1, 1, 0, 1) } )
+--	msg.post("@render:", "draw_line", { start_point = pos2, end_point = pos2 + vmath.vector3(0, -player_height * 2, 0), color = vmath.vector4(1, 1, 1, 1) } )
 
     -- Update position
 	local move_offset = (self.velocity + self.verticalvelocity) * dt
@@ -206,9 +211,6 @@ function on_message(self, message_id, message, sender)
     elseif message_id == hash("move_right") then
         self.acceleration = vmath.vector3(acceleration, 0, 0)
     elseif message_id == hash("jump") and self.state == STATE_ONGROUND then    	
-        print(self.verticalvelocity)
-        print(self.velocity)
-        print(self.acceleration)
 		self.state = STATE_INAIR
         self.verticalvelocity.y = jump_speed     
 	end

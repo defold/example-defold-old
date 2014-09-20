@@ -18,7 +18,6 @@ function on_message(self, message_id, message, sender)
 		newpos.x = newpos.x + 50
 		go.set_position(newpos)
 	elseif message_id == hash("wand") then
-		print(self.magically_empowered)
 		if self.magically_empowered == false then
 			-- Let's send a message to the wand to come to my hand.
 			msg.post("wand#script", "come_to_hand")

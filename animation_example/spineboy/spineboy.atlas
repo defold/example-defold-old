@@ -1,0 +1,83 @@
+images {
+  image: "/animation_example/spineboy/images/eye_indifferent.png"
+}
+images {
+  image: "/animation_example/spineboy/images/eye_surprised.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_bracer.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_fist_closed.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_fist_open.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_foot.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_foot_bend1.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_foot_bend2.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_shin.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_thigh.png"
+}
+images {
+  image: "/animation_example/spineboy/images/front_upper_arm.png"
+}
+images {
+  image: "/animation_example/spineboy/images/goggles.png"
+}
+images {
+  image: "/animation_example/spineboy/images/gun.png"
+}
+images {
+  image: "/animation_example/spineboy/images/head.png"
+}
+images {
+  image: "/animation_example/spineboy/images/mouth_grind.png"
+}
+images {
+  image: "/animation_example/spineboy/images/mouth_oooo.png"
+}
+images {
+  image: "/animation_example/spineboy/images/mouth_smile.png"
+}
+images {
+  image: "/animation_example/spineboy/images/muzzle.png"
+}
+images {
+  image: "/animation_example/spineboy/images/neck.png"
+}
+images {
+  image: "/animation_example/spineboy/images/rear_bracer.png"
+}
+images {
+  image: "/animation_example/spineboy/images/rear_foot.png"
+}
+images {
+  image: "/animation_example/spineboy/images/rear_foot_bend1.png"
+}
+images {
+  image: "/animation_example/spineboy/images/rear_foot_bend2.png"
+}
+images {
+  image: "/animation_example/spineboy/images/rear_shin.png"
+}
+images {
+  image: "/animation_example/spineboy/images/rear_thigh.png"
+}
+images {
+  image: "/animation_example/spineboy/images/rear_upper_arm.png"
+}
+images {
+  image: "/animation_example/spineboy/images/torso.png"
+}
+margin: 0
+extrude_borders: 0

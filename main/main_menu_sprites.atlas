@@ -1,5 +1,3 @@
 images {
-  image: "/main/images/octopus background.png"
+  image: "/main/images/Defold logo.png"
 }
-margin: 0
-extrude_borders: 0

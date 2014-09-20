@@ -9,10 +9,3 @@ function on_message(self, message_id, message, sender)
 		flying.fly_randomly()
 	end
 end
-
-
-function on_reload(self)
---	pprint(package.loaded["modules_example/flying"])
-	package.loaded["modules_example/flying"] = nil
-	flying = require "modules_example/flying"
-end

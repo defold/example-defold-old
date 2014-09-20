@@ -83,8 +83,8 @@ instances {
   id: "player"
   prototype: "/physics_example/player.go"
   position {
-    x: 232.7007
-    y: 307.78522
+    x: 250.08202
+    y: 305.61255
     z: 1.0
   }
   rotation {
