@@ -2,7 +2,7 @@ name: "default"
 scale_along_z: 0
 embedded_instances {
   id: "spineboy"
-  data: "embedded_components {\n  id: \"spinemodel\"\n  type: \"spinemodel\"\n  data: \"spine_scene: \\\"/animation_example/animation.spinescene\\\"\\ndefault_animation: \\\"run\\\"\\nskin: \\\"\\\"\\nblend_mode: BLEND_MODE_ALPHA\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\n\"\n  position {\n    x: 381.73907\n    y: 16.427235\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "embedded_components {\n  id: \"spinemodel\"\n  type: \"spinemodel\"\n  data: \"spine_scene: \\\"/animation_example/animation.spinescene\\\"\\ndefault_animation: \\\"run\\\"\\nskin: \\\"\\\"\\nblend_mode: BLEND_MODE_ALPHA\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\n\"\n  position {\n    x: 410.2259\n    y: 28.204582\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
   position {
     x: 0.0
     y: 0.0
@@ -15,4 +15,20 @@ embedded_instances {
     w: 1.0
   }
   scale: 1.0
+}
+embedded_instances {
+  id: "teapot"
+  data: "embedded_components {\n  id: \"model\"\n  type: \"model\"\n  data: \"mesh: \\\"/animation_example/teapot.dae\\\"\\nmaterial: \\\"/animation_example/flat.material\\\"\\ntextures: \\\"/magic_example/images/painting.png\\\"\\n\"\n  position {\n    x: 3.700149\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.14115037\n    y: 0.20608294\n    z: 0.18618006\n    w: 0.95023334\n  }\n}\n"
+  position {
+    x: 454.73224
+    y: 404.9939
+    z: 0.8423542
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 46.92229
 }

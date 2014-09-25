@@ -1,0 +1,16 @@
+name: "flat"
+tags: "tile"
+vertex_program: "/animation_example/flat.vp"
+fragment_program: "/animation_example/flat.fp"
+vertex_constants {
+  name: "view_proj"
+  type: CONSTANT_TYPE_VIEWPROJ
+}
+vertex_constants {
+  name: "world"
+  type: CONSTANT_TYPE_WORLD
+}
+fragment_constants {
+  name: "constant_name"
+  type: CONSTANT_TYPE_USER
+}
