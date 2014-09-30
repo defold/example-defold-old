@@ -1,69 +1,5 @@
 name: "default"
 instances {
-  id: "ball"
-  prototype: "/physics_example/ball.go"
-  position {
-    x: 1310.5221
-    y: 331.69363
-    z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-instances {
-  id: "ball1"
-  prototype: "/physics_example/ball.go"
-  position {
-    x: 1385.9502
-    y: 373.25607
-    z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-instances {
-  id: "ball2"
-  prototype: "/physics_example/ball.go"
-  position {
-    x: 1562.9753
-    y: 344.00842
-    z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-instances {
-  id: "ball3"
-  prototype: "/physics_example/ball.go"
-  position {
-    x: 1442.9061
-    y: 527.191
-    z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-instances {
   id: "level"
   prototype: "/physics_example/level.go"
   position {
@@ -83,9 +19,73 @@ instances {
   id: "player"
   prototype: "/physics_example/player.go"
   position {
-    x: 250.08202
-    y: 305.61255
+    x: 240.64995
+    y: 311.69385
     z: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "star"
+  prototype: "/physics_example/star.go"
+  position {
+    x: 1310.5221
+    y: 331.69363
+    z: 0.5
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "star1"
+  prototype: "/physics_example/star.go"
+  position {
+    x: 1385.9502
+    y: 373.25607
+    z: 0.5
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "star2"
+  prototype: "/physics_example/orange_star.go"
+  position {
+    x: 1918.2405
+    y: 464.64365
+    z: 0.5
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "star3"
+  prototype: "/physics_example/blue_star.go"
+  position {
+    x: 1442.9061
+    y: 527.191
+    z: 0.5
   }
   rotation {
     x: 0.0
