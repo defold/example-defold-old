@@ -10,6 +10,7 @@ local jump_speed = 800
 local max_fall_speed = 800
 local damping = 0.1
 
+-- States
 local STATE_ONGROUND = hash("onground")
 local STATE_INAIR = hash("inair")
 

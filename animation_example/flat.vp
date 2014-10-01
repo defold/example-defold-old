@@ -1,9 +1,0 @@
-uniform mediump mat4 view_proj;
-uniform mediump mat4 world;
-
-attribute mediump vec4 position;
-	
-void main()
-{
-	gl_Position = view_proj * vec4(position.xyz, 1.0);
-}
