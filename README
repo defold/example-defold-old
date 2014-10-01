@@ -1,5 +1,3 @@
-Added from work
-
 This Defold project contain a set of examples that illustrate various concepts and aspects
 of Defold development. Each example is contained within a separate folder and there is a
 main menu interface (under folder "main") that present a GUI interface to the examples and
@@ -57,10 +55,13 @@ Green butterflies	Are controlled by an autonomous game object that implements th
 Physics
 =======
 This example is a simple implementation of a platformer with slopes. There are some dynamic physics
-objects in addition to the character. Note that there are some edge cases that causes glitches and 
+objects in addition to the character. These objects have physical properties that you can play with
+to familiarize yourself with the characteristics of Box2D.
+
+The character is a kinematic object and all interaction with the game is calculated manually which allows
+precise design of the character behavior. Note that there are some edge cases that causes glitches and 
 unwanted side effects in the player movement, particularly at slope edges. These have been left as 
 an exercise for you to track down and solve.
-
 
 
 

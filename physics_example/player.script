@@ -111,7 +111,6 @@ function update(self, dt)
 	end
 
 	-- Ray cast down at each edge of the character. Used to find edges
-	
 	local pos1 = go.get_position() + vmath.vector3(player_width / 2, 0, 0)
 	local pos2 = go.get_position() - vmath.vector3(player_width / 2, 0, 0)
 

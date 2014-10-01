@@ -1,6 +1,12 @@
 images {
   image: "/physics_example/images/star.png"
 }
+images {
+  image: "/physics_example/images/blue_star.png"
+}
+images {
+  image: "/physics_example/images/orange_star.png"
+}
 animations {
   id: "idle_right"
   images {
