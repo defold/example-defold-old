@@ -1,4 +1,6 @@
-flying = require "modules_example/flying"
+-- In the require filename string, '.' characters will be changed
+-- into path separators (usually '/' on Mac and Linux and '\' on Windows).
+flying = require "modules_example.flying"
 
 function init(self)
 	flying.fly_randomly()
