@@ -9,14 +9,18 @@ function on_message(self, message_id, message, sender)
 		-- Enable the power spells
 		local summonnode = gui.get_node("summon")
 		local jailnode = gui.get_node("jail")
+		local colorchangenode = gui.get_node("colorchange")
 		gui.set_enabled(summonnode, true)
-		gui.set_enabled(jailnode, true)	
+		gui.set_enabled(jailnode, true)
+		gui.set_enabled(colorchangenode, true)	
 	elseif message_id == hash("hide_powerspells") then
 		-- Disable the power spells
 		local summonnode = gui.get_node("summon")
 		local jailnode = gui.get_node("jail")
+		local colorchangenode = gui.get_node("colorchange")
 		gui.set_enabled(summonnode, false)
 		gui.set_enabled(jailnode, false)
+		gui.set_enabled(colorchangenode, false)
 	elseif message_id == hash("hide_movement") then
 		-- Disable the movement buttons
 		local leftnode = gui.get_node("left")
@@ -37,6 +41,7 @@ function on_input(self, action_id, action)
 		local wandnode = gui.get_node("wand")
 		local summonnode = gui.get_node("summon")
 		local jailnode = gui.get_node("jail")
+		local colorchangenode = gui.get_node("colorchange")
 		-- Test if user has touched one of the valid text nodes.
 		if gui.pick_node(leftnode, x, y) and gui.is_enabled(leftnode) then
 			msg.post("wizard", "move_left")
@@ -48,6 +53,8 @@ function on_input(self, action_id, action)
 			msg.post("wizard", "summon")
 		elseif gui.pick_node(jailnode, x, y) and gui.is_enabled(jailnode) then
 			msg.post("wizard", "jail")
+		elseif gui.pick_node(colorchangenode, x, y) and gui.is_enabled(colorchangenode) then
+			msg.post("wizard", "colorchange")
 		end
 	end
 end

@@ -12,9 +12,6 @@ function on_message(self, message_id, message, sender)
 		-- Animate the wand into place in the sender's hands (assuming it's always the same). Position and rotation
 		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(65, 85, -0.1), go.EASING_INOUTSINE, 0.5)
 		go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -2), go.EASING_INOUTSINE, 0.5, 0)
-		
-		-- Now, whoever holds the wand will get magically empowered.
-		msg.post(sender, "magically_empower")		
 	elseif message_id == hash("sit_on_floor") then
 		-- Magic effect.
 		msg.post(".", "show_magic")
@@ -25,14 +22,16 @@ function on_message(self, message_id, message, sender)
 		-- Animate the wand back to the floor. Position and rotation
 		go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(530, 79, -0.1), go.EASING_INOUTSINE, 0.5)
 		go.animate(".", "euler", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(0, 0, -70), go.EASING_INOUTSINE, 0.5, 0)
-
-		-- Whoever held the wand will get magically weakened.
-		msg.post(sender, "magically_weaken")
 	elseif message_id == hash("summon_animal") then
 		-- Magic effect.
 		msg.post(".", "show_magic")
 		-- Relay a message to the target object that it should summon an animal.
 		msg.post(message.target, "summon_animal")
+	elseif message_id == hash("colorchange_animals") then
+		-- Magic effect.
+		msg.post(".", "show_magic")
+		-- Relay a message to the target object that it should colorchange the animals.
+		msg.post(message.target, "colorchange_animals")
 	elseif message_id == hash("jail_into") then
 		local prisoner = sender.path
 		msg.post(prisoner, "set_parent", { parent_id = message.target })

@@ -8,4 +8,16 @@ function init(self)
 	local rand_radius = math.random(self.radius)
 	local offset = vmath.rotate(vmath.quat_rotation_z(rand_angle), vmath.vector3(rand_radius, 0, 0))
 	go.set_position(self.center + offset)
+	
+	msg.post("#alt_sprite", "disable")
+	
+	-- Tell our container we're here
+	msg.post(self.container, "track_me")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("colorchange") then
+		msg.post("#alt_sprite", "enable")
+		msg.post("#sprite", "disable")
+	end
 end

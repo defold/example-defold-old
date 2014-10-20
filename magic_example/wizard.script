@@ -34,6 +34,9 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("summon") then
 		-- This spell takes a target object.
 		msg.post("wand#script", "summon_animal", { target = hash("/interior/cage") })
+	elseif message_id == hash("colorchange") then
+		-- This spell takes a target object.
+		msg.post("wand#script", "colorchange_animals", { target = hash("/interior/cage") })
 	elseif message_id == hash("jail") then
 		-- Only one place to jail me... The cage.
 		msg.post("wand#script", "jail_into", { target = hash("/interior/cage") })
