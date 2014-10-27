@@ -27,7 +27,6 @@ function update(self)
     render.set_blend_func(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)
     render.disable_state(render.STATE_CULL_FACE)
 
-	-- We're increasing the projection depth so we can render 3D models properly.
     render.set_projection(vmath.matrix4_orthographic(0, render.get_width(), 0, render.get_height(), -1, 1))
 	
     render.draw(self.tile_pred)
@@ -39,7 +38,6 @@ function update(self)
     render.enable_state(render.STATE_CULL_FACE)
 	-- We're increasing the projection depth so we can render 3D models properly.
     render.set_projection(vmath.matrix4_orthographic(0, render.get_width(), 0, render.get_height(), -1000, 1000))
-    render.set_view(self.view)
 
     render.draw(self.model_pred)
     render.draw_debug3d()
@@ -55,7 +53,7 @@ function update(self)
     render.draw(self.text_pred)
 
     render.set_depth_mask(false)
-    render.draw_debug2d()
+	render.draw_debug2d()
 end
 
 function on_message(self, message_id, message)
@@ -64,4 +62,8 @@ function on_message(self, message_id, message)
     elseif message_id == hash("set_view_projection") then
         self.view = message.view
     end
+end
+
+function on_reload(self)
+--	msg.post("@system:", "toggle_profile")
 end

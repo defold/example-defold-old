@@ -1,0 +1,50 @@
+name: "default"
+scale_along_z: 0
+embedded_instances {
+  id: "blurbook"
+  data: "components {\n  id: \"script\"\n  component: \"/material_example/book.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"model\"\n  type: \"model\"\n  data: \"mesh: \\\"/material_example/assets/book of defold.dae\\\"\\nmaterial: \\\"/material_example/blurry.material\\\"\\ntextures: \\\"/material_example/assets/book_of_defold_1024.png\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 698.7791
+    y: 353.78677
+    z: -500.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 50.0
+}
+embedded_instances {
+  id: "flatbook"
+  data: "components {\n  id: \"script\"\n  component: \"/material_example/book.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"model\"\n  type: \"model\"\n  data: \"mesh: \\\"/material_example/assets/book of defold.dae\\\"\\nmaterial: \\\"/material_example/flat.material\\\"\\ntextures: \\\"/material_example/assets/book_of_defold_1024.png\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 275.1465
+    y: 385.84546
+    z: 500.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 71.7155
+}
+embedded_instances {
+  id: "hud"
+  data: "components {\n  id: \"gui\"\n  component: \"/material_example/input.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 467.9235
+    y: 438.585
+    z: 0.101435706
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}

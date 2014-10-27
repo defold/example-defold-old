@@ -407,8 +407,8 @@ nodes {
 }
 nodes {
   position {
-    x: 512.0
-    y: 576.0
+    x: 192.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -464,7 +464,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 512.0
+    y: 576.0
     z: 0.0
     w: 1.0
   }
@@ -520,7 +520,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 448.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -576,7 +576,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 384.0
+    y: 448.0
     z: 0.0
     w: 1.0
   }
@@ -716,7 +716,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 320.0
+    y: 384.0
     z: 0.0
     w: 1.0
   }
@@ -749,6 +749,62 @@ nodes {
   text: "Model"
   font: "headline"
   id: "model"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: "layer"
+  inherit_alpha: false
+}
+nodes {
+  position {
+    x: 512.0
+    y: 320.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.29803923
+    y: 0.29803923
+    z: 0.29803923
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "Material"
+  font: "headline"
+  id: "material"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
