@@ -126,8 +126,7 @@ function update(self, dt)
 	go.set_position(new_pos)
 
 	-- Move camera
-	local cam_off = vmath.vector3(-512, -383, 0)
-	go.set_position(new_pos + cam_off, "/player_camera")
+	go.set_position(new_pos, "/player_camera")
 		
 	-- Reset values
 	self.acceleration.x = 0

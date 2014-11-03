@@ -11,6 +11,8 @@ end
 
 function final(self)
 	print("Spawner final()")
+	print("*** And that concludes the application lifecycle.")
+	print("*** Review the console output for the whole run.")
 end
 
 function update(self, dt)
