@@ -1,28 +1,48 @@
 function init(self)
 	msg.post("#camera", "acquire_camera_focus")
+	
+	-- Tell render script to use view and projection of camera
+	msg.post("@render:", "set_cameratype_viewproj")
 
 	-- Store current position and set target pos to the same since wanna start
 	-- at a stand-still.
 	self.pos = go.get_world_position()
 	self.target = self.pos
 	self.look_at = self.pos
+	-- Player speed
+	self.speed = 0
 end
 
 function update(self, dt)
 	-- We're defining a dead-zone around the player and doesn't set a new target
 	-- for the camera until enough movement happens. This is to prevent small camera 
 	-- movements if the player does small movements back and forth.
-	if vmath.length(self.look_at - self.pos) > 100 then
-		self.target = self.look_at
-	end
+--	if vmath.length(self.look_at - self.pos) > 100 then
+--		self.target = self.look_at
+--		self.target.z = 0
+--	end
 	-- Calculate a new position based on current pos interpolated towards current
 	-- target position.
-	self.pos = vmath.lerp(0.03, self.pos, self.target)
-	go.set_position(self.pos)	
+	self.pos = vmath.lerp(0.03, self.pos, self.look_at)
+	
+	-- Measure speed.
+	local v1 = go.get_world_position()
+	v1.z = 0
+	local v2 = self.pos
+	v2.z = 0
+	local speed = vmath.length(v2 - v1)
+	-- Depending on how fast player is moving, pull camera back or push it forward.
+	
+	self.pos.z = 500 + speed * speed * 10
+	go.set_position(self.pos)
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("look_at") then	
 		self.look_at = message.position
 	end
+end
+
+function on_reload(self)
+	go.set_rotation(vmath.quat_rotation_z(0.314) * vmath.quat_rotation_y(0.314))
 end

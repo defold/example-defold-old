@@ -22,6 +22,7 @@ function init(self)
 	-- send "set_view_projection" messages to the render script and we
 	-- can update the view matrix with the value the camera provides.
     self.view = vmath.matrix4()
+    self.projection = vmath.matrix4()
     self.has_camera = false
 end
 
@@ -63,7 +64,11 @@ function update(self)
 	else
 		local w = render.get_width()
 		local h = render.get_height()
-	    render.set_projection(vmath.matrix4_orthographic(- w / 2, w / 2, -h / 2, h / 2, -1, 1))	
+		if self.has_camera == hash("view") then
+		    render.set_projection(vmath.matrix4_orthographic(- w / 2, w / 2, -h / 2, h / 2, -1000, 1000))
+		else
+			render.set_projection(self.projection)
+		end
 	end
 	
 	-- Now, draw everything in the "tile_pred" predicate (tiles and sprites)
@@ -114,9 +119,15 @@ end
 function on_message(self, message_id, message)
     if message_id == hash("clear_color") then
         self.clear_color = message.color
+    elseif message_id == hash("set_cameratype_view") then
+    	-- User message. Camera with view and no projection.
+    	self.has_camera = hash("view")
+    elseif message_id == hash("set_cameratype_viewproj") then
+    	-- User message. Camera with view and projection.
+    	self.has_camera = hash("viewproj")
     elseif message_id == hash("set_view_projection") then
-    	-- We have a camera feeding us views and projections.
-    	self.has_camera = true
+    	-- Camera view and projection arrives here.
         self.view = message.view
+        self.projection = message.projection
     end
 end

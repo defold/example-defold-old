@@ -4,8 +4,24 @@ embedded_instances {
   id: "camera"
   data: "components {\n  id: \"camera\"\n  component: \"/camera_example/camera.camera\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\ncomponents {\n  id: \"script\"\n  component: \"/camera_example/camera.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
   position {
-    x: 517.1345
-    y: 318.6992
+    x: 639.1388
+    y: 436.09952
+    z: 100.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "level"
+  data: "components {\n  id: \"tilemap\"\n  component: \"/camera_example/level.tilemap\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {
@@ -23,22 +39,6 @@ embedded_instances {
     x: 574.636
     y: 385.80212
     z: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
-}
-embedded_instances {
-  id: "level"
-  data: "components {\n  id: \"tilemap\"\n  component: \"/camera_example/level.tilemap\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
   }
   rotation {
     x: 0.0
