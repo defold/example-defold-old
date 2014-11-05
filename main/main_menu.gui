@@ -16,7 +16,7 @@ background_color {
 nodes {
   position {
     x: 192.0
-    y: 448.0
+    y: 384.0
     z: 0.0
     w: 1.0
   }
@@ -72,7 +72,7 @@ nodes {
 nodes {
   position {
     x: 192.0
-    y: 576.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -128,7 +128,7 @@ nodes {
 nodes {
   position {
     x: 192.0
-    y: 512.0
+    y: 448.0
     z: 0.0
     w: 1.0
   }
@@ -184,7 +184,7 @@ nodes {
 nodes {
   position {
     x: 192.0
-    y: 320.0
+    y: 256.0
     z: 0.0
     w: 1.0
   }
@@ -240,7 +240,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 704.0
+    y: 667.0201
     z: 0.0
     w: 1.0
   }
@@ -296,7 +296,7 @@ nodes {
 nodes {
   position {
     x: 192.0
-    y: 384.0
+    y: 320.0
     z: 0.0
     w: 1.0
   }
@@ -352,7 +352,7 @@ nodes {
 nodes {
   position {
     x: 192.0
-    y: 256.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -408,7 +408,7 @@ nodes {
 nodes {
   position {
     x: 192.0
-    y: 192.0
+    y: 128.0
     z: 0.0
     w: 1.0
   }
@@ -464,7 +464,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 576.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -520,7 +520,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 512.0
+    y: 448.0
     z: 0.0
     w: 1.0
   }
@@ -576,7 +576,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 448.0
+    y: 384.0
     z: 0.0
     w: 1.0
   }
@@ -670,11 +670,17 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
 }
 nodes {
   position {
-    x: 900.0
-    y: 100.0
+    x: 896.0
+    y: 675.46387
     z: 0.0
     w: 1.0
   }
@@ -712,11 +718,17 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
 }
 nodes {
   position {
     x: 512.0
-    y: 384.0
+    y: 320.0
     z: 0.0
     w: 1.0
   }
@@ -772,7 +784,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 320.0
+    y: 256.0
     z: 0.0
     w: 1.0
   }
@@ -828,7 +840,7 @@ nodes {
 nodes {
   position {
     x: 512.0
-    y: 256.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -861,6 +873,62 @@ nodes {
   text: "Camera"
   font: "headline"
   id: "camera"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: "layer"
+  inherit_alpha: false
+}
+nodes {
+  position {
+    x: 512.0
+    y: 128.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.29803923
+    y: 0.29803923
+    z: 0.29803923
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "Slice 9"
+  font: "headline"
+  id: "slice9"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
