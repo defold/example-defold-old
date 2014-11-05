@@ -1,0 +1,12 @@
+function init(self)
+	local node = gui.get_node("growbutton")
+	scale_up(node)
+end
+
+function scale_up(node)
+	gui.animate(node, gui.PROP_SIZE, vmath.vector3(500, 128, 0), gui.EASING_INOUTSINE, 2.0, 0, function () scale_down(node) end)
+end
+
+function scale_down(node)
+	gui.animate(node, gui.PROP_SIZE, vmath.vector3(300, 128, 0), gui.EASING_INOUTSINE, 2.0, 0, function () scale_up(node) end)
+end

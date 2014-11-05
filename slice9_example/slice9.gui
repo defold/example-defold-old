@@ -1,4 +1,4 @@
-script: ""
+script: "/slice9_example/slice9.gui_script"
 fonts {
   name: "headline"
   font: "/main/font/headline.font"
@@ -64,6 +64,63 @@ nodes {
     z: 64.0
     w: 64.0
   }
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 300.0
+    y: 200.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 0.34509805
+    z: 0.09019608
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "This frame can contain dialog text."
+  font: "headline"
+  id: "box1text"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: true
+  parent: "box1"
+  layer: ""
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -172,8 +229,8 @@ nodes {
 }
 nodes {
   position {
-    x: 295.21735
-    y: 283.88046
+    x: 256.0
+    y: 290.54984
     z: 0.0
     w: 1.0
   }
@@ -204,7 +261,7 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "slice9_2"
-  id: "button2"
+  id: "growbutton"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -253,7 +310,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "Longer text"
   font: "headline"
-  id: "b2text"
+  id: "growtext"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -271,7 +328,7 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "button2"
+  parent: "growbutton"
   layer: ""
   inherit_alpha: true
 }
@@ -382,8 +439,8 @@ nodes {
 }
 nodes {
   position {
-    x: 724.13684
-    y: 475.56192
+    x: 769.15515
+    y: 478.8966
     z: 0.0
     w: 1.0
   }
@@ -427,4 +484,61 @@ nodes {
     z: 64.0
     w: 64.0
   }
+}
+nodes {
+  position {
+    x: -137.98497
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 310.0
+    y: 200.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 0.34509805
+    z: 0.09019608
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "This frame is larger so it can contain much more dialog text. Quite a lot more text, actually."
+  font: "headline"
+  id: "box2text"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_W
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: true
+  parent: "box2"
+  layer: ""
+  inherit_alpha: true
 }
