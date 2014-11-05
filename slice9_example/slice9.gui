@@ -20,7 +20,7 @@ background_color {
 nodes {
   position {
     x: 256.0
-    y: 512.0
+    y: 578.6937
     z: 0.0
     w: 1.0
   }
@@ -51,7 +51,7 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "slice9"
-  id: "box1"
+  id: "rotatebox"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -85,7 +85,7 @@ nodes {
     w: 1.0
   }
   size {
-    x: 300.0
+    x: 320.0
     y: 200.0
     z: 0.0
     w: 1.0
@@ -98,9 +98,9 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "This frame can contain dialog text."
+  text: "This frame contains some dialog text."
   font: "headline"
-  id: "box1text"
+  id: "rotateboxtext"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -118,7 +118,7 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: true
-  parent: "box1"
+  parent: "rotatebox"
   layer: ""
   inherit_alpha: true
 }
@@ -471,7 +471,7 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "slice9"
-  id: "box2"
+  id: "growbox"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -520,7 +520,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "This frame is larger so it can contain much more dialog text. Quite a lot more text, actually."
   font: "headline"
-  id: "box2text"
+  id: "growboxtext"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_W
@@ -538,7 +538,7 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: true
-  parent: "box2"
+  parent: "growbox"
   layer: ""
   inherit_alpha: true
 }
