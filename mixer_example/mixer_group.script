@@ -1,0 +1,27 @@
+go.property("gain", 1)
+
+function init(self)
+	self.name = nil
+	self.stored_gain = nil
+	self.muted = false
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("set_name") then
+		self.name = message.name
+	elseif message_id == hash("mute") and not self.muted then
+		self.stored_gain = self.gain
+		self.gain = 0
+		self.muted = true
+	elseif message_id == hash("unmute") and self.muted then
+		self.gain = self.stored_gain
+		self.muted = false
+	end
+end
+
+function update(self, dt)
+	if self.name == nil then
+		return
+	end
+	sound.set_group_gain(self.name, self.gain)
+end

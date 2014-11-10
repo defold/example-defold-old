@@ -1,0 +1,18 @@
+name: "default"
+scale_along_z: 0
+embedded_instances {
+  id: "mixer"
+  data: "components {\n  id: \"gui\"\n  component: \"/mixer_example/mixer.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\ncomponents {\n  id: \"script\"\n  component: \"/mixer_example/mixer.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"group_factory\"\n  type: \"factory\"\n  data: \"prototype: \\\"/mixer_example/mixer_group.go\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"radio\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/radio.ogg\\\"\\nlooping: 1\\ngroup: \\\"radio\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"sound\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/music.ogg\\\"\\nlooping: 1\\ngroup: \\\"music\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"tone\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/tone.wav\\\"\\nlooping: 1\\ngroup: \\\"tone\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
