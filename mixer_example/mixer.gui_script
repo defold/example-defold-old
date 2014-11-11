@@ -61,6 +61,7 @@ local function update_vu(self, group_name)
 
 	-- Show the VU meter
 	local left, right = sound.get_rms(group_name, 2048 / 65536.0)
+	
 	left = math.max(0.0000001, left)
 	right = math.max(0.0000001, right)
 	left = 20 * math.log10(left)
@@ -74,7 +75,7 @@ local function update_vu(self, group_name)
 	rs.y = scale * -(right - MAX_DB)
 	gui.set_size(mixer.vu_l, ls)
 	gui.set_size(mixer.vu_r, rs)
-			
+				
 	-- Peak markers position
 	left, right = sound.get_peak(group_name, 2048 * 10 / 65536.0)
 	left = math.max(0.0000001, left)
@@ -107,7 +108,7 @@ local function update_vu(self, group_name)
 	gui.set_color(mixer.peak_l, vmath.vector4(1-lr, 1-lg, 0, 1))
 	gui.set_color(mixer.peak_r, vmath.vector4(1-rr, 1-rg, 0, 1))
 	
-	gui.set_text(mixer.peak, math.max(math.floor(left + 0.5), math.floor(right + 0.5)))
+	gui.set_text(mixer.peak, string.format("%.1f", math.max(left, right)))
 end
 
 function update_knob(self, group_name)
@@ -124,7 +125,7 @@ function update_knob(self, group_name)
 	kp.y = mixer.min_y + scale * (db - MIN_DB)
 	gui.set_position(mixer.knob, kp)
 
-	gui.set_text(mixer.gain, math.floor(db + 0.5))
+	gui.set_text(mixer.gain, string.format("%.1f", db))
 end
 
 function update(self, dt)

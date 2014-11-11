@@ -7,9 +7,9 @@ function init(self)
 	msg.post(".", "init_mixer_groups")
 	
 	-- Play some music
-	msg.post("#sound", "play_sound")
-	msg.post("#tone", "play_sound")
-	msg.post("#radio", "play_sound")
+	msg.post("#sound", "play_sound", { gain = 1.0 })
+	msg.post("#tone", "play_sound", { gain = 1.0 })
+	msg.post("#radio", "play_sound", { gain = 1.0 })
 end
 
 function on_message(self, message_id, message, sender)
@@ -41,10 +41,10 @@ function on_message(self, message_id, message, sender)
 		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 5)	
 		url.path = self.mixer_groups["tone"]
 		go.set(url, "gain", 1)
-		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 5, 1)		
+		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 4, 1)		
 		url.path = self.mixer_groups["radio"]
 		go.set(url, "gain", 1)
-		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 5, 2)
+		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 3, 2)
 	elseif message_id == hash("stop_animation") then
 		local url = msg.url()
 		url.path = self.mixer_groups["music"]
