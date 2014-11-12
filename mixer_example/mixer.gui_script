@@ -16,8 +16,8 @@ function init(self)
 	local spacing = gui.get_size(template).x + 1
 	gui.set_enabled(template, false)
 
-	local group_names = sound.get_group_names()
-	for i, name in ipairs(sound.get_group_names()) do
+	for i, group_hash in ipairs(sound.get_groups()) do
+		print(group_hash)
 		local tree = gui.clone_tree(template)
 
 		-- Control min and max y
@@ -30,8 +30,10 @@ function init(self)
 		gui.set_position(tree["mixer"], vmath.vector3(x, 350, 0))
 		gui.set_enabled(tree["mixer"], true)
 		
+		-- Name is only available in debug!
+		local name = sound.get_group_name(group_hash)
 		gui.set_text(tree["name"], name)
-		self.mixers[name] = { name = name, 
+		self.mixers[group_hash] = { name = name, 
 			min_y = min_y, max_y = max_y,
 			peak_l = tree["peak_l"], peak_r = tree["peak_r"],
 			vu_l = tree["vu_l"], vu_r = tree["vu_r"],
@@ -39,11 +41,11 @@ function init(self)
 			knob = tree["knob"], mute = tree["mute"], muted = false }
 
 		-- Master has no solo
-		if name == "master" then
+		if group_hash == hash("master") then
 			gui.delete_node(tree["solo"])
 		else
-			self.mixers[name].solo = tree["solo"]
-			self.mixers[name].soloed = false
+			self.mixers[group_hash].solo = tree["solo"]
+			self.mixers[group_hash].soloed = false
 		end
 
 	end
@@ -53,14 +55,14 @@ local function clamp(low, n, high)
 	return math.min(math.max(n, low), high)
 end
 
-local function update_vu(self, group_name)
-	local mixer = self.mixers[group_name]
+local function update_vu(self, group)
+	local mixer = self.mixers[group]
 
 	local length = mixer.max_y - mixer.min_y
 	local scale = length / (MAX_DB - MIN_DB)
 
 	-- Show the VU meter
-	local left, right = sound.get_rms(group_name, 2048 / 65536.0)
+	local left, right = sound.get_rms(group, 2048 / 65536.0)
 	
 	left = math.max(0.0000001, left)
 	right = math.max(0.0000001, right)
@@ -77,7 +79,7 @@ local function update_vu(self, group_name)
 	gui.set_size(mixer.vu_r, rs)
 				
 	-- Peak markers position
-	left, right = sound.get_peak(group_name, 2048 * 10 / 65536.0)
+	left, right = sound.get_peak(group, 2048 * 10 / 65536.0)
 	left = math.max(0.0000001, left)
 	right = math.max(0.0000001, right)
 	left = 20 * math.log10(left)
@@ -111,13 +113,13 @@ local function update_vu(self, group_name)
 	gui.set_text(mixer.peak, string.format("%.1f", math.max(left, right)))
 end
 
-function update_knob(self, group_name)
-	local mixer = self.mixers[group_name]
+function update_knob(self, group)
+	local mixer = self.mixers[group]
 	
 	local length = mixer.max_y - mixer.min_y
 	local scale = length / (MAX_DB - MIN_DB)
 
-	local gain = sound.get_group_gain(group_name)
+	local gain = sound.get_group_gain(group)
 	local db = 20 * math.log10(gain)
 	db = clamp(MIN_DB, db, MAX_DB)
 
@@ -129,9 +131,9 @@ function update_knob(self, group_name)
 end
 
 function update(self, dt)
-	for i, name in ipairs(sound.get_group_names()) do
-		update_vu(self, name)
-		update_knob(self, name)
+	for i, group_hash in ipairs(sound.get_groups()) do
+		update_vu(self, group_hash)
+		update_knob(self, group_hash)
 	end
 end
 
@@ -151,20 +153,20 @@ function on_input(self, action_id, action)
 		end
 	
 		-- start interaction with mixer units
-		for i, name in ipairs(sound.get_group_names()) do
-			local mixer = self.mixers[name]
+		for i, group_hash in ipairs(sound.get_groups()) do
+			local mixer = self.mixers[group_hash]
 			
 			if gui.pick_node(mixer.knob, action.x, action.y) then
-				self.drag_group = name
+				self.drag_group = group_hash
 			elseif gui.pick_node(mixer.mute, action.x, action.y) then
 				-- Mute
 				if not mixer.muted then
 					mixer.muted = true
-					msg.post("mixer", "mute", { group = name })
+					msg.post("mixer", "mute", { group = group_hash })
 					gui.set_color(mixer.mute, vmath.vector4(1, 0.25, 0.25, 1))
 				else
 					mixer.muted = false
-					msg.post("mixer", "unmute", { group = name })	
+					msg.post("mixer", "unmute", { group = group_hash })	
 					gui.set_color(mixer.mute, vmath.vector4(0.25, 0.25, 0.25, 1))				
 				end
 			end
@@ -174,11 +176,11 @@ function on_input(self, action_id, action)
 				-- Solo
 					if not mixer.soloed then
 						mixer.soloed = true
-						msg.post("mixer", "solo", { group = name })
+						msg.post("mixer", "solo", { group = group_hash })
 						gui.set_color(mixer.solo, vmath.vector4(0.0, 0.5, 0.8, 1))
 					else
 						mixer.soloed = false
-						msg.post("mixer", "unsolo", { group = name })
+						msg.post("mixer", "unsolo", { group = group_hash })
 						gui.set_color(mixer.solo, vmath.vector4(0.25, 0.25, 0.25, 1))
 					end					
 				end
@@ -187,22 +189,22 @@ function on_input(self, action_id, action)
 		
 		-- If there are soloed mixers, mute everyone else except non-soloable
 		local solo_exists = false
-		for i, name in ipairs(sound.get_group_names()) do
-			if self.mixers[name].soloed then
+		for i, group_hash in ipairs(sound.get_groups()) do
+			if self.mixers[group_hash].soloed then
 				solo_exists = true
-				for i, name in ipairs(sound.get_group_names()) do
-					if self.mixers[name].soloed == false then
-						msg.post("mixer", "mute", { group = name })
-					elseif self.mixers[name].muted == false then
-						msg.post("mixer", "unmute", { group = name })						
+				for i, group_hash in ipairs(sound.get_groups()) do
+					if self.mixers[group_hash].soloed == false then
+						msg.post("mixer", "mute", { group = group_hash })
+					elseif self.mixers[group_hash].muted == false then
+						msg.post("mixer", "unmute", { group = group_hash })						
 					end
 				end
 			end
 		end
 		if not solo_exists then
-			for i, name in ipairs(sound.get_group_names()) do
-				if not self.mixers[name].muted then
-					msg.post("mixer", "unmute", { group = name })					
+			for i, group_hash in ipairs(sound.get_groups()) do
+				if not self.mixers[group_hash].muted then
+					msg.post("mixer", "unmute", { group = group_hash })					
 				end
 			end
 		end

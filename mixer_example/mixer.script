@@ -1,24 +1,17 @@
 function init(self)
 	self.mixer_groups = {}
-	for i, name in ipairs(sound.get_group_names()) do
-		self.mixer_groups[name] = factory.create("#group_factory", nil, nil)
+	for i, group_hash in ipairs(sound.get_groups()) do
+		self.mixer_groups[group_hash] = factory.create("#group_factory", nil, nil, { group = group_hash })
 	end
-
-	msg.post(".", "init_mixer_groups")
 	
 	-- Play some music
-	msg.post("#sound", "play_sound", { gain = 1.0 })
+	msg.post("#music", "play_sound", { gain = 1.0 })
 	msg.post("#tone", "play_sound", { gain = 1.0 })
 	msg.post("#radio", "play_sound", { gain = 1.0 })
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("init_mixer_groups") then
-		-- Set the name for all spawned mixer groups
-		for i, name in ipairs(sound.get_group_names()) do
-			msg.post(self.mixer_groups[name], "set_name", { name = name })
-		end
-	elseif message_id == hash("set_group_gain") then
+	if message_id == hash("set_group_gain") then
 		local url = msg.url()
 		url.path = self.mixer_groups[message.group]
 		url.fragment = hash("script")
@@ -35,24 +28,24 @@ function on_message(self, message_id, message, sender)
 		msg.post(url, "unmute")
 	elseif message_id == hash("start_animation") then
 		local url = msg.url()
-		url.path = self.mixer_groups["music"]
+		url.path = self.mixer_groups[hash("music")]
 		url.fragment = hash("script")
 		go.set(url, "gain", 1)
 		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 5)	
-		url.path = self.mixer_groups["tone"]
+		url.path = self.mixer_groups[hash("tone")]
 		go.set(url, "gain", 1)
 		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 4, 1)		
-		url.path = self.mixer_groups["radio"]
+		url.path = self.mixer_groups[hash("radio")]
 		go.set(url, "gain", 1)
 		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 3, 2)
 	elseif message_id == hash("stop_animation") then
 		local url = msg.url()
-		url.path = self.mixer_groups["music"]
+		url.path = self.mixer_groups[hash("music")]
 		url.fragment = hash("script")
 		go.cancel_animations(url, "gain")
-		url.path = self.mixer_groups["tone"]
+		url.path = self.mixer_groups[hash("tone")]
 		go.cancel_animations(url, "gain")		
-		url.path = self.mixer_groups["radio"]
+		url.path = self.mixer_groups[hash("radio")]
 		go.cancel_animations(url, "gain")		
 	end
 end
