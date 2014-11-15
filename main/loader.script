@@ -2,4 +2,10 @@ function init(self)
 	-- The loader game object that holds the collection proxy needs to acquire input
 	-- for objects in the loaded collection to receive input.
 	msg.post(".", "acquire_input_focus")
+
+    http.request("http://www.google.com", "GET", function (response)
+	   	print(response.status)
+	   	print(response.payload)
+	   	print(response.headers)
+    end)
 end
