@@ -1,12 +1,13 @@
 local gate_time = 0.3
 
 function init(self)
-	-- Store played sounds in table and count down each frame until they have been 
+	-- Store played sound timers in table and count down each frame until they have been 
 	-- in the table for "gate_time" seconds. Then remove them.
 	self.sounds = {}
 end
 
 function update(self, dt)
+	-- Count down the stored timers
 	for k,v in pairs(self.sounds) do
 		self.sounds[k] = self.sounds[k] - dt
 		if self.sounds[k] < 0 then
@@ -19,7 +20,7 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("play") then
 		-- Only play sounds that are not currently in the gating table.
 		if self.sounds[message.soundcomponent] == nil then
-			-- Store sound in table
+			-- Store sound timer in table
 			self.sounds[message.soundcomponent] = gate_time
 			-- Redirect the "play_sound" message to the real target
 			msg.post(message.soundcomponent, "play_sound", { gain = message.gain })
