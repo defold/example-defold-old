@@ -1,0 +1,18 @@
+function init(self)
+	self.max_particles = tonumber(sys.get_config("particle_fx.max_particle_count"))
+	self.particles = 0
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("permission_to") then
+		if message.message == hash("fire_big") and self.particles + 300 < self.max_particles then
+			msg.post(sender, message.message)
+			self.particles = self.particles + 300
+		elseif message.message == hash("fire_small") and self.particles + 75 < self.max_particles then
+			msg.post(sender, message.message)	
+			self.particles = self.particles + 75
+		end		
+	elseif message_id == hash("done") then
+		self.particles = self.particles - message.particles
+	end
+end

@@ -1,0 +1,27 @@
+function init(self)
+    -- Add initialization code here
+    -- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- We're gonna try to fire a shot almost every frame. This would create total mayhem unless
+	-- we gated the spawning by routing the spawning through a simple gate.
+	local r = math.random()
+	if r < 0.1 then
+		msg.post("/launch_control#script", "permission_to", { message = hash("fire_small") })		
+	elseif r < 0.8 then
+		msg.post("/launch_control#script", "permission_to", { message = hash("fire_big") })
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("fire_big") or message_id == hash("fire_small") then	
+		local pos = vmath.vector3(math.random() * sys.get_config("display.width"),
+									math.random() * sys.get_config("display.height"), 0)	
+		factory.create("#fireworksfactory", pos, nil, { style = message_id } )
+	end
+end
+
+function on_reload(self)
+	msg.post("@system:", "toggle_profile")
+end

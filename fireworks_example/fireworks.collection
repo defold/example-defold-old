@@ -1,0 +1,66 @@
+name: "default"
+scale_along_z: 0
+embedded_instances {
+  id: "crazy_spawner"
+  data: "components {\n  id: \"script\"\n  component: \"/fireworks_example/crazy_spawner.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"fireworksfactory\"\n  type: \"factory\"\n  data: \"prototype: \\\"/fireworks_example/fireworks.go\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 357.3459
+    y: 350.80905
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "sounds"
+  data: "embedded_components {\n  id: \"fw1\"\n  type: \"sound\"\n  data: \"sound: \\\"/fireworks_example/sounds/fireworks_1.wav\\\"\\nlooping: 0\\ngroup: \\\"master\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"fw2\"\n  type: \"sound\"\n  data: \"sound: \\\"/fireworks_example/sounds/fireworks_2.wav\\\"\\nlooping: 0\\ngroup: \\\"master\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"fw3\"\n  type: \"sound\"\n  data: \"sound: \\\"/fireworks_example/sounds/fireworks_3.wav\\\"\\nlooping: 0\\ngroup: \\\"master\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"fw4\"\n  type: \"sound\"\n  data: \"sound: \\\"/fireworks_example/sounds/fireworks_4.wav\\\"\\nlooping: 0\\ngroup: \\\"master\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"fw5\"\n  type: \"sound\"\n  data: \"sound: \\\"/fireworks_example/sounds/fireworks_5.wav\\\"\\nlooping: 0\\ngroup: \\\"master\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "launch_control"
+  data: "components {\n  id: \"script\"\n  component: \"/fireworks_example/launch_control.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 357.3459
+    y: 350.80905
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "sound_gate"
+  data: "components {\n  id: \"script\"\n  component: \"/fireworks_example/sound_gate.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
