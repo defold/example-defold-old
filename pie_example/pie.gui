@@ -50,7 +50,7 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: true
-  outerBounds: PIEBOUNDS_RECTANGLE
+  outerBounds: PIEBOUNDS_ELLIPSE
   innerRadius: 0.0
   perimeterVertices: 16
   pieFillAngle: 226.0

@@ -1,6 +1,6 @@
 function init(self)
-    -- Add initialization code here
-    -- Remove this function if not needed
+	local node = gui.get_node("pie")
+	gui.animate(node, "fill_angle", 50, gui.EASING_INOUTSINE, 5)
 end
 
 function final(self)
