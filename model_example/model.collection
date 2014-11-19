@@ -2,7 +2,7 @@ name: "default"
 scale_along_z: 0
 embedded_instances {
   id: "model"
-  data: "components {\n  id: \"script\"\n  component: \"/model_example/book.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"model\"\n  type: \"model\"\n  data: \"mesh: \\\"/model_example/assets/book of defold.dae\\\"\\nmaterial: \\\"/model_example/textured.material\\\"\\ntextures: \\\"/model_example/assets/book_of_defold_1024.png\\\"\\n\"\n  position {\n    x: 1.4101743\n    y: 0.7832592\n    z: -0.19872442\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n  id: \"script\"\n  component: \"/model_example/book.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"model\"\n  type: \"model\"\n  data: \"mesh: \\\"/model_example/assets/book_of_defold.dae\\\"\\nmaterial: \\\"/model_example/textured.material\\\"\\ntextures: \\\"/model_example/assets/book_of_defold_1024.png\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
   position {
     x: 381.07205
     y: 334.78375

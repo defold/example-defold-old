@@ -9,7 +9,5 @@ void main()
 {
     mediump mat4 mvp = view_proj * world;
     gl_Position = mvp * vec4(position.xyz, 1.0);
-    gl_FrontColor = gl_Color;
-    gl_BackColor = gl_Color;
 	var_texcoord0 = texcoord0;
 }
