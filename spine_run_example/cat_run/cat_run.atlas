@@ -1,0 +1,62 @@
+images {
+  image: "/graphics/heroes/cat_run/images/back_arm01.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/back_arm02.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/back_foot.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/back_leg01.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/back_leg02.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/back_paw.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/front_arm01.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/front_arm02.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/front_foot.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/front_leg01.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/front_leg02.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/front_paw.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/body.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/lower_body.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/eyelids.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/tail.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/right_ear.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/left_ear.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/head.png"
+}
+images {
+  image: "/graphics/heroes/cat_run/images/hat.png"
+}
+margin: 0
+extrude_borders: 0
