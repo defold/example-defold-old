@@ -11,8 +11,54 @@ background_color {
 }
 nodes {
   position {
+    x: 256.0
+    y: 256.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 45.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 200.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PIE
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "pie"
+  id: "pacman"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  outerBounds: PIEBOUNDS_ELLIPSE
+  innerRadius: 0.0
+  perimeterVertices: 32
+  pieFillAngle: 270.0
+}
+nodes {
+  position {
     x: 512.0
-    y: 384.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -43,15 +89,61 @@ nodes {
   type: TYPE_PIE
   blend_mode: BLEND_MODE_ALPHA
   texture: "pie"
-  id: "pie"
+  id: "square"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: true
-  outerBounds: PIEBOUNDS_ELLIPSE
+  outerBounds: PIEBOUNDS_RECTANGLE
   innerRadius: 0.0
-  perimeterVertices: 16
-  pieFillAngle: 226.0
+  perimeterVertices: 4
+  pieFillAngle: 360.0
+}
+nodes {
+  position {
+    x: 768.0
+    y: 256.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 200.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_PIE
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "pie"
+  id: "funky"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  outerBounds: PIEBOUNDS_RECTANGLE
+  innerRadius: 40.0
+  perimeterVertices: 32
+  pieFillAngle: 360.0
 }

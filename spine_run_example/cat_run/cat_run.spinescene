@@ -1,2 +1,2 @@
-spine_json: "/graphics/heroes/cat_run/run.json"
-atlas: "/graphics/heroes/cat_run/cat_run.atlas"
+spine_json: "/spine_run_example/cat_run/run.json"
+atlas: "/spine_run_example/cat_run/cat_run.atlas"
