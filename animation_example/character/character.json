@@ -1808,7 +1808,7 @@
 		},
 		"events": [
 			{ "time": 0, "name": "footstep" },
-			{ "time": 0.4, "name": "footstep", "int": 1 }
+			{ "time": 0.4, "name": "footstep", "int": 1, "float": 0.47, "string": "script" }
 		]
 	},
 	"shoot": {
