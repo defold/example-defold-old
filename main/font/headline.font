@@ -2,4 +2,5 @@ font: "/main/font/SourceSansPro-Black.otf"
 material: "/builtins/fonts/font.material"
 size: 48
 outline_alpha: 1.0
-outline_width: 4.0
+outline_width: 3.0
+shadow_alpha: 1.0

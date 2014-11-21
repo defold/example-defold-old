@@ -10,6 +10,19 @@ function init(self)
 
 	gui.animate(funky, "fill_angle", 0, gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_LOOP_FORWARD)
 	gui.animate(funky, "rotation.z", 360, gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_LOOP_FORWARD)
-	gui.animate(funky, "inner_radius", 80, gui.EASING_INOUTSINE, 2, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
-	gui.animate(funky, "scale", 1.5, gui.EASING_INOUTSINE, 2, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
+	gui.animate(funky, "inner_radius", 75, gui.EASING_INOUTSINE, 2, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
+	funky_switch()
+end
+
+local state = hash("square")
+function funky_switch()
+	local funky = gui.get_node("funky")
+	if state == hash("square") then
+		gui.set_outer_bounds(funky, gui.PIEBOUNDS_ELLIPSE)
+		state = hash("circle")
+	else
+		gui.set_outer_bounds(funky, gui.PIEBOUNDS_RECTANGLE)
+		state = hash("square")	
+	end
+	gui.animate(funky, "scale", 1.5, gui.EASING_INOUTSINE, 1, 0, funky_switch, gui.PLAYBACK_ONCE_FORWARD)
 end
