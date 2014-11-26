@@ -1,0 +1,18 @@
+local map_w = 720   -- Map width
+local map_h = 620	-- Map height
+local map_r = 100	-- Minimap radius
+
+function init(self)
+	self.t = 0
+end
+
+function update(self, dt)
+	self.t = self.t + math.pi / 512
+	local max_xoffset = (map_w / 2 - map_r)
+	local max_yoffset = (map_h / 2 - map_r)
+	local x = math.sin(self.t) * max_xoffset
+	local y = math.cos(self.t) * max_yoffset
+	
+	local node = gui.get_node("map")
+	gui.set_position(node, vmath.vector3(x, y, 0))
+end

@@ -27,8 +27,8 @@ background_color {
 }
 nodes {
   position {
-    x: 200.0
-    y: 720.0
+    x: 192.0
+    y: 64.0
     z: 0.0
     w: 1.0
   }
@@ -66,6 +66,15 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -123,11 +132,14 @@ nodes {
   parent: "left"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 824.0
-    y: 720.0
+    x: 832.0
+    y: 64.0
     z: 0.0
     w: 1.0
   }
@@ -165,6 +177,15 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -222,11 +243,14 @@ nodes {
   parent: "right"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 192.0
-    y: 640.0
+    x: 320.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -264,11 +288,20 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 0.8558777
-    y: 8.558777
+    x: 0.0
+    y: 0.0
     z: 0.0
     w: 1.0
   }
@@ -307,11 +340,20 @@ nodes {
   parent: "wand"
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 320.0
-    y: 640.0
+    x: 448.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -349,6 +391,15 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -392,11 +443,20 @@ nodes {
   parent: "summon"
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 448.0
-    y: 640.0
+    x: 576.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -434,6 +494,15 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -477,11 +546,20 @@ nodes {
   parent: "jail"
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 576.0
-    y: 640.0
+    x: 704.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -519,6 +597,15 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -562,6 +649,15 @@ nodes {
   parent: "colorchange"
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -605,6 +701,15 @@ nodes {
   parent: "colorchange"
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -648,4 +753,14 @@ nodes {
   parent: "colorchange"
   layer: ""
   inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
+material: "/builtins/materials/gui.material"

@@ -119,6 +119,11 @@ end
 function on_message(self, message_id, message)
     if message_id == hash("clear_color") then
         self.clear_color = message.color
+    elseif message_id == hash("no_camera") then
+    	-- User message. No camera
+    	self.has_camera = nil
+   		self.view = vmath.matrix4()
+    	self.projection = vmath.matrix4()
     elseif message_id == hash("set_cameratype_view") then
     	-- User message. Camera with view and no projection.
     	self.has_camera = hash("view")
