@@ -1,8 +1,6 @@
 function init(self)
 	msg.post("#", "acquire_input_focus")
 	self.t = 0
-	self.invert_square = false
-	self.invert_hexagon = false
 end
 
 function update(self, dt)
@@ -18,25 +16,23 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("hexagon_toggle") then
 		local node = gui.get_node("hexagon")
 		local textnode = gui.get_node("hexagon_text")
-		if self.invert_hexagon then
+		if gui.get_is_clipping_inverted(node) then
 			gui.set_clipping_inverted(node, false)
 			gui.set_text(textnode, "HEXAGON NORMAL")
 		else
 			gui.set_clipping_inverted(node, true)
 			gui.set_text(textnode, "HEXAGON INVERTED")
 		end
-		self.invert_hexagon = not self.invert_hexagon
 	elseif message_id == hash("square_toggle") then
 		local node = gui.get_node("square")
 		local textnode = gui.get_node("square_text")
-		if self.invert_square then
+		if gui.get_is_clipping_inverted(node) then
 			gui.set_clipping_inverted(node, false)
 			gui.set_text(textnode, "SQUARE NORMAL")
 		else
 			gui.set_clipping_inverted(node, true)
 			gui.set_text(textnode, "SQUARE INVERTED")
 		end
-		self.invert_square = not self.invert_square		
 	end
 end
 
