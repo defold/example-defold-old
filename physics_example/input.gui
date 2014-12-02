@@ -3,6 +3,14 @@ fonts {
   name: "headline"
   font: "/main/font/headline.font"
 }
+textures {
+  name: "back_arm02"
+  texture: "/spine_run_example/cat_run/images/back_arm02.png"
+}
+textures {
+  name: "back_leg02"
+  texture: "/spine_run_example/cat_run/images/back_leg02.png"
+}
 background_color {
   x: 0.0
   y: 0.0
@@ -324,3 +332,13 @@ nodes {
   layer: ""
   inherit_alpha: false
 }
+layers {
+  name: "layer"
+}
+layers {
+  name: "layer1"
+}
+layers {
+  name: "layer2"
+}
+material: "/builtins/materials/gui.material"

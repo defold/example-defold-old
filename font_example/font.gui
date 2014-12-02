@@ -68,9 +68,6 @@ nodes {
   line_break: false
   layer: ""
   inherit_alpha: true
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
 }
 nodes {
   position {
@@ -127,8 +124,5 @@ nodes {
   line_break: false
   layer: ""
   inherit_alpha: true
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
 }
 material: "/builtins/materials/gui.material"

@@ -50,9 +50,6 @@ nodes {
   innerRadius: 0.0
   perimeterVertices: 10
   pieFillAngle: 360.0
-  clipping_mode: CLIPPING_MODE_STENCIL
-  clipping_visible: false
-  clipping_inverted: true
 }
 nodes {
   position {
@@ -102,9 +99,6 @@ nodes {
     z: 0.0
     w: 0.0
   }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: false
-  clipping_inverted: true
 }
 nodes {
   position {
@@ -152,8 +146,5 @@ nodes {
   innerRadius: 0.0
   perimeterVertices: 10
   pieFillAngle: 360.0
-  clipping_mode: CLIPPING_MODE_STENCIL
-  clipping_visible: false
-  clipping_inverted: false
 }
 material: "/builtins/materials/gui.material"

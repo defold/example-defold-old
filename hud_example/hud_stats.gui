@@ -12,15 +12,22 @@ textures {
   texture: "/magic_example/images/star.png"
 }
 background_color {
+  x: 0.0
+  y: 0.0
+  z: 0.0
   w: 1.0
 }
 nodes {
   position {
-    x: 60.83734
-    y: 692.7984
+    x: 825.7949
+    y: 690.886
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -32,6 +39,7 @@ nodes {
   size {
     x: 200.0
     y: 100.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -41,9 +49,13 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
   text: "Score:"
   font: "system_font"
   id: "score_text"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
   outline {
     x: 1.0
     y: 1.0
@@ -56,14 +68,22 @@ nodes {
     z: 1.0
     w: 1.0
   }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: ""
+  inherit_alpha: false
 }
 nodes {
   position {
-    x: 49.855747
-    y: 725.72577
+    x: 814.8133
+    y: 723.81335
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -75,6 +95,7 @@ nodes {
   size {
     x: 32.0
     y: 32.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -84,16 +105,33 @@ nodes {
     w: 1.0
   }
   type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
   texture: "heart"
   id: "heart"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
 }
 nodes {
   position {
-    x: 49.855747
-    y: 662.72577
+    x: 814.8133
+    y: 660.81335
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -105,6 +143,7 @@ nodes {
   size {
     x: 32.0
     y: 32.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -114,16 +153,33 @@ nodes {
     w: 1.0
   }
   type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
   texture: "star"
   id: "star"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
 }
 nodes {
   position {
-    x: 95.17401
-    y: 692.7984
+    x: 860.1316
+    y: 690.886
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -135,6 +191,7 @@ nodes {
   size {
     x: 200.0
     y: 100.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -144,9 +201,12 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
   text: "0"
   font: "system_font"
   id: "score"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
   pivot: PIVOT_W
   outline {
     x: 1.0
@@ -160,4 +220,9 @@ nodes {
     z: 1.0
     w: 1.0
   }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: ""
+  inherit_alpha: false
 }
+material: "/builtins/materials/gui.material"
