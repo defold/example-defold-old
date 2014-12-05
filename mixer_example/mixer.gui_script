@@ -17,7 +17,6 @@ function init(self)
 	gui.set_enabled(template, false)
 
 	for i, group_hash in ipairs(sound.get_groups()) do
-		print(group_hash)
 		local tree = gui.clone_tree(template)
 
 		-- Control min and max y
