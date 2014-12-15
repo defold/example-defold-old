@@ -2,7 +2,7 @@
 title = Documentation
 
 [bootstrap]
-main_collection = /mixer_example/mixer.collectionc
+main_collection = /main/main.collectionc
 render = /render/example.renderc
 
 [input]
