@@ -224,6 +224,10 @@ function on_input(self, action_id, action)
 		-- Set db
 		local db = MIN_DB + (kp.y - mixer.min_y) / scale
 		local gain = math.pow(10, db / 20)
+		-- Clamp to 0
+		if gain <= 0.0001 then
+			gain = 0
+		end
 		msg.post("mixer", "set_group_gain", { group = self.drag_group, gain = gain })
 	end
 end
