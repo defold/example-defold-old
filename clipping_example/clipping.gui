@@ -59,7 +59,7 @@ nodes {
   perimeterVertices: 6
   pieFillAngle: 360.0
   clipping_mode: CLIPPING_MODE_STENCIL
-  clipping_visible: true
+  clipping_visible: false
   clipping_inverted: false
 }
 nodes {
@@ -88,9 +88,9 @@ nodes {
     w: 1.0
   }
   color {
-    x: 1.0
-    y: 0.9294118
-    z: 0.09411766
+    x: 0.9843138
+    y: 0.24705884
+    z: 0.078431375
     w: 1.0
   }
   type: TYPE_BOX
@@ -111,7 +111,7 @@ nodes {
     w: 0.0
   }
   clipping_mode: CLIPPING_MODE_STENCIL
-  clipping_visible: true
+  clipping_visible: false
   clipping_inverted: false
 }
 nodes {
