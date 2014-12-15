@@ -5,9 +5,10 @@ function init(self)
 	end
 	
 	-- Play some music
-	msg.post("#music", "play_sound", { gain = 1.0 })
-	msg.post("#tone", "play_sound", { gain = 1.0 })
-	msg.post("#radio", "play_sound", { gain = 1.0 })
+	msg.post("#drums", "play_sound", { gain = 1.0 })
+	msg.post("#bass", "play_sound", { gain = 1.0 })
+	msg.post("#synth", "play_sound", { gain = 1.0 })
+	msg.post("#atmosphere", "play_sound", { gain = 1.0 })
 end
 
 function on_message(self, message_id, message, sender)
