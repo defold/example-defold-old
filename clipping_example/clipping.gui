@@ -58,6 +58,9 @@ nodes {
   innerRadius: 0.0
   perimeterVertices: 6
   pieFillAngle: 360.0
+  clipping_mode: CLIPPING_MODE_STENCIL
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -107,6 +110,9 @@ nodes {
     z: 0.0
     w: 0.0
   }
+  clipping_mode: CLIPPING_MODE_STENCIL
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -154,6 +160,9 @@ nodes {
   innerRadius: 0.0
   perimeterVertices: 32
   pieFillAngle: 360.0
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -202,6 +211,9 @@ nodes {
     z: 0.0
     w: 0.0
   }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -259,6 +271,9 @@ nodes {
   parent: "hexagon_toggle"
   layer: ""
   inherit_alpha: true
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -307,6 +322,9 @@ nodes {
     z: 0.0
     w: 0.0
   }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -364,6 +382,9 @@ nodes {
   parent: "square_toggle"
   layer: ""
   inherit_alpha: true
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -412,5 +433,8 @@ nodes {
     z: 0.0
     w: 0.0
   }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 material: "/builtins/materials/gui.material"

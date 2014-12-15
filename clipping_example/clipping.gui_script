@@ -16,7 +16,7 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("hexagon_toggle") then
 		local node = gui.get_node("hexagon")
 		local textnode = gui.get_node("hexagon_text")
-		if gui.get_is_clipping_inverted(node) then
+		if gui.get_clipping_inverted(node) then
 			gui.set_clipping_inverted(node, false)
 			gui.set_text(textnode, "HEXAGON NORMAL")
 		else
@@ -26,7 +26,7 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("square_toggle") then
 		local node = gui.get_node("square")
 		local textnode = gui.get_node("square_text")
-		if gui.get_is_clipping_inverted(node) then
+		if gui.get_clipping_inverted(node) then
 			gui.set_clipping_inverted(node, false)
 			gui.set_text(textnode, "SQUARE NORMAL")
 		else
