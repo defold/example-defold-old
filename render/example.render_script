@@ -34,7 +34,7 @@ function update(self)
 	-- The normal depth values are between 0.0 (near) and 1.0 (far) so maximizing the values
 	-- throughout the buffer means that every pixel you draw will be nearer than 1.0 and thus
 	-- it will be properly drawn and depth testing will work from thereon.
-    render.clear({[render.BUFFER_COLOR_BIT] = self.clear_color, [render.BUFFER_DEPTH_BIT] = 1})
+    render.clear({[render.BUFFER_COLOR_BIT] = self.clear_color, [render.BUFFER_DEPTH_BIT] = 1, [render.BUFFER_STENCIL_BIT] = 0})
 
 	-- Set the viewport to the window dimensions.
     render.set_viewport(0, 0, render.get_window_width(), render.get_window_height())
@@ -42,9 +42,10 @@ function update(self)
     render.set_view(self.view)
 
 	-- We're gonna start by drawing 2D stuff (sprites and tiles) so we can disable
-	-- depth testing and unset the depth mask.
+	-- depth testing and unset the depth mask. We also disable stencil tests.
     render.set_depth_mask(false)
     render.disable_state(render.STATE_DEPTH_TEST)
+    render.disable_state(render.STATE_STENCIL_TEST)
 
 	-- Enable blending and set the blend function. We're gonna use the source alpha as the 
 	-- source blend factor. The destination blend factor is set to one minus the source
@@ -112,8 +113,11 @@ function update(self)
 
 	-- Draw the GUI and text predicates. Text drawn with "draw_text" messages are rendered with
 	-- the built-in system font that has tag "text". It's thus part of the "text_pred" predicate.
+	-- The GUI can have stencil clipping nodes so we need to enable that.
+    render.enable_state(render.STATE_STENCIL_TEST)
 	render.draw(self.gui_pred)
 	render.draw(self.text_pred)    
+    render.disable_state(render.STATE_STENCIL_TEST)
 end
 
 function on_message(self, message_id, message)

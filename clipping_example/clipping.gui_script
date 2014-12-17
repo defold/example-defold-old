@@ -5,8 +5,8 @@ end
 
 function update(self, dt)
 	self.t = self.t + math.pi / 512
-	local x = math.sin(self.t) * 200
-	local y = math.cos(self.t) * 200
+	local x = math.sin(self.t) * 150
+	local y = math.cos(self.t) * 150
 	
 	local node = gui.get_node("circle")
 	gui.set_position(node, vmath.vector3(x, y, 0))
