@@ -12,6 +12,9 @@ local function sequence_1(self)
 	msg.post("go_2", "disable")
 	coroutine.yield(1.5)
 	msg.post("go_3", "disable")
+
+	-- Run sequence again
+	msg.post(".", "run_sequence_1")
 	return 0
 end
 
@@ -28,9 +31,6 @@ function run_sequence(seq)
 		go.animate("#", "wait", go.PLAYBACK_ONCE_FORWARD, 1, go.EASING_LINEAR, wait_seconds, 0, function ()
 			run_sequence(seq)
 		end)
-	else
-		-- Run again
-		msg.post(".", "run_sequence_1")
 	end
 end
 
