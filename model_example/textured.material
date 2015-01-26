@@ -1,0 +1,23 @@
+name: "textured"
+tags: "model"
+vertex_program: "/model_example/textured.vp"
+fragment_program: "/model_example/textured.fp"
+vertex_constants {
+  name: "view_proj"
+  type: CONSTANT_TYPE_VIEWPROJ
+}
+vertex_constants {
+  name: "world"
+  type: CONSTANT_TYPE_WORLD
+}
+fragment_constants {
+  name: "tint"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+}
+textures: "diffuse_texture"

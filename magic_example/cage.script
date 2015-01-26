@@ -1,6 +1,7 @@
 function init(self)
 	-- Add a swinging motion. Two functions do the animations. Call either one of them to start.
 	swing_left(self)
+	self.butterflies = {}
 end
 
 function on_message(self, message_id, message, sender)
@@ -8,9 +9,14 @@ function on_message(self, message_id, message, sender)
 		local position = go.get_position()
 		position.y = position.y - 250
 		position.z = position.z - 0.05
-		factory.create("#butterfly_factory", nil, nil, { container = go.get_id(), center = position, radius = 70 })
-	elseif message_id == hash("colorchange") then
-			
+		local butterfly = factory.create("#butterfly_factory", nil, nil, { container = go.get_id(), center = position, radius = 70 })
+	elseif message_id == hash("track_me") then
+		-- Store the butterfly so we can access any spawned ones later
+		table.insert(self.butterflies, sender)
+	elseif message_id == hash("colorchange_animals") then
+		for n, butterfly in ipairs(self.butterflies) do
+			msg.post(butterfly, "colorchange")
+		end
 	end
 end
 

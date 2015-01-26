@@ -11,8 +11,8 @@ background_color {
 }
 nodes {
   position {
-    x: 158.3627
-    y: 700.0
+    x: 128.0
+    y: 64.0
     z: 0.0
     w: 1.0
   }
@@ -63,4 +63,6 @@ nodes {
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
   layer: ""
+  inherit_alpha: false
 }
+material: "/builtins/materials/gui.material"

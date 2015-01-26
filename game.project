@@ -3,7 +3,7 @@ title = Examples
 
 [bootstrap]
 main_collection = /main/main.collectionc
-render = /builtins/render/default.renderc
+render = /render/example.renderc
 
 [input]
 game_binding = /input/game.input_bindingc
@@ -19,9 +19,10 @@ debug = 0
 
 [particle_fx]
 max_count = 256
+max_particle_count = 1024
 
 [collection_proxy]
-max_count = 16
+max_count = 32
 
 [library]
 include_dirs = magic_example worlds_example shared_sprites

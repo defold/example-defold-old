@@ -1,0 +1,18 @@
+name: "default"
+scale_along_z: 0
+embedded_instances {
+  id: "mixer"
+  data: "components {\n  id: \"gui\"\n  component: \"/mixer_example/mixer.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\ncomponents {\n  id: \"script\"\n  component: \"/mixer_example/mixer.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"drums\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/drums.ogg\\\"\\nlooping: 1\\ngroup: \\\"drums\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"group_factory\"\n  type: \"factory\"\n  data: \"prototype: \\\"/mixer_example/mixer_group.go\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"pad\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/pad.ogg\\\"\\nlooping: 1\\ngroup: \\\"pad\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"strings1\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/strings1.ogg\\\"\\nlooping: 1\\ngroup: \\\"strings1\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"strings2\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/strings2.ogg\\\"\\nlooping: 1\\ngroup: \\\"strings2\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"synth\"\n  type: \"sound\"\n  data: \"sound: \\\"/mixer_example/sounds/synth.ogg\\\"\\nlooping: 1\\ngroup: \\\"synth\\\"\\ngain: 1.0\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}

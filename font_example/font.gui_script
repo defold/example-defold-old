@@ -1,0 +1,8 @@
+function init(self)
+	local dfont = gui.get_node("distancefield")
+	local bfont = gui.get_node("bitmap")
+	
+	local scale = 10
+	gui.animate(dfont, "scale", vmath.vector3(scale, scale, 0), gui.EASING_INOUTQUART, 8, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
+	gui.animate(bfont, "scale", vmath.vector3(scale, scale, 0), gui.EASING_INOUTQUART, 8, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
+end

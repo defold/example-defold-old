@@ -1,0 +1,35 @@
+go.property("lifetime", 0)
+go.property("style", hash(""))
+
+function init(self)
+	local parts = 0		-- How many particles
+	local fx = ""		-- What particlefx to play
+	local gain = 0		-- Sound gain
+	if self.style == hash("fire_big") then
+		parts = 300
+		fx = "#fireworksfx_big"
+		gain = 1
+	else
+		parts = 75
+		fx = "#fireworksfx_small"
+		gain = 0.5
+	end
+	particlefx.play(fx)
+	-- Random tint color
+	local tint = vmath.vector4(math.random(), math.random(), math.random(), 1)		
+	particlefx.set_constant(fx, "secondary", "tint", tint)
+	-- Delete this game object after 2 seconds to free emitter resources
+	go.animate("#", "lifetime", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 2.0, 0, function ()
+		go.delete()
+		-- Tell launch control how many particles have gone out of the system.
+		msg.post("/launch_control", "done", { particles = parts })
+	end)
+
+	-- Play sound, but pass it through a gating object it to avoid phasing artifacts
+	-- We have a list of sounds to choose from.
+	local s = { "/sounds#fw1", "/sounds#fw2", "/sounds#fw3", "/sounds#fw4", "/sounds#fw5" }
+	local soundcomponent = s[math.ceil(math.random() * 5)]
+	-- Send "play" message to the gating object. We can't use "play_sound" for name here since
+	-- it would clash with the built in "play_sound" message.
+	msg.post("/sound_gate#script", "play", { soundcomponent = soundcomponent, gain = gain })
+end

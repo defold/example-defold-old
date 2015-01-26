@@ -4,15 +4,22 @@ fonts {
   font: "/main/font/headline.font"
 }
 background_color {
+  x: 0.0
+  y: 0.0
+  z: 0.0
   w: 1.0
 }
 nodes {
   position {
-    x: 200.0
-    y: 720.0
+    x: 192.0
+    y: 64.0
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -24,6 +31,7 @@ nodes {
   size {
     x: 150.0
     y: 50.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -33,13 +41,33 @@ nodes {
     w: 0.5
   }
   type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
   id: "left"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
 }
 nodes {
   position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -51,6 +79,7 @@ nodes {
   size {
     x: 200.0
     y: 100.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -60,13 +89,17 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
   text: "LEFT"
   font: "headline"
   id: "lefttext"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.6313726
+    y: 0.6117647
+    z: 0.6392157
     w: 1.0
   }
   shadow {
@@ -75,15 +108,23 @@ nodes {
     z: 1.0
     w: 1.0
   }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
   parent: "left"
+  layer: ""
+  inherit_alpha: false
 }
 nodes {
   position {
-    x: 824.0
-    y: 720.0
+    x: 832.0
+    y: 64.0
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -95,6 +136,7 @@ nodes {
   size {
     x: 150.0
     y: 50.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -104,13 +146,33 @@ nodes {
     w: 0.5
   }
   type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
   id: "right"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: false
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
 }
 nodes {
   position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   scale {
@@ -122,6 +184,7 @@ nodes {
   size {
     x: 200.0
     y: 100.0
+    z: 0.0
     w: 1.0
   }
   color {
@@ -131,13 +194,17 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
   text: "RIGHT"
   font: "headline"
   id: "righttext"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.6313726
+    y: 0.6117647
+    z: 0.6392157
     w: 1.0
   }
   shadow {
@@ -146,5 +213,10 @@ nodes {
     z: 1.0
     w: 1.0
   }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
   parent: "right"
+  layer: ""
+  inherit_alpha: false
 }
+material: "/builtins/materials/gui.material"

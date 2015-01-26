@@ -1,0 +1,50 @@
+local max_blur = 0.01
+
+function init(self)
+	-- Animate!
+	go.animate(".", "euler.x", go.PLAYBACK_LOOP_FORWARD, 360, go.EASING_LINEAR, 9)
+	go.animate(".", "euler.y", go.PLAYBACK_LOOP_FORWARD, 360, go.EASING_LINEAR, 11)
+	go.animate(".", "euler.z", go.PLAYBACK_LOOP_FORWARD, 360, go.EASING_LINEAR, 13)
+	self.blur = 0.003
+	msg.post("/hud", "show_blur", { value = self.blur })
+end
+
+function on_message(self, message_id, message, sender)
+ 	if message_id == hash("increase_blur") then
+ 		if self.blur <= max_blur then
+	 		self.blur = self.blur + 0.0001
+	 	end
+		if self.blur > max_blur then
+			self.blur = max_blur
+		end
+		-- Update the HUD text
+ 		msg.post("/hud", "show_blur", { value = self.blur })
+ 		sprite.set_constant("/blurbook#model", "blur", vmath.vector4(self.blur, 0, 0, 0))
+ 	elseif message_id == hash("decrease_blur") then
+ 		if self.blur > 0 then
+	 		self.blur = self.blur - 0.0001
+	 	end
+	 	if self.blur < 0.0001 then
+	 		self.blur = 0
+	 	end
+		-- Update the HUD text
+ 		msg.post("/hud", "show_blur", { value = self.blur })
+ 		sprite.set_constant("/blurbook#model", "blur", vmath.vector4(self.blur, 0, 0, 0))
+ 	end
+end
+
+function on_input(self, action_id, action)
+	-- React to touch and mouse presses
+	if (action_id == hash("touch") or action_id == hash("mouse_press")) then
+		-- Where did the user press/touch and how large is the screen?
+		local x = action.screen_x
+		local y = action.screen_y
+		local width = sys.get_config("display.width")
+		local height = sys.get_config("display.height")
+
+		-- Set the tint shader constant according to the
+		-- interaction position.
+--		sprite.set_constant("#model", "tint", vmath.vector4(1 / width * (width - x), 1 / height * y, 1, 1))
+	end
+end
+

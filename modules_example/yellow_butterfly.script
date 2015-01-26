@@ -1,4 +1,4 @@
--- flying = require "modules_example/flying"
+-- flying = require "modules_example.flying"
 -- Note that we don't have to require the module in more than
 -- one game object. This is because all game objects in the same
 -- collection share the same Lua context.

@@ -17,6 +17,9 @@ local STATE_INAIR = hash("inair")
 function init(self)
 	msg.post(nil, "acquire_input_focus")
 	msg.post("player_camera#camera", "acquire_camera_focus")
+
+	-- Tell render script to use view-only camera
+	msg.post("@render:", "set_cameratype_view")
 	
 	-- Replace the two door-tiles with "open door" tiles.
 --	local doorpos = vmath.vector3(174, 305, 0)
@@ -126,8 +129,7 @@ function update(self, dt)
 	go.set_position(new_pos)
 
 	-- Move camera
-	local cam_off = vmath.vector3(-512, -383, 0)
-	go.set_position(new_pos + cam_off, "/player_camera")
+	go.set_position(new_pos, "/player_camera")
 		
 	-- Reset values
 	self.acceleration.x = 0

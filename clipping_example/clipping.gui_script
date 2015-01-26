@@ -1,0 +1,52 @@
+function init(self)
+	msg.post("#", "acquire_input_focus")
+	self.t = 0
+end
+
+function update(self, dt)
+	self.t = self.t + math.pi / 512
+	local x = math.sin(self.t) * 150
+	local y = math.cos(self.t) * 150
+	
+	local node = gui.get_node("circle")
+	gui.set_position(node, vmath.vector3(x, y, 0))
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("hexagon_toggle") then
+		local node = gui.get_node("hexagon")
+		local textnode = gui.get_node("hexagon_text")
+		if gui.get_clipping_inverted(node) then
+			gui.set_clipping_inverted(node, false)
+			gui.set_text(textnode, "HEXAGON NORMAL")
+		else
+			gui.set_clipping_inverted(node, true)
+			gui.set_text(textnode, "HEXAGON INVERTED")
+		end
+	elseif message_id == hash("square_toggle") then
+		local node = gui.get_node("square")
+		local textnode = gui.get_node("square_text")
+		if gui.get_clipping_inverted(node) then
+			gui.set_clipping_inverted(node, false)
+			gui.set_text(textnode, "SQUARE NORMAL")
+		else
+			gui.set_clipping_inverted(node, true)
+			gui.set_text(textnode, "SQUARE INVERTED")
+		end
+	end
+end
+
+function on_input(self, action_id, action)
+	if (action_id == hash("mouse_press")) and action.pressed == true then
+		local x = action.x
+		local y = action.y
+		
+		local hexnode = gui.get_node("hexagon_toggle")
+		local squarenode = gui.get_node("square_toggle")
+		if gui.pick_node(hexnode, x, y) then
+			msg.post("#", "hexagon_toggle")
+		elseif gui.pick_node(squarenode, x, y) then
+			msg.post("#", "square_toggle")
+		end
+	end
+end

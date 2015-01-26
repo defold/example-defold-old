@@ -1,0 +1,35 @@
+function init(self)
+	buttonscale_up()
+	boxscale_up()
+	rotate_left()
+end
+
+function buttonscale_up()
+	local node = gui.get_node("growbutton")
+	gui.animate(node, gui.PROP_SIZE, vmath.vector3(500, 128, 0), gui.EASING_INOUTSINE, 2.0, 0, buttonscale_down)
+end
+
+function buttonscale_down()
+	local node = gui.get_node("growbutton")
+	gui.animate(node, gui.PROP_SIZE, vmath.vector3(300, 128, 0), gui.EASING_INOUTSINE, 2.0, 0, buttonscale_up)
+end
+
+function boxscale_up()
+	local node = gui.get_node("growbox")
+	gui.animate(node, gui.PROP_SIZE, vmath.vector3(420, 520, 0), gui.EASING_INOUTSINE, 0.2, 0, boxscale_down)
+end
+
+function boxscale_down()
+	local node = gui.get_node("growbox")
+	gui.animate(node, gui.PROP_SIZE, vmath.vector3(400, 500, 0), gui.EASING_INOUTSINE, 0.2, 0, boxscale_up)
+end
+
+function rotate_left()
+	local node = gui.get_node("rotatebox")
+	gui.animate(node, gui.PROP_ROTATION, vmath.vector3(0, 0, 10), gui.EASING_INOUTSINE, 2.0, 0, rotate_right)
+end
+
+function rotate_right()
+	local node = gui.get_node("rotatebox")
+	gui.animate(node, gui.PROP_ROTATION, vmath.vector3(0, 0, -10), gui.EASING_INOUTSINE, 2.0, 0, rotate_left)
+end

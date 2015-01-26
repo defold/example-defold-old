@@ -1,0 +1,142 @@
+function init(self)
+	-- Define the render predicates. Each predicate is drawn by itself and
+	-- that allows us to change the state of OpenGL between the draws.
+    self.model_pred = render.predicate({"model"})
+    self.tile_pred = render.predicate({"tile"})
+    self.gui_pred = render.predicate({"gui"})
+    self.text_pred = render.predicate({"text"})
+    self.particle_pred = render.predicate({"particle"})
+
+	-- Define a color to use as clear color (background color).
+    self.clear_color = vmath.vector4(0, 0, 0, 0)
+    
+	-- Fetch user-set clear color from the game.project
+	-- settings file if it exists. Note that the settings file can
+	-- contain custom settings like this one to use if you like.
+    self.clear_color.x = sys.get_config("render.clear_color_red", 0)
+    self.clear_color.y = sys.get_config("render.clear_color_green", 0)
+    self.clear_color.z = sys.get_config("render.clear_color_blue", 0)
+    self.clear_color.w = sys.get_config("render.clear_color_alpha", 0)
+
+	-- Define a view matrix to use. If we have a camera object, it will
+	-- send "set_view_projection" messages to the render script and we
+	-- can update the view matrix with the value the camera provides.
+    self.view = vmath.matrix4()
+    self.projection = vmath.matrix4()
+    self.has_camera = false
+end
+
+function update(self)
+	-- Set the depth mask which allows us to modify the depth buffer.
+    render.set_depth_mask(true)
+    
+	-- Clear the color buffer with the clear color value and set the depth buffer to 1.0.
+	-- The normal depth values are between 0.0 (near) and 1.0 (far) so maximizing the values
+	-- throughout the buffer means that every pixel you draw will be nearer than 1.0 and thus
+	-- it will be properly drawn and depth testing will work from thereon.
+    render.clear({[render.BUFFER_COLOR_BIT] = self.clear_color, [render.BUFFER_DEPTH_BIT] = 1, [render.BUFFER_STENCIL_BIT] = 0})
+
+	-- Set the viewport to the window dimensions.
+    render.set_viewport(0, 0, render.get_window_width(), render.get_window_height())
+	-- Set the view to the stored view value (can be set by a camera object)
+    render.set_view(self.view)
+
+	-- We're gonna start by drawing 2D stuff (sprites and tiles) so we can disable
+	-- depth testing and unset the depth mask. We also disable stencil tests.
+    render.set_depth_mask(false)
+    render.disable_state(render.STATE_DEPTH_TEST)
+    render.disable_state(render.STATE_STENCIL_TEST)
+
+	-- Enable blending and set the blend function. We're gonna use the source alpha as the 
+	-- source blend factor. The destination blend factor is set to one minus the source
+    -- object alpha value (1-src).
+    render.enable_state(render.STATE_BLEND)
+    render.set_blend_func(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)
+
+	-- Everything is drawn facing the camera so we can disable face culling.
+    render.disable_state(render.STATE_CULL_FACE)
+
+	-- Set the projection to orthographic with our camera origo at lower left. Without a camera
+	-- that's fine since that will be the same as world origo. With a camera we would like to
+	-- have the camera position align to center of screen. Only render between -1 and 1 Z-depth
+    -- (fine for most 2D).
+    if not self.has_camera then
+	    render.set_projection(vmath.matrix4_orthographic(0, render.get_width(), 0, render.get_height(), -1, 1))
+	else
+		local w = render.get_width()
+		local h = render.get_height()
+		if self.has_camera == hash("view") then
+		    render.set_projection(vmath.matrix4_orthographic(- w / 2, w / 2, -h / 2, h / 2, -1000, 1000))
+		else
+			render.set_projection(self.projection)
+		end
+	end
+	
+	-- Now, draw everything in the "tile_pred" predicate (tiles and sprites)
+    render.draw(self.tile_pred)
+    
+    -- Then draw particles.
+    render.draw(self.particle_pred)
+
+	-- Now it's time for some 3D. The built in script is not fit for that so
+	-- we have a specific predicate prepared for 3D models.
+	-- First, need to set the depth mask and enable depth test.
+	render.set_depth_mask(true)
+    render.enable_state(render.STATE_DEPTH_TEST)
+    
+	-- Face culling makes sense when drawing 3D.
+    render.enable_state(render.STATE_CULL_FACE)
+    
+	-- Keep drawing orthographically, but increase the projection depth so
+	-- our models won't clip. If they clip you can disable face culling to see how
+	-- the inside of the clipped object is drawn.
+    render.set_projection(vmath.matrix4_orthographic(0, render.get_width(), 0, render.get_height(), -1000, 1000))
+
+    -- Draw the model predicate.
+    render.draw(self.model_pred)
+    -- Draw 3D debug information. Lines drawn with "draw_line" messages and physics
+    -- visualization is drawn here.
+    render.draw_debug3d()
+
+	-- GUI and on screen text will be drawn in screen space so we're gonna use a
+	-- zero view matrix.
+    render.set_view(vmath.matrix4())
+    
+	-- Projection is still orthographic but use actual window width and height,
+	-- in case it's been resized.
+    render.set_projection(vmath.matrix4_orthographic(0, render.get_window_width(), 0, render.get_window_height(), -1, 1))
+
+	-- No depth mask or face culling needed for GUI and text.
+    render.set_depth_mask(false)
+    render.disable_state(render.STATE_DEPTH_TEST)
+    render.disable_state(render.STATE_CULL_FACE)
+
+	-- Draw the GUI and text predicates. Text drawn with "draw_text" messages are rendered with
+	-- the built-in system font that has tag "text". It's thus part of the "text_pred" predicate.
+	-- The GUI can have stencil clipping nodes so we need to enable that.
+    render.enable_state(render.STATE_STENCIL_TEST)
+	render.draw(self.gui_pred)
+	render.draw(self.text_pred)    
+    render.disable_state(render.STATE_STENCIL_TEST)
+end
+
+function on_message(self, message_id, message)
+    if message_id == hash("clear_color") then
+        self.clear_color = message.color
+    elseif message_id == hash("no_camera") then
+    	-- User message. No camera
+    	self.has_camera = nil
+   		self.view = vmath.matrix4()
+    	self.projection = vmath.matrix4()
+    elseif message_id == hash("set_cameratype_view") then
+    	-- User message. Camera with view and no projection.
+    	self.has_camera = hash("view")
+    elseif message_id == hash("set_cameratype_viewproj") then
+    	-- User message. Camera with view and projection.
+    	self.has_camera = hash("viewproj")
+    elseif message_id == hash("set_view_projection") then
+    	-- Camera view and projection arrives here.
+        self.view = message.view
+        self.projection = message.projection
+    end
+end
