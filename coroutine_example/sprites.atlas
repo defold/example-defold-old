@@ -1,0 +1,12 @@
+images {
+  image: "/coroutine_example/images/1.png"
+}
+images {
+  image: "/coroutine_example/images/2.png"
+}
+images {
+  image: "/coroutine_example/images/3.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
