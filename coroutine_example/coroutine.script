@@ -36,7 +36,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("run_sequence_1") then
-		local coroutine = coroutine.create(sequence_1)
-		run_sequence(coroutine)	
+		local co = coroutine.create(sequence_1)
+		run_sequence(co)	
 	end
 end
