@@ -28,7 +28,7 @@ M.fly_randomly = function (radius)
 	local rand_pos = flying.origins[go_id] + offset
 	-- Set a random duration scaled against the radius to prevent
 	-- too fast animation.
-	local rand_duration = 0.1 -- math.random(radius) / 100 + (radius / 200)
+	local rand_duration = math.random(radius) / 100 + (radius / 200)
 
 	-- Animate, then send a message back when completed
 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, rand_pos, go.EASING_INOUTSINE, rand_duration, 0.0, 

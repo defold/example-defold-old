@@ -1,5 +1,6 @@
 [project]
-title = Examples
+title = Defold examples
+version = 0.1
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -26,4 +27,16 @@ max_count = 32
 
 [library]
 include_dirs = magic_example worlds_example shared_sprites
+
+[ios]
+bundle_identifier = com.defold.examples
+infoplist = 
+
+[android]
+package = com.defold.examples
+app_icon_32x32 = /main/images/icon_32.png
+manifest = 
+
+[osx]
+bundle_identifier = com.defold.examples
 

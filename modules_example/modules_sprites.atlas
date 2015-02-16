@@ -7,7 +7,7 @@ animations {
     image: "/modules_example/images/butterfly2.png"
   }
   playback: PLAYBACK_LOOP_FORWARD
-  fps: 15
+  fps: 8
   flip_horizontal: 0
   flip_vertical: 0
 }
@@ -20,9 +20,10 @@ animations {
     image: "/modules_example/images/butterfly4.png"
   }
   playback: PLAYBACK_LOOP_FORWARD
-  fps: 15
+  fps: 10
   flip_horizontal: 1
   flip_vertical: 0
 }
 margin: 0
 extrude_borders: 0
+inner_padding: 0
