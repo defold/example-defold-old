@@ -1,0 +1,48 @@
+function init(self)
+	msg.post("#", "acquire_input_focus")
+
+	-- Disable the logo node 
+	gui.set_enabled(gui.get_node("logo"), false)
+	
+	if iap == nil then
+		-- If there's no iap, disable the UI.
+		gui.set_enabled(gui.get_node("coin"), false)
+		gui.set_enabled(gui.get_node("coin_button"), false)
+		gui.set_enabled(gui.get_node("logo_button"), false)
+	else
+		-- Remove the no iap message
+		msg.post("#gui", "status", { text = "Idle..." })
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("set_price") then
+		node = gui.get_node(message.node)
+		gui.set_text(node, message.price_string)
+	elseif message_id == hash("status") then
+		local n = gui.get_node("status")
+		gui.set_text(n, message.text)
+	elseif message_id == hash("set_coins") then
+		local n = gui.get_node("coin_count")
+		gui.set_text(n, "x " .. message.coins)
+	elseif message_id == hash("set_logo") and message.logo then
+		gui.set_enabled(gui.get_node("logo"), true)
+		gui.set_enabled(gui.get_node("logo_button"), false)
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("mouse_press") and action.pressed == true then
+		local x = action.x
+		local y = action.y
+			
+		local coin_button = gui.get_node("coin_button")
+		local logo_button = gui.get_node("logo_button")
+		
+		if gui.pick_node(coin_button, x, y) then
+			msg.post("#script", "purchase_coin")
+		elseif gui.pick_node(logo_button, x, y) and gui.is_enabled(logo_button) then
+			msg.post("#script", "purchase_logo")
+		end		
+	end
+end

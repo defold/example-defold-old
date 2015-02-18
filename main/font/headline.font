@@ -7,3 +7,4 @@ shadow_alpha: 1.0
 shadow_blur: 10
 shadow_x: 5.0
 shadow_y: 5.0
+extra_characters: "\302\240"

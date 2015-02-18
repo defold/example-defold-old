@@ -1,0 +1,82 @@
+-- These are the product id:s we're using.
+-- These must be registered with the App on iTunes Connect. 
+local COINS_ID = "com.defold.examples.coins"	-- A consumable
+local LOGO_ID = "com.defold.examples.logo"		-- A non consumable. No restore available.
+
+-- We query the servers for product info and set the correct prices in the GUI.
+local function iap_list(self, products, error)
+	if error == nil then	
+		for k,v in pairs(products) do
+			local node
+			if v.ident == COINS_ID then
+				node = "coin_price"
+			end
+			
+			if v.ident == LOGO_ID then
+				node = "logo_price"
+			end
+			
+			msg.post("#gui", "set_price", { node = node, price_string = v.price_string })		
+ 		end
+	else
+		msg.post("#gui", "status", { text = error.error })
+	end
+end
+
+local function iap_listener(self, transaction, error)
+	if error == nil then
+		if transaction.state == iap.TRANS_STATE_PURCHASING then
+			msg.post("#gui", "status", { text = "Purchasing..." })
+		elseif transaction.state == iap.TRANS_STATE_PURCHASED then
+			if transaction.ident == COINS_ID then
+				-- Bought a coin!
+				self.coins = self.coins + 1
+			elseif transaction.ident == LOGO_ID then
+				-- Bought a logo!
+				self.logo = true
+			end			
+			msg.post("#", "update_inventory")
+			msg.post("#gui", "status", { text = "Purchased!" })
+		elseif transaction.state == iap.TRANS_STATE_FAILED then
+			msg.post("#gui", "status", { text = "Failed." })
+		elseif transaction.state == iap.TRANS_STATE_RESTORED then
+			msg.post("#gui", "status", { text = "Restored." })
+		end	
+	else
+		if transaction.state == iap.TRANS_STATE_FAILED then
+			msg.post("#gui", "status", { text = "Failed." })
+		else
+			msg.post("#gui", "status", { text = error.error })
+		end
+	end
+end
+
+function init(self)
+	if iap == nil then
+		-- No iap available on this platform. Return to prevent some ugly errors in the console.
+		return
+	end
+	
+	-- We are not doing any persistence at all here. If the user re-purchases the logo
+	-- The store will detect that it's already bought and just ask if the user wants it for free.
+	self.coins = 0
+	self.logo = false
+
+	-- Find out the prices of the products
+	iap.list({ COINS_ID, LOGO_ID }, iap_list)
+
+	-- Register the function that will listen to IAP transactions.
+	iap.set_listener(iap_listener)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("purchase_coin") then
+		iap.buy(COINS_ID)
+	elseif message_id == hash("purchase_logo") then
+		iap.buy(LOGO_ID)
+	elseif message_id == hash("update_inventory") then
+		msg.post("#gui", "set_coins", { coins = self.coins })
+		msg.post("#gui", "set_logo", { logo = self.logo })		
+	end
+end
+

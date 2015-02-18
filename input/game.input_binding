@@ -19,7 +19,7 @@ key_trigger {
   action: "move_down"
 }
 mouse_trigger {
-  input: MOUSE_BUTTON_1
+  input: MOUSE_BUTTON_LEFT
   action: "mouse_press"
 }
 gamepad_trigger {

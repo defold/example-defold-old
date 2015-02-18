@@ -5,7 +5,7 @@ fonts {
 }
 textures {
   name: "Defold logo"
-  texture: "/main/images/Defold logo.png"
+  texture: "/main/images/defold_logo.png"
 }
 background_color {
   x: 0.0
@@ -16,7 +16,7 @@ background_color {
 nodes {
   position {
     x: 192.0
-    y: 384.0
+    y: 448.0
     z: 0.0
     w: 1.0
   }
@@ -66,13 +66,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 192.0
-    y: 512.0
+    y: 576.0
     z: 0.0
     w: 1.0
   }
@@ -122,13 +125,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 192.0
-    y: 448.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -178,13 +184,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 192.0
-    y: 256.0
+    y: 320.0
     z: 0.0
     w: 1.0
   }
@@ -234,8 +243,11 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -290,13 +302,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 192.0
-    y: 320.0
+    y: 384.0
     z: 0.0
     w: 1.0
   }
@@ -346,13 +361,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 192.0
-    y: 192.0
+    y: 256.0
     z: 0.0
     w: 1.0
   }
@@ -402,13 +420,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 192.0
-    y: 128.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -458,13 +479,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 512.0
-    y: 512.0
+    x: 192.0
+    y: 128.0
     z: 0.0
     w: 1.0
   }
@@ -514,13 +538,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 512.0
-    y: 448.0
+    y: 576.0
     z: 0.0
     w: 1.0
   }
@@ -570,13 +597,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 512.0
-    y: 384.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -626,8 +656,11 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -676,11 +709,14 @@ nodes {
     z: 0.0
     w: 0.0
   }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 512.0
-    y: 320.0
+    y: 448.0
     z: 0.0
     w: 1.0
   }
@@ -730,13 +766,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 512.0
-    y: 256.0
+    y: 384.0
     z: 0.0
     w: 1.0
   }
@@ -786,13 +825,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 512.0
-    y: 192.0
+    y: 320.0
     z: 0.0
     w: 1.0
   }
@@ -842,13 +884,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 512.0
-    y: 128.0
+    y: 256.0
     z: 0.0
     w: 1.0
   }
@@ -898,13 +943,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 832.0
-    y: 512.0
+    x: 512.0
+    y: 192.0
     z: 0.0
     w: 1.0
   }
@@ -954,13 +1002,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
-    x: 832.0
-    y: 448.0
+    x: 512.0
+    y: 128.0
     z: 0.0
     w: 1.0
   }
@@ -1010,13 +1061,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 832.0
-    y: 384.0
+    y: 576.0
     z: 0.0
     w: 1.0
   }
@@ -1066,13 +1120,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 832.0
-    y: 256.0
+    y: 448.0
     z: 0.0
     w: 1.0
   }
@@ -1122,13 +1179,16 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
     x: 832.0
-    y: 320.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -1178,13 +1238,398 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  layer: "layer"
+  layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
-layers {
-  name: "layer1"
+nodes {
+  position {
+    x: 832.0
+    y: 384.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.79215693
+    y: 0.76470596
+    z: 0.79215693
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "Coroutine"
+  font: "headline"
+  id: "coroutine"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 0.36078432
+    y: 0.34901962
+    z: 0.36862746
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 0.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: ""
+  inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
-layers {
-  name: "layer"
+nodes {
+  position {
+    x: 832.0
+    y: 320.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.79215693
+    y: 0.76470596
+    z: 0.79215693
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "IAP"
+  font: "headline"
+  id: "iap"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 0.36078432
+    y: 0.34901962
+    z: 0.36862746
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 0.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: ""
+  inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+}
+nodes {
+  position {
+    x: 512.0
+    y: 320.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1024.0
+    y: 600.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
+  id: "loading"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 100.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.9843138
+    y: 0.24705884
+    z: 0.078431375
+    w: 1.0
+  }
+  type: TYPE_PIE
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
+  id: "spinner"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "loading"
+  layer: ""
+  inherit_alpha: true
+  outerBounds: PIEBOUNDS_ELLIPSE
+  innerRadius: 40.0
+  perimeterVertices: 64
+  pieFillAngle: 300.0
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 300.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 100.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.9843138
+    y: 0.24705884
+    z: 0.078431375
+    w: 1.0
+  }
+  type: TYPE_PIE
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
+  id: "spinner_pie"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "spinner"
+  layer: ""
+  inherit_alpha: true
+  outerBounds: PIEBOUNDS_ELLIPSE
+  innerRadius: 0.0
+  perimeterVertices: 64
+  pieFillAngle: 60.0
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "LOADING..."
+  font: "headline"
+  id: "loading_text"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 0.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  parent: "loading"
+  layer: ""
+  inherit_alpha: true
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+}
+nodes {
+  position {
+    x: 1326.3606
+    y: 380.16223
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.79215693
+    y: 0.76470596
+    z: 0.79215693
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "Facebook"
+  font: "headline"
+  id: "facebook"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 0.36078432
+    y: 0.34901962
+    z: 0.36862746
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 0.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: ""
+  inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 material: "/builtins/materials/gui.material"

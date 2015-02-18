@@ -5,12 +5,12 @@ end
 
 function on_input(self, action_id, action)
 	-- React to touch and mouse presses
-	if (action_id == hash("touch") or action_id == hash("mouse_press")) then
+	if action_id == hash("mouse_press") then
 		-- Where did the user press/touch and how large is the screen?
-		local x = action.screen_x
-		local y = action.screen_y
-		local dx = action.screen_dx
-		local dy = action.screen_dy
+		local x = action.x
+		local y = action.y
+		local dx = action.dx
+		local dy = action.dy
 		local width = sys.get_config("display.width")
 		local height = sys.get_config("display.height")
 

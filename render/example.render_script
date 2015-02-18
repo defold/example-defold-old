@@ -26,6 +26,7 @@ function init(self)
     self.has_camera = false
 end
 
+local ct = {}
 function update(self)
 	-- Set the depth mask which allows us to modify the depth buffer.
     render.set_depth_mask(true)
