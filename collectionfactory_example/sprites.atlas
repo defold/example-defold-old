@@ -1,0 +1,15 @@
+images {
+  image: "/collectionfactory_example/images/astronaut.png"
+}
+images {
+  image: "/collectionfactory_example/images/planet.png"
+}
+images {
+  image: "/collectionfactory_example/images/green_probe.png"
+}
+images {
+  image: "/collectionfactory_example/images/red_probe.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
