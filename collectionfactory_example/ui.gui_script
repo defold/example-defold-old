@@ -1,0 +1,22 @@
+function init(self)
+    msg.post(nil, "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("mouse_press") and action.pressed == true then
+		local x = action.x
+		local y = action.y
+		local detachnode = gui.get_node("detach")
+		local deletenode = gui.get_node("delete")
+		
+		if gui.pick_node(detachnode, x, y) and gui.is_enabled(detachnode) then
+			msg.post("/planet#script", "detach")
+			gui.set_enabled(detachnode, false)
+		elseif gui.pick_node(deletenode, x, y) and gui.is_enabled(deletenode) then
+			msg.post("/planet#script", "delete_all")
+			gui.set_enabled(deletenode, false)
+			-- No point in detaching if everything's deleted.
+			gui.set_enabled(detachnode, false)
+		end
+	end
+end

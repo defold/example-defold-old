@@ -1,1 +1,120 @@
 name: "default"
+collection_instances {
+  id: "astronaut0"
+  collection: "/collectionfactory_example/astronaut.collection"
+  position {
+    x: 811.23376
+    y: 565.32794
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.514136
+    w: 0.8577087
+  }
+  scale: 0.2
+  instance_properties {
+    id: "astronaut"
+    properties {
+      id: "script"
+      properties {
+        id: "floating"
+        value: "true"
+        type: PROPERTY_TYPE_BOOLEAN
+      }
+    }
+  }
+}
+collection_instances {
+  id: "astronaut1"
+  collection: "/collectionfactory_example/astronaut.collection"
+  position {
+    x: 204.21346
+    y: 112.797035
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.36161542
+    w: 0.93232733
+  }
+  scale: 0.1
+  instance_properties {
+    id: "astronaut"
+    properties {
+      id: "script"
+      properties {
+        id: "floating"
+        value: "true"
+        type: PROPERTY_TYPE_BOOLEAN
+      }
+    }
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "instance0"
+  data: ""
+  position {
+    x: 803.4225
+    y: 531.80286
+    z: -0.25
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "planet"
+  data: "components {\n  id: \"script\"\n  component: \"/collectionfactory_example/planet.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"factory\"\n  type: \"collectionfactory\"\n  data: \"prototype: \\\"/collectionfactory_example/astronaut.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\ndefault_animation: \\\"planet\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 512.0
+    y: 384.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "space"
+  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\ndefault_animation: \\\"space\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 512.0
+    y: 384.0
+    z: -0.5
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "ui"
+  data: "components {\n  id: \"gui\"\n  component: \"/collectionfactory_example/ui.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 582.845
+    y: 295.6057
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}

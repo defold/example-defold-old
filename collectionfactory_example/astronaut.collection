@@ -1,0 +1,52 @@
+name: "default"
+instances {
+  id: "probe1"
+  prototype: "/collectionfactory_example/probe.go"
+  position {
+    x: 210.89952
+    y: 203.29242
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+instances {
+  id: "probe2"
+  prototype: "/collectionfactory_example/probe.go"
+  position {
+    x: -198.4352
+    y: -121.04625
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+scale_along_z: 0
+embedded_instances {
+  id: "astronaut"
+  children: "probe1"
+  children: "probe2"
+  data: "components {\n  id: \"script\"\n  component: \"/collectionfactory_example/astronaut.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"factory\"\n  type: \"factory\"\n  data: \"prototype: \\\"/collectionfactory_example/probe.go\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\ndefault_animation: \\\"astronaut\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 0.0\n    y: -5.4433\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 0.0
+    y: 229.9794
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}

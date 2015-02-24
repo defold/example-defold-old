@@ -1,0 +1,41 @@
+go.property("floating", false)
+
+function init(self)
+	-- Start probe fly loop at random point
+	self.t = math.random(math.pi * 2)
+	
+	-- Randomly select one of the probes to start the tag-game.
+	if math.random() > 0.5 then
+		msg.post("probe1", "tag", { other = "probe2" })
+	else
+		msg.post("probe2", "tag", { other = "probe1" })
+	end
+	
+	-- Randomly select a target for floating
+	self.float_target = vmath.vector3(math.random() * 1024, math.random() * 768, 0)
+	-- Rotation for floating
+	self.rot = vmath.quat_rotation_z((math.random() - 0.5) / 50)
+end
+
+-- Use the update loop to fly the probes around.
+function update(self, dt)
+	self.t = self.t + dt
+
+	-- Rotate probes around astronaut	
+	local scale = go.get_scale()
+	local x = math.sin(self.t * 4) * 220 
+	local y = math.cos(self.t * 4.4) * 160
+	local y2 = math.cos(self.t * 4.2) * 120
+	
+	local np = vmath.vector3(x, y, 0)
+	local np2 = vmath.vector3(0-x, 0-y2, 0)
+	go.set_position(np, "probe1")
+	go.set_position(np2, "probe2")
+
+	if self.floating then
+		go.set_rotation(go.get_rotation() * self.rot)
+		local pos = go.get_position()
+		pos = vmath.lerp(0.001, pos, self.float_target)
+		go.set_position(pos)
+	end	
+end

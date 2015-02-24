@@ -80,6 +80,8 @@ function on_input(self, action_id, action)
 		local coroutinenode = gui.get_node("coroutine")
 		local iapnode = gui.get_node("iap")
 		local facebooknode = gui.get_node("facebook")
+		local collectionfactorynode = gui.get_node("collectionfactory")
+		local pushnode = gui.get_node("push")
 		
 		-- Test if user has touched one of the valid text nodes.
 		if gui.pick_node(hudnode, x, y) then
@@ -145,9 +147,15 @@ function on_input(self, action_id, action)
 		elseif gui.pick_node(iapnode, x, y) then
 			-- Load the IAP collection
 			msg.post(".", "load_example", { proxy="/loader#iapproxy" })
+		elseif gui.pick_node(collectionfactorynode, x, y) then
+			-- Load the Collectionfactory collection
+			msg.post(".", "load_example", { proxy="/loader#collectionfactoryproxy" })
 		elseif gui.pick_node(facebooknode, x, y) then
 			-- Load the Facebook collection
 			msg.post(".", "load_example", { proxy="/loader#facebookproxy" })
+		elseif gui.pick_node(pushnode, x, y) then
+			-- Load the Push collection
+			msg.post(".", "load_example", { proxy="/loader#pushproxy" })
 		end
 	end	
 end

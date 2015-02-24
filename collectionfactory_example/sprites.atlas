@@ -10,6 +10,9 @@ images {
 images {
   image: "/collectionfactory_example/images/red_probe.png"
 }
+images {
+  image: "/collectionfactory_example/images/space.png"
+}
 margin: 0
-extrude_borders: 0
+extrude_borders: 4
 inner_padding: 0

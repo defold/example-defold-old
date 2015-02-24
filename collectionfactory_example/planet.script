@@ -1,0 +1,48 @@
+function init(self)
+	msg.post("#", "spawn")
+	go.animate(".", "euler.z", go.PLAYBACK_LOOP_BACKWARD, 360, go.EASING_LINEAR, 20)
+	
+	self.all_spawned = {}
+	self.astronauts = {}
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("spawn") then
+		-- Number of astronauts
+		local n = 12
+		for i = 1,n do
+			-- Figure out where to spawn, what rotation and scale
+			local a = (2 * math.pi / n) * i
+			local dx = math.sin(a) * 185
+			local dy = math.cos(a) * 185
+			local pos = go.get_position()
+			pos.x = pos.x + dx
+			pos.y = pos.y + dy
+			local rot = vmath.quat_rotation_z(-a)
+			local scale = 0.1 + (0.02 * i)
+			-- Spawn an astronaut
+			local a = collectionfactory.create("#factory", pos, rot, {}, scale)
+			-- Child it under planet
+			msg.post(a[hash("/astronaut")], "set_parent", { parent_id = go.get_id() })
+			-- Store the astronaut's root object for easy access.
+			table.insert(self.astronauts, a[hash("/astronaut")])
+			-- Store everything we've spawned so we can delete it.
+			table.insert(self.all_spawned, a)
+		end
+	elseif message_id == hash("detach") then
+		for i, a in pairs(self.astronauts) do
+			-- Remove parent.
+			msg.post(a, "set_parent", { parent_id = nil })
+
+			-- Build an URL to the script that contains the "floating" property.
+			local u = msg.url()
+			u.path = a
+			u.fragment = hash("script")
+			go.set(u, "floating", true)
+		end		
+	elseif message_id == hash("delete_all") then
+		for i, s in pairs(self.all_spawned) do
+			go.delete_all(s)
+		end
+	end
+end

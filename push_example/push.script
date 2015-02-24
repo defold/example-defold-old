@@ -1,0 +1,30 @@
+local function listener(self, message)
+	pprint(message)
+end
+
+
+function init(self)
+end
+
+
+function on_message(self, message_id, message)
+	if message_id == hash("push") then
+		print("Setting up push")
+		local alerts = {push.NOTIFICATION_BADGE, push.NOTIFICATION_SOUND, push.NOTIFICATION_ALERT}
+		push.register(alerts, function (self, token, error)
+			print("push")
+			if token then
+				local s = ""
+				for i = 1,#token do
+					s = s .. string.format("%02x", string.byte(token, i)) 
+				end
+				print(s)
+			else
+				print("PUSH error", error.error)
+			end
+		end)
+	end
+end
+
+function on_reload(self)
+end

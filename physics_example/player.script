@@ -182,6 +182,8 @@ function on_message(self, message_id, message, sender)
 	-- Give a nudge to the ball
 	elseif message_id == hash("contact_point_response") and message.group == hash("balls") then
 		msg.post(message.other_id, "apply_force", {force = vmath.vector3(self.velocity.x, math.abs(self.velocity.x), 0), position = go.get_world_position(message.other_id)})
+
+	local p = vmath.vector3(0, 0, 0)
 	-- Glue raycast
 	elseif message_id == hash("ray_cast_response") then
 		-- How far is it to ground?

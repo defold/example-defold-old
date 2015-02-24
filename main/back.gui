@@ -56,6 +56,9 @@ nodes {
     z: 0.0
     w: 0.0
   }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 nodes {
   position {
@@ -78,7 +81,7 @@ nodes {
   }
   size {
     x: 200.0
-    y: 100.0
+    y: 50.0
     z: 0.0
     w: 1.0
   }
@@ -113,5 +116,8 @@ nodes {
   parent: "back"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
 }
 material: "/builtins/materials/gui.material"

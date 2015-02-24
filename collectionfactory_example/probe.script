@@ -1,0 +1,27 @@
+go.property("timer", 0)
+go.property("color", hash("red_probe"))
+
+function init(self)
+	msg.post("#sprite", "play_animation", {id = self.color})
+end
+
+function final(self)
+    -- Add finalization code here
+    -- Remove this function if not needed
+end
+
+function update(self, dt)
+    -- Add update code here
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("tag") then
+		-- I got the tag. Switch to red, then wait before passing the tag.
+--		msg.post("#sprite", "play_animation", {id = hash("red_probe")})
+--		go.animate("#", "timer", go.PLAYBACK_ONCE_BACKWARD, 1, go.EASING_LINEAR, 1, 0, function () 
+--			msg.post("#sprite", "play_animation", {id = hash("green_probe")})
+--			msg.post(message.other, "tag", { other = go.get_id() })
+--		end)		
+	end
+end
