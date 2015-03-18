@@ -46,3 +46,6 @@ function on_message(self, message_id, message, sender)
 		end
 	end
 end
+
+function final(self)
+end

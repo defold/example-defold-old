@@ -1,11 +1,10 @@
 name: "default"
-scale_along_z: 0
-embedded_instances {
-  id: "text"
-  data: "components {\n  id: \"gui\"\n  component: \"/input_example/text.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+instances {
+  id: "acc"
+  prototype: "/input_example/acc.go"
   position {
-    x: 960.0
-    y: 704.0
+    x: 335.21133
+    y: 447.18414
     z: 0.0
   }
   rotation {
@@ -16,6 +15,7 @@ embedded_instances {
   }
   scale: 1.0
 }
+scale_along_z: 0
 embedded_instances {
   id: "hud"
   data: "components {\n  id: \"gui\"\n  component: \"/input_example/hud.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
@@ -54,6 +54,22 @@ embedded_instances {
   position {
     x: 512.0
     y: 384.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale: 1.0
+}
+embedded_instances {
+  id: "text"
+  data: "components {\n  id: \"gui\"\n  component: \"/input_example/text.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  position {
+    x: 960.0
+    y: 704.0
     z: 0.0
   }
   rotation {

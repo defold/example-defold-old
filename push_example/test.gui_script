@@ -1,0 +1,45 @@
+function init(self)
+	local w = 200
+	local h = 300
+	local orange = string.char(0xff) .. string.char(0x80) .. string.char(0x10)
+
+	-- Create a dynamic texture, all white.
+	if gui.new_texture("dynamic_tx", w, h, "rgb", string.rep(string.char(0xff), w * h * 3)) then
+		-- Create a box node and apply the texture to it.
+		local n = gui.new_box_node(vmath.vector3(200, 200, 0), vmath.vector3(w, h, 0))
+		gui.set_texture(n, "dynamic_tx")
+
+		-- Change the data in the texture to a nice orange.
+		if gui.set_texture_data("dynamic_tx", w, h, "rgb", string.rep(orange, w * h)) then
+			-- Go on and to more stuff
+			
+		end
+	else
+		-- Something went wrong
+	end
+end
+
+function final(self)
+    -- Add finalization code here
+    -- Remove this function if not needed
+end
+
+function update(self, dt)
+    -- Add update code here
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+    -- Add message-handling code here
+    -- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+    -- Add input-handling code here
+    -- Remove this function if not needed
+end
+
+function on_reload(self)
+    -- Add input-handling code here
+    -- Remove this function if not needed
+end

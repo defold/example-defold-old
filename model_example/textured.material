@@ -20,4 +20,4 @@ fragment_constants {
     w: 1.0
   }
 }
-textures: "diffuse_texture"
+textures: "DIFFUSE_TEXTURE"
