@@ -63,6 +63,66 @@ precise design of the character behavior. Note that there are some edge cases th
 unwanted side effects in the player movement, particularly at slope edges. These have been left as 
 an exercise for you to track down and solve.
 
+Animation
+=========
+This example contains a Spine model and a set of animations (all taken from the Spineboy example).
+Animation blending can be customized and tested. The "run" animation sends events that plays
+footstep sounds.
+
+Model
+=====
+A simple 3D model with a custom material.
+
+Material
+========
+An example of a custom material with a shader constant that controls the amount of blur in the
+fragment shader.
+
+Camera
+======
+A simple camera example with a 2D chase camera that alters its distance depending on movement
+speed.
+
+Slice 9
+=======
+A demonstration of the GUI slice 9 node type and its capabilities.
+
+Mixer
+=====
+A sound mixer with support for dynamic mixing of sound groups. The demo song is a good example
+of what might happen if content from two sources are merged into the same project.
+
+Fireworks
+=========
+Particle effects and sounds. The example includes a gating mechanism that prevents sounds from
+playing too close in sync that would otherwise cause phasing artifacts.
+
+Pie
+===
+A demonstration of the GUI pie node type and its capabilities.
+
+Fonts
+=====
+A demonstration of the two font-types available and how they respond to resizing.
+
+Clipping
+========
+A simple demonstration of GUI hierarchial stencil clipping. You can see the effect of normal and
+inverted clipping.
+
+Coroutine
+=========
+A simple example on how coroutines can be used to simplify the creation of sequenced events.
+
+IAP
+===
+A simple In-App Purchase example. This example requires quite extensive setup on Apple's
+developer services (Member Center and iTunes Connect) or Google Play Developer Console.
+
+Collection factory
+==================
+This example showcases the "collectionfactory" component that allows dynamic spawning of game
+object hierarchies from a collection file prototype.
 
 
 ###############################################################################
