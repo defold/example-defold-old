@@ -78,7 +78,11 @@ function update(self)
     
     -- Then draw particles.
     render.draw(self.particle_pred)
-
+    
+    -- Draw 3D debug information. Lines drawn with "draw_line" messages and physics
+    -- visualization is drawn here.
+    render.draw_debug3d()
+    
 	-- Now it's time for some 3D. The built in script is not fit for that so
 	-- we have a specific predicate prepared for 3D models.
 	-- First, need to set the depth mask and enable depth test.
@@ -95,9 +99,6 @@ function update(self)
 
     -- Draw the model predicate.
     render.draw(self.model_pred)
-    -- Draw 3D debug information. Lines drawn with "draw_line" messages and physics
-    -- visualization is drawn here.
-    render.draw_debug3d()
 
 	-- GUI and on screen text will be drawn in screen space so we're gonna use a
 	-- zero view matrix.
