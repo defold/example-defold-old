@@ -54,3 +54,6 @@ bundle_identifier = com.defold.examples
 [script]
 shared_state = 1
 
+[graphics]
+texture_profiles = /example.texture_profiles
+

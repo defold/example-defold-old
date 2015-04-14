@@ -1,0 +1,14 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action.acc_x ~= nil then
+		local pos = go.get_position()
+		local scale = go.get_scale()
+		pos.x = pos.x + action.acc_y * 10
+		pos.y = pos.y - action.acc_x * 10
+		go.set_position(pos)
+		go.set_scale(2 + action.acc_z)
+	end
+end
