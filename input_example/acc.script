@@ -3,7 +3,10 @@ function init(self)
 end
 
 function on_input(self, action_id, action)
-	if action.acc_x ~= nil then
+	if message_id == hash("touch") then
+		print("TOUCH")
+		pprint(action)
+	elseif action.acc_x ~= nil then
 		local pos = go.get_position()
 		local scale = go.get_scale()
 		pos.x = pos.x + action.acc_y * 10
