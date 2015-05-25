@@ -82,6 +82,8 @@ function on_input(self, action_id, action)
 		local facebooknode = gui.get_node("facebook")
 		local collectionfactorynode = gui.get_node("collectionfactory")
 		local pushnode = gui.get_node("push")
+		local layoutsnode = gui.get_node("layouts")
+		local soundnode = gui.get_node("sound")
 		
 		-- Test if user has touched one of the valid text nodes.
 		if gui.pick_node(hudnode, x, y) then
@@ -156,6 +158,12 @@ function on_input(self, action_id, action)
 		elseif gui.pick_node(pushnode, x, y) then
 			-- Load the Push collection
 			msg.post(".", "load_example", { proxy="/loader#pushproxy" })
+		elseif gui.pick_node(layoutsnode, x, y) then
+			-- Load the Layouts collection
+			msg.post(".", "load_example", { proxy="/loader#layoutsproxy" })
+		elseif gui.pick_node(soundnode, x, y) then
+			-- Load the Sound collection
+			msg.post(".", "load_example", { proxy="/loader#soundproxy" })
 		end
 	end	
 end
