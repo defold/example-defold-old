@@ -87,8 +87,16 @@ nodes {
     z: 0.9843138
     w: 1.0
   }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: ""
   id: "button_ok/frame"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
   parent: "button_ok"
+  layer: ""
   inherit_alpha: true
   slice9 {
     x: 0.0
@@ -96,13 +104,11 @@ nodes {
     z: 0.0
     w: 0.0
   }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
-  overridden_fields: 1
-  overridden_fields: 2
-  overridden_fields: 4
-  overridden_fields: 22
+  overridden_fields: 6
   template_node_child: true
 }
 nodes {
@@ -157,23 +163,7 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
-  overridden_fields: 1
-  overridden_fields: 2
-  overridden_fields: 4
   overridden_fields: 6
-  overridden_fields: 7
-  overridden_fields: 9
-  overridden_fields: 12
-  overridden_fields: 13
-  overridden_fields: 14
-  overridden_fields: 17
-  overridden_fields: 20
-  overridden_fields: 22
-  overridden_fields: 27
-  overridden_fields: 28
-  overridden_fields: 29
   template_node_child: true
 }
 nodes {
@@ -213,11 +203,12 @@ nodes {
   font: "headline"
   id: "button_ok/text"
   xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   shadow {
@@ -226,20 +217,17 @@ nodes {
     z: 1.0
     w: 1.0
   }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
   parent: "button_ok/frame"
+  layer: ""
   inherit_alpha: true
   clipping_mode: CLIPPING_MODE_NONE
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  outline_alpha: 1.0
+  outline_alpha: 0.0
   shadow_alpha: 1.0
-  overridden_fields: 1
-  overridden_fields: 2
-  overridden_fields: 4
-  overridden_fields: 7
-  overridden_fields: 12
-  overridden_fields: 14
   overridden_fields: 27
   overridden_fields: 28
   overridden_fields: 29
@@ -344,8 +332,6 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
   overridden_fields: 1
   overridden_fields: 2
   overridden_fields: 4
@@ -415,8 +401,6 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
   overridden_fields: 1
   overridden_fields: 2
   overridden_fields: 4
@@ -467,16 +451,16 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Cancel"
+  text: "OK"
   font: "headline"
   id: "button_cancel/text"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   shadow {
@@ -494,19 +478,8 @@ nodes {
   clipping_visible: true
   clipping_inverted: false
   alpha: 1.0
-  outline_alpha: 1.0
+  outline_alpha: 0.0
   shadow_alpha: 1.0
-  overridden_fields: 1
-  overridden_fields: 2
-  overridden_fields: 4
-  overridden_fields: 7
-  overridden_fields: 8
-  overridden_fields: 12
-  overridden_fields: 13
-  overridden_fields: 14
-  overridden_fields: 17
-  overridden_fields: 18
-  overridden_fields: 20
   overridden_fields: 27
   overridden_fields: 28
   overridden_fields: 29
@@ -657,15 +630,27 @@ layouts {
       z: 0.9843138
       w: 1.0
     }
+    type: TYPE_BOX
+    blend_mode: BLEND_MODE_ALPHA
+    texture: ""
     id: "button_ok/frame"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_NONE
+    pivot: PIVOT_CENTER
+    adjust_mode: ADJUST_MODE_FIT
     parent: "button_ok"
+    layer: ""
     inherit_alpha: true
+    slice9 {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
+    }
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
-    outline_alpha: 0.0
-    shadow_alpha: 0.0
-    overridden_fields: 1
-    overridden_fields: 2
-    overridden_fields: 4
     template_node_child: true
   }
   nodes {
@@ -699,15 +684,27 @@ layouts {
       z: 0.078431375
       w: 1.0
     }
+    type: TYPE_BOX
+    blend_mode: BLEND_MODE_ALPHA
+    texture: ""
     id: "button_ok/color"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_NONE
+    pivot: PIVOT_CENTER
+    adjust_mode: ADJUST_MODE_FIT
     parent: "button_ok/frame"
+    layer: ""
     inherit_alpha: true
+    slice9 {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
+    }
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
-    outline_alpha: 0.0
-    shadow_alpha: 0.0
-    overridden_fields: 1
-    overridden_fields: 2
-    overridden_fields: 4
     template_node_child: true
   }
   nodes {
@@ -742,13 +739,17 @@ layouts {
       w: 1.0
     }
     type: TYPE_TEXT
+    blend_mode: BLEND_MODE_ALPHA
     text: "OK"
     font: "headline"
     id: "button_ok/text"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_NONE
+    pivot: PIVOT_CENTER
     outline {
-      x: 1.0
-      y: 1.0
-      z: 1.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
       w: 1.0
     }
     shadow {
@@ -757,14 +758,17 @@ layouts {
       z: 1.0
       w: 1.0
     }
+    adjust_mode: ADJUST_MODE_FIT
+    line_break: false
     parent: "button_ok/frame"
+    layer: ""
     inherit_alpha: true
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
     outline_alpha: 0.0
     shadow_alpha: 1.0
-    overridden_fields: 1
-    overridden_fields: 2
-    overridden_fields: 4
     template_node_child: true
   }
   nodes {
@@ -846,12 +850,27 @@ layouts {
       z: 0.9843138
       w: 1.0
     }
+    type: TYPE_BOX
+    blend_mode: BLEND_MODE_ALPHA
+    texture: ""
     id: "button_cancel/frame"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_NONE
+    pivot: PIVOT_CENTER
+    adjust_mode: ADJUST_MODE_FIT
     parent: "button_cancel"
+    layer: ""
     inherit_alpha: true
+    slice9 {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
+    }
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
-    outline_alpha: 0.0
-    shadow_alpha: 0.0
     overridden_fields: 1
     overridden_fields: 2
     overridden_fields: 4
@@ -888,12 +907,27 @@ layouts {
       z: 0.078431375
       w: 1.0
     }
+    type: TYPE_BOX
+    blend_mode: BLEND_MODE_ALPHA
+    texture: ""
     id: "button_cancel/color"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_NONE
+    pivot: PIVOT_CENTER
+    adjust_mode: ADJUST_MODE_FIT
     parent: "button_cancel/frame"
+    layer: ""
     inherit_alpha: true
+    slice9 {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
+    }
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
-    outline_alpha: 0.0
-    shadow_alpha: 0.0
     overridden_fields: 1
     overridden_fields: 2
     overridden_fields: 4
@@ -931,13 +965,17 @@ layouts {
       w: 1.0
     }
     type: TYPE_TEXT
+    blend_mode: BLEND_MODE_ALPHA
     text: "OK"
     font: "headline"
     id: "button_cancel/text"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_NONE
+    pivot: PIVOT_CENTER
     outline {
-      x: 1.0
-      y: 1.0
-      z: 1.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
       w: 1.0
     }
     shadow {
@@ -946,8 +984,14 @@ layouts {
       z: 1.0
       w: 1.0
     }
+    adjust_mode: ADJUST_MODE_FIT
+    line_break: false
     parent: "button_cancel/frame"
+    layer: ""
     inherit_alpha: true
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
     outline_alpha: 0.0
     shadow_alpha: 1.0
