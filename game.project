@@ -34,7 +34,7 @@ include_dirs =
 
 [ios]
 bundle_identifier = com.defold.examples
-infoplist = 
+infoplist = /facebook_example/Info.plist
 app_icon_120x120 = 
 app_icon_180x180 = 
 app_icon_152x152 = 

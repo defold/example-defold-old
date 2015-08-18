@@ -1,6 +1,11 @@
+function callback(self, res, err)
+	print("login")
+end
+
 function init(self)
- 	fb.login()     
- end
+	facebook.login(callback)
+--	facebook.show_dialog("feed", {} callback)
+end
 
 function final(self)
     -- Add finalization code here
@@ -23,6 +28,4 @@ function on_input(self, action_id, action)
 end
 
 function on_reload(self)
-    -- Add reload-handling code here
-    -- Remove this function if not needed
 end
