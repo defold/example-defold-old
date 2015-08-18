@@ -1,9 +1,13 @@
 function init(self)
-	msg.post("#", "spawn")
-	go.animate(".", "euler.z", go.PLAYBACK_LOOP_BACKWARD, 360, go.EASING_LINEAR, 20)
+--	msg.post("#", "spawn")
+--	go.animate(".", "euler.z", go.PLAYBACK_LOOP_BACKWARD, 360, go.EASING_LINEAR, 20)
 	
-	self.all_spawned = {}
-	self.astronauts = {}
+--	self.all_spawned = {}
+--	self.astronauts = {}
+
+	
+
+
 end
 
 function on_message(self, message_id, message, sender)
@@ -34,7 +38,7 @@ function on_message(self, message_id, message, sender)
 			-- Remove parent.
 			msg.post(a, "set_parent", { parent_id = nil })
 
-			-- Build an URL to the script that contains the "floating" property.
+			-- Build an URL to the astronaut script that contains the "floating" property.
 			local u = msg.url()
 			u.path = a
 			u.fragment = hash("script")

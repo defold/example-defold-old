@@ -1,8 +1,9 @@
 go.property("floating", false)
+go.property("orbit_size", 1.0)
 
 function init(self)
 	-- Start probe fly loop at random point
-	self.t = math.random(math.pi * 2)
+	self.t = math.random(math.pi * self.orbit_size)
 	
 	-- Randomly select one of the probes to start the tag-game.
 	if math.random() > 0.5 then

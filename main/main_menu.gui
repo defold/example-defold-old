@@ -267,69 +267,6 @@ nodes {
 }
 nodes {
   position {
-    x: 512.0
-    y: 667.0201
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 150.0
-    y: 50.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 0.34509805
-    z: 0.09019608
-    w: 1.0
-  }
-  type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
-  text: "EXAMPLES"
-  font: "headline"
-  id: "header"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  outline {
-    x: 0.79215693
-    y: 0.76470596
-    z: 0.79215693
-    w: 1.0
-  }
-  shadow {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
-  layer: ""
-  inherit_alpha: false
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
-  template_node_child: false
-}
-nodes {
-  position {
     x: 192.0
     y: 384.0
     z: 0.0
@@ -582,8 +519,8 @@ nodes {
 }
 nodes {
   position {
-    x: 512.0
-    y: 576.0
+    x: 192.0
+    y: 640.0
     z: 0.0
     w: 1.0
   }
@@ -708,8 +645,8 @@ nodes {
 }
 nodes {
   position {
-    x: 936.8122
-    y: 680.73
+    x: 512.0
+    y: 676.7068
     z: 0.0
     w: 1.0
   }
@@ -726,8 +663,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 109.0
-    y: 129.0
+    x: 146.0
+    y: 173.0
     z: 0.0
     w: 1.0
   }
@@ -1139,8 +1076,8 @@ nodes {
 }
 nodes {
   position {
-    x: 832.0
-    y: 576.0
+    x: 512.0
+    y: 64.0
     z: 0.0
     w: 1.0
   }
@@ -1203,7 +1140,7 @@ nodes {
 nodes {
   position {
     x: 832.0
-    y: 448.0
+    y: 576.0
     z: 0.0
     w: 1.0
   }
@@ -1266,7 +1203,7 @@ nodes {
 nodes {
   position {
     x: 832.0
-    y: 512.0
+    y: 640.0
     z: 0.0
     w: 1.0
   }
@@ -1329,7 +1266,7 @@ nodes {
 nodes {
   position {
     x: 832.0
-    y: 384.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -1454,8 +1391,8 @@ nodes {
 }
 nodes {
   position {
-    x: 1334.5823
-    y: 424.0115
+    x: 1326.3606
+    y: 380.16223
     z: 0.0
     w: 1.0
   }
@@ -1518,7 +1455,7 @@ nodes {
 nodes {
   position {
     x: 832.0
-    y: 256.0
+    y: 448.0
     z: 0.0
     w: 1.0
   }
@@ -1580,8 +1517,8 @@ nodes {
 }
 nodes {
   position {
-    x: 1334.3492
-    y: 366.86133
+    x: 832.0
+    y: 256.0
     z: 0.0
     w: 1.0
   }
@@ -1644,7 +1581,7 @@ nodes {
 nodes {
   position {
     x: 832.0
-    y: 192.0
+    y: 384.0
     z: 0.0
     w: 1.0
   }
@@ -1740,132 +1677,6 @@ nodes {
   text: "Sound"
   font: "headline"
   id: "sound"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  outline {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
-    w: 1.0
-  }
-  shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
-  layer: ""
-  inherit_alpha: false
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  outline_alpha: 1.0
-  shadow_alpha: 0.0
-  template_node_child: false
-}
-nodes {
-  position {
-    x: 1330.7854
-    y: 303.39706
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 250.0
-    y: 50.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 0.79215693
-    y: 0.76470596
-    z: 0.79215693
-    w: 1.0
-  }
-  type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
-  text: "Easing"
-  font: "headline"
-  id: "easing"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  outline {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
-    w: 1.0
-  }
-  shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
-  layer: ""
-  inherit_alpha: false
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  outline_alpha: 1.0
-  shadow_alpha: 0.0
-  template_node_child: false
-}
-nodes {
-  position {
-    x: 832.0
-    y: 128.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 250.0
-    y: 50.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 0.79215693
-    y: 0.76470596
-    z: 0.79215693
-    w: 1.0
-  }
-  type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
-  text: "GUI templates"
-  font: "headline"
-  id: "gui_templates"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER

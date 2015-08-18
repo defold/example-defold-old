@@ -3,9 +3,9 @@ collection_instances {
   id: "astronaut0"
   collection: "/collectionfactory_example/astronaut.collection"
   position {
-    x: 811.23376
-    y: 565.32794
-    z: 0.0
+    x: 1498.6063
+    y: 670.7091
+    z: 1.0
   }
   rotation {
     x: 0.0
@@ -13,7 +13,6 @@ collection_instances {
     z: -0.514136
     w: 0.8577087
   }
-  scale: 0.2
   instance_properties {
     id: "astronaut"
     properties {
@@ -25,14 +24,19 @@ collection_instances {
       }
     }
   }
+  scale3 {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
 }
 collection_instances {
   id: "astronaut1"
   collection: "/collectionfactory_example/astronaut.collection"
   position {
-    x: 204.21346
-    y: 112.797035
-    z: 0.0
+    x: 1475.9724
+    y: 230.15332
+    z: 1.0
   }
   rotation {
     x: 0.0
@@ -40,7 +44,6 @@ collection_instances {
     z: 0.36161542
     w: 0.93232733
   }
-  scale: 0.1
   instance_properties {
     id: "astronaut"
     properties {
@@ -51,6 +54,11 @@ collection_instances {
         type: PROPERTY_TYPE_BOOLEAN
       }
     }
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 0.1
   }
 }
 scale_along_z: 0
@@ -68,11 +76,67 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }
 embedded_instances {
   id: "planet"
-  data: "components {\n  id: \"script\"\n  component: \"/collectionfactory_example/planet.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"factory\"\n  type: \"collectionfactory\"\n  data: \"prototype: \\\"/collectionfactory_example/astronaut.collection\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\ndefault_animation: \\\"planet\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/collectionfactory_example/planet.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"factory\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/collectionfactory_example/astronaut.collection\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\n"
+  "default_animation: \\\"planet\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 512.0
     y: 384.0
@@ -84,11 +148,35 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }
 embedded_instances {
   id: "space"
-  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\ndefault_animation: \\\"space\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\n"
+  "default_animation: \\\"space\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 512.0
     y: 384.0
@@ -100,11 +188,30 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }
 embedded_instances {
   id: "ui"
-  data: "components {\n  id: \"gui\"\n  component: \"/collectionfactory_example/ui.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"gui\"\n"
+  "  component: \"/collectionfactory_example/ui.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 582.845
     y: 295.6057
@@ -116,5 +223,9 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }

@@ -14,7 +14,6 @@ function init(self)
 		fx = "#fireworksfx_small"
 		gain = 0.5
 	end
-	particlefx.play(fx)
 	-- Random tint color
 	local tint = vmath.vector4(math.random(), math.random(), math.random(), 1)		
 	particlefx.set_constant(fx, "secondary", "tint", tint)
