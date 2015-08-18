@@ -116,13 +116,24 @@ A simple example on how coroutines can be used to simplify the creation of seque
 
 IAP
 ===
-A simple In-App Purchase example. This example requires quite extensive setup on Apple's
-developer services (Member Center and iTunes Connect) or Google Play Developer Console.
+A simple In-App Purchase example. This example requires setup on Apple's developer services 
+(Member Center and iTunes Connect) or Google Play Developer Console.
+
+Push
+====
+A simple example on how to register for, and receive remote and local push notifications.
+This example requires setup on Apple's developer services (Member Center) or Google 
+Play Developer Console.
 
 Collection factory
 ==================
 This example showcases the "collectionfactory" component that allows dynamic spawning of game
 object hierarchies from a collection file prototype.
+
+Layouts
+=======
+A very simple example that demonstrate dynamic GUI layouts. Run on device and rotate between
+landscape and portrait.
 
 
 ###############################################################################
