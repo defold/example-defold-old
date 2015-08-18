@@ -30,14 +30,14 @@ function on_message(self, message_id, message, sender)
 		msg.post(url, "unmute")
 	elseif message_id == hash("start_animation") then
 		local url = msg.url()
-		url.path = self.mixer_groups[hash("music")]
+		url.path = self.mixer_groups[hash("drums")]
 		url.fragment = hash("script")
 		go.set(url, "gain", 1)
 		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 5)	
-		url.path = self.mixer_groups[hash("tone")]
+		url.path = self.mixer_groups[hash("pad")]
 		go.set(url, "gain", 1)
 		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 4, 1)		
-		url.path = self.mixer_groups[hash("radio")]
+		url.path = self.mixer_groups[hash("synth")]
 		go.set(url, "gain", 1)
 		go.animate(url, "gain", go.PLAYBACK_LOOP_PINGPONG, 0, go.EASING_INOUTSINE, 3, 2)
 	elseif message_id == hash("stop_animation") then

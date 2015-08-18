@@ -1,29 +1,15 @@
 path_settings {
-  path: "/magic_example/**/*.atlas"
-  profile: "atlas"
-}
-path_settings {
-  path: "/**/*.atlasX"
-  profile: "atlas_"
+  path: "**"
+  profile: "Default"
 }
 profiles {
-  name: "atlas"
+  name: "Default"
   platforms {
     os: OS_ID_GENERIC
     formats {
-      format: TEXTURE_FORMAT_RGBA_PVRTC_4BPPV1
-      compression_level: HIGH
+      format: TEXTURE_FORMAT_RGBA
+      compression_level: BEST
     }
     mipmaps: true
-    max_texture_size: 1024
-  }
-  platforms {
-    os: OS_ID_ANDROID
-    formats {
-      format: TEXTURE_FORMAT_RGB_ETC1
-      compression_level: FAST
-    }
-    mipmaps: true
-    max_texture_size: 1024
   }
 }
