@@ -1,19 +1,11 @@
 function init(self)
 	msg.post("#", "acquire_input_focus")
 	msg.post("back", "disable")
-	self.loaded_proxy = nil
-	
-	-- Spinner animates all the time.
-	n = gui.get_node("spinner")
-	gui.animate(n, "rotation.z", 360, gui.EASING_LINEAR, 1, 0, null, gui.PLAYBACK_LOOP_FORWARD)
+	self.loaded_proxy = nil	
 end
 
 function on_message(self, message_id, message, sender)
     if message_id == hash("load_example") then
-		-- Loading indicator on...
-		l = gui.get_node("loading")
-		gui.set_color(l, vmath.vector4(0, 0, 0, 1)) 
-
 	   	local proxy = message.proxy
     	msg.post(proxy, "load")
     elseif message_id == hash("proxy_loaded") then
@@ -42,10 +34,6 @@ function on_message(self, message_id, message, sender)
 		msg.post("main_menu", "enable")
 		-- Disable the "Back" button
 		msg.post("back", "disable")
-
-		-- Loading indicator off...
-		l = gui.get_node("loading")
-		gui.set_color(l, vmath.vector4(0, 0, 0, 0))
 
 		-- Take back input.
     	msg.post("#", "acquire_input_focus")

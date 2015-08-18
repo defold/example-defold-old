@@ -35,20 +35,21 @@ include_dirs =
 [ios]
 bundle_identifier = com.defold.examples
 infoplist = 
-app_icon_120x120 = /main/images/icon120.png
-app_icon_180x180 = /main/images/icon180.png
-app_icon_152x152 = /main/images/icon152.png
-app_icon_144x144 = /main/images/icon144.png
-app_icon_114x114 = /main/images/icon114.png
-app_icon_76x76 = /main/images/icon76.png
-app_icon_57x57 = /main/images/icon57.png
-app_icon_72x72 = /main/images/icon72.png
-pre_renderered_icons = 1
+app_icon_120x120 = 
+app_icon_180x180 = 
+app_icon_152x152 = 
+app_icon_144x144 = 
+app_icon_114x114 = 
+app_icon_76x76 = 
+app_icon_57x57 = 
+app_icon_72x72 = 
+pre_renderered_icons = 0
 
 [android]
 package = com.defold.examples
 app_icon_32x32 = /main/images/icon_32.png
 manifest = 
+gcm_sender_id = 125341512319
 
 [osx]
 bundle_identifier = com.defold.examples
