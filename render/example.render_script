@@ -140,7 +140,7 @@ function on_message(self, message_id, message)
     	-- Camera view and projection arrives here.
         self.view = message.view
         self.projection = message.projection
-	elseif message.id == hash("window_resized") then
+	elseif message_id == hash("window_resized") then
 		-- The window was resized.
     end
 end

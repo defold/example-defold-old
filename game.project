@@ -1,7 +1,7 @@
 [project]
 title = Defold examples
 version = 1.0
-write_log = 0
+write_log = 1
 compress_archive = 0
 
 [bootstrap]
@@ -34,7 +34,7 @@ include_dirs =
 
 [ios]
 bundle_identifier = com.defold.examples
-infoplist = /facebook_example/Info.plist
+infoplist = 
 app_icon_120x120 = 
 app_icon_180x180 = 
 app_icon_152x152 = 
@@ -54,8 +54,11 @@ gcm_sender_id = 125341512319
 [osx]
 bundle_identifier = com.defold.examples
 
+[facebook]
+appid = 1614078522180486
+
 [script]
-shared_state = 1
+shared_state = 0
 
 [graphics]
 texture_profiles = /example.texture_profiles

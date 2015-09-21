@@ -1,7 +1,7 @@
 script: "/layouts_example/layouts.gui_script"
 fonts {
-  name: "gentium_bitmap"
-  font: "/font_example/font/gentium_bitmap.font"
+  name: "headline"
+  font: "/main/font/headline.font"
 }
 background_color {
   x: 0.0
@@ -43,7 +43,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Center of screen"
-  font: "gentium_bitmap"
+  font: "headline"
   id: "text"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -70,6 +70,7 @@ nodes {
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
+  template_node_child: false
 }
 nodes {
   position {
@@ -105,7 +106,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Top center"
-  font: "gentium_bitmap"
+  font: "headline"
   id: "text1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -132,6 +133,7 @@ nodes {
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
+  template_node_child: false
 }
 nodes {
   position {
@@ -167,7 +169,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Lower right"
-  font: "gentium_bitmap"
+  font: "headline"
   id: "text2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -194,6 +196,7 @@ nodes {
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
+  template_node_child: false
 }
 nodes {
   position {
@@ -229,7 +232,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Lower left"
-  font: "gentium_bitmap"
+  font: "headline"
   id: "text3"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -256,109 +259,7 @@ nodes {
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
-}
-nodes {
-  position {
-    x: 512.0
-    y: 192.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 100.0
-    y: 100.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_PIE
-  blend_mode: BLEND_MODE_ALPHA
-  texture: ""
-  id: "pie"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
-  inherit_alpha: true
-  outerBounds: PIEBOUNDS_ELLIPSE
-  innerRadius: 0.0
-  perimeterVertices: 32
-  pieFillAngle: 360.0
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-}
-nodes {
-  position {
-    x: 46.5419
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 100.0
-    y: 10.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: ""
-  id: "box"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  parent: "pie"
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
+  template_node_child: false
 }
 material: "/builtins/materials/gui.material"
 layouts {
@@ -397,7 +298,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Center of screen"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -425,6 +326,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
+    template_node_child: false
   }
   nodes {
     position {
@@ -460,7 +362,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Top center"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text1"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -488,6 +390,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
+    template_node_child: false
   }
   nodes {
     position {
@@ -523,7 +426,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Lower right"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text2"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -551,6 +454,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
+    template_node_child: false
   }
   nodes {
     position {
@@ -586,7 +490,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Lower left"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text3"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -614,58 +518,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
-  }
-  nodes {
-    position {
-      x: 384.0
-      y: 320.0
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 100.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    type: TYPE_PIE
-    blend_mode: BLEND_MODE_ALPHA
-    texture: ""
-    id: "pie"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    adjust_mode: ADJUST_MODE_FIT
-    layer: ""
-    inherit_alpha: true
-    outerBounds: PIEBOUNDS_ELLIPSE
-    innerRadius: 0.0
-    perimeterVertices: 32
-    pieFillAngle: 360.0
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    overridden_fields: 1
-    overridden_fields: 2
+    template_node_child: false
   }
 }
 layouts {
@@ -704,7 +557,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Center of screen"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -732,6 +585,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
+    template_node_child: false
   }
   nodes {
     position {
@@ -767,7 +621,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Top center"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text1"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -795,6 +649,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
+    template_node_child: false
   }
   nodes {
     position {
@@ -830,7 +685,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Lower right"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text2"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -858,6 +713,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
+    template_node_child: false
   }
   nodes {
     position {
@@ -893,7 +749,7 @@ layouts {
     type: TYPE_TEXT
     blend_mode: BLEND_MODE_ALPHA
     text: "Lower left"
-    font: "gentium_bitmap"
+    font: "headline"
     id: "text3"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -921,5 +777,7 @@ layouts {
     outline_alpha: 1.0
     shadow_alpha: 1.0
     overridden_fields: 1
+    template_node_child: false
   }
 }
+adjust_reference: ADJUST_REFERENCE_LEGACY
