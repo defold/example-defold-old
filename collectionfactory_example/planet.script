@@ -22,6 +22,12 @@ function on_message(self, message_id, message, sender)
 			local scale = 0.1 + (0.02 * i)
 			-- Spawn an astronaut
 			local a = collectionfactory.create("#factory", pos, rot, {}, scale)
+	        -- Child it under planet
+            msg.post(a[hash("/astronaut")], "set_parent", { parent_id = go.get_id() })
+            -- Store the astronaut's root object for easy access.
+            table.insert(self.astronauts, a[hash("/astronaut")])
+            -- Store everything we've spawned so we can delete it.
+            table.insert(self.all_spawned, a)
 		end
 	elseif message_id == hash("detach") then
 		for i, a in pairs(self.astronauts) do
