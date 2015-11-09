@@ -30,7 +30,7 @@ max_particle_count = 1024
 max_count = 32
 
 [library]
-include_dirs = physics_example modules_example
+include_dirs = physics_example,modules_example
 
 [ios]
 bundle_identifier = com.defold.examples
