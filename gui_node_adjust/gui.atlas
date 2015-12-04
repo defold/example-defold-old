@@ -1,0 +1,9 @@
+images {
+  image: "/gui_node_adjust/images/grid.png"
+}
+images {
+  image: "/gui_node_adjust/images/defold_logo.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

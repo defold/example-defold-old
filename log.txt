@@ -2,8 +2,8 @@ INFO:DLIB: Writing log to: ./log.txt
 INFO:ENGINE: Loading data from: build/default
 INFO:ENGINE: Initialised sound device 'default'
 
-INFO:DLIB: SSDP: Started on address 172.19.5.49
-INFO:DLIB: SSDP: Started on address 172.19.20.229
+INFO:DLIB: SSDP: Started on address 172.19.5.9
+INFO:DLIB: SSDP: Started on address 172.19.21.171
 INFO:SOUND: Waiting for OpenAL device to complete
-INFO:DLIB: SSDP: Done on address 172.19.5.49
-INFO:DLIB: SSDP: Done on address 172.19.20.229
+INFO:DLIB: SSDP: Done on address 172.19.5.9
+INFO:DLIB: SSDP: Done on address 172.19.21.171
