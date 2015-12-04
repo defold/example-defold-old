@@ -15,7 +15,7 @@ background_color {
 }
 nodes {
   position {
-    x: 640.0
+    x: 512.0
     y: 384.0
     z: 0.0
     w: 1.0
@@ -33,7 +33,7 @@ nodes {
     w: 1.0
   }
   size {
-    x: 1280.0
+    x: 1024.0
     y: 768.0
     z: 0.0
     w: 1.0
@@ -68,8 +68,8 @@ nodes {
 }
 nodes {
   position {
-    x: 640.0
-    y: 640.0
+    x: 384.0
+    y: 128.0
     z: 0.0
     w: 1.0
   }
@@ -185,8 +185,8 @@ nodes {
 }
 nodes {
   position {
-    x: 896.0
-    y: 384.0
+    x: 768.0
+    y: 512.0
     z: 0.0
     w: 1.0
   }
@@ -218,9 +218,9 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   texture: "gui/defold_logo"
   id: "zoom"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
+  xanchor: XANCHOR_RIGHT
+  yanchor: YANCHOR_TOP
+  pivot: PIVOT_NE
   adjust_mode: ADJUST_MODE_ZOOM
   layer: ""
   inherit_alpha: true
@@ -238,8 +238,8 @@ nodes {
 }
 nodes {
   position {
-    x: 0.0
-    y: 0.0
+    x: -128.0
+    y: -128.0
     z: 0.0
     w: 1.0
   }
@@ -303,7 +303,7 @@ nodes {
 nodes {
   position {
     x: 384.0
-    y: 128.0
+    y: 640.0
     z: 0.0
     w: 1.0
   }
@@ -404,7 +404,7 @@ nodes {
     z: 1.0
     w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
+  adjust_mode: ADJUST_MODE_STRETCH
   line_break: false
   parent: "stretch"
   layer: ""
@@ -419,8 +419,8 @@ nodes {
 }
 nodes {
   position {
-    x: 256.0
-    y: 512.0
+    x: 1024.0
+    y: 768.0
     z: 0.0
     w: 1.0
   }
