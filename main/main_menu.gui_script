@@ -2,6 +2,12 @@ function init(self)
 	msg.post("#", "acquire_input_focus")
 	msg.post("back", "disable")
 	self.loaded_proxy = nil	
+	
+	
+	-- Update version text label
+	local engine_info = sys.get_engine_info()
+	local version_str = "Defold " .. engine_info.version .. "\n" .. engine_info.version_sha1
+	gui.set_text(gui.get_node("version"), version_str)
 end
 
 function on_message(self, message_id, message, sender)
