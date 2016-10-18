@@ -16,7 +16,7 @@ background_color {
 nodes {
   position {
     x: 192.0
-    y: 448.0
+    y: 491.12793
     z: 0.0
     w: 1.0
   }
@@ -75,11 +75,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 576.0
+    y: 619.1279
     z: 0.0
     w: 1.0
   }
@@ -138,11 +141,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 512.0
+    y: 555.1279
     z: 0.0
     w: 1.0
   }
@@ -201,11 +207,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 320.0
+    y: 363.12793
     z: 0.0
     w: 1.0
   }
@@ -264,11 +273,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 384.0
+    y: 427.12793
     z: 0.0
     w: 1.0
   }
@@ -327,11 +339,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 256.0
+    y: 299.12793
     z: 0.0
     w: 1.0
   }
@@ -390,11 +405,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 192.0
+    y: 235.12793
     z: 0.0
     w: 1.0
   }
@@ -453,11 +471,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 128.0
+    y: 171.12793
     z: 0.0
     w: 1.0
   }
@@ -516,11 +537,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 640.0
+    y: 683.1279
     z: 0.0
     w: 1.0
   }
@@ -579,11 +603,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 512.0
+    y: 555.1279
     z: 0.0
     w: 1.0
   }
@@ -642,11 +669,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 676.7068
+    y: 691.9284
     z: 0.0
     w: 1.0
   }
@@ -657,8 +687,8 @@ nodes {
     w: 1.0
   }
   scale {
-    x: 1.0
-    y: 1.0
+    x: 0.8
+    y: 0.8
     z: 1.0
     w: 1.0
   }
@@ -695,11 +725,12 @@ nodes {
   clipping_inverted: false
   alpha: 1.0
   template_node_child: false
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 448.0
+    y: 491.12793
     z: 0.0
     w: 1.0
   }
@@ -758,11 +789,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 384.0
+    y: 427.12793
     z: 0.0
     w: 1.0
   }
@@ -821,11 +855,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 320.0
+    y: 363.12793
     z: 0.0
     w: 1.0
   }
@@ -884,11 +921,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 256.0
+    y: 299.12793
     z: 0.0
     w: 1.0
   }
@@ -947,11 +987,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 192.0
+    y: 235.12793
     z: 0.0
     w: 1.0
   }
@@ -1010,11 +1053,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 128.0
+    y: 171.12793
     z: 0.0
     w: 1.0
   }
@@ -1073,11 +1119,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
-    y: 64.0
+    y: 107.12793
     z: 0.0
     w: 1.0
   }
@@ -1136,11 +1185,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 576.0
+    y: 619.1279
     z: 0.0
     w: 1.0
   }
@@ -1199,11 +1251,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 640.0
+    y: 683.1279
     z: 0.0
     w: 1.0
   }
@@ -1262,11 +1317,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 512.0
+    y: 555.1279
     z: 0.0
     w: 1.0
   }
@@ -1325,11 +1383,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 192.0
+    y: 235.12793
     z: 0.0
     w: 1.0
   }
@@ -1388,11 +1449,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 64.0
+    y: 107.12793
     z: 0.0
     w: 1.0
   }
@@ -1451,11 +1515,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 448.0
+    y: 491.12793
     z: 0.0
     w: 1.0
   }
@@ -1514,11 +1581,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 128.0
+    y: 171.12793
     z: 0.0
     w: 1.0
   }
@@ -1577,11 +1647,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 384.0
+    y: 427.12793
     z: 0.0
     w: 1.0
   }
@@ -1640,11 +1713,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 192.0
-    y: 64.0
+    y: 107.12793
     z: 0.0
     w: 1.0
   }
@@ -1703,11 +1779,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 320.0
+    y: 363.12793
     z: 0.0
     w: 1.0
   }
@@ -1766,11 +1845,14 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 832.0
-    y: 256.0
+    y: 299.12793
     z: 0.0
     w: 1.0
   }
@@ -1829,6 +1911,76 @@ nodes {
   outline_alpha: 1.0
   shadow_alpha: 0.0
   template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
+}
+nodes {
+  position {
+    x: 1002.8973
+    y: 12.338738
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 1000.0
+    y: 80.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 0.48627454
+    y: 0.48627454
+    z: 0.48627454
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "Defold Version 0.0.0"
+  font: "headline"
+  id: "version"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_SE
+  outline {
+    x: 0.11764707
+    y: 0.11764707
+    z: 0.11764707
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: ""
+  inherit_alpha: true
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  outline_alpha: 1.0
+  shadow_alpha: 1.0
+  template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
+  size_mode: SIZE_MODE_AUTO
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_LEGACY
+max_nodes: 512

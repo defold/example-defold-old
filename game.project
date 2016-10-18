@@ -33,7 +33,7 @@ max_count = 32
 include_dirs = physics_example,modules_example
 
 [ios]
-bundle_identifier = dmengine
+bundle_identifier = com.defold.examples
 infoplist = 
 app_icon_120x120 = 
 app_icon_180x180 = 
