@@ -2,7 +2,5 @@ INFO:DLIB: Writing log to: ./log.txt
 INFO:ENGINE: Loading data from: build/default
 INFO:ENGINE: Initialised sound device 'default'
 
-INFO:DLIB: SSDP: Started on address 172.19.5.9
-INFO:DLIB: SSDP: Started on address 172.19.21.171
-INFO:DLIB: SSDP: Done on address 172.19.5.9
-INFO:DLIB: SSDP: Done on address 172.19.21.171
+INFO:DLIB: SSDP: Started on address 172.19.13.138
+INFO:DLIB: SSDP: Done on address 172.19.13.138
