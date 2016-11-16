@@ -10,6 +10,7 @@ render = /render/example.renderc
 
 [input]
 game_binding = /input/game.input_bindingc
+gamepads = /gamepad_example/custom.gamepadsc
 
 [display]
 width = 1024

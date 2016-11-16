@@ -30,6 +30,106 @@ gamepad_trigger {
   input: GAMEPAD_RPAD_DOWN
   action: "down"
 }
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_LEFT
+  action: "GAMEPAD_LSTICK_LEFT"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_RIGHT
+  action: "GAMEPAD_LSTICK_RIGHT"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_DOWN
+  action: "GAMEPAD_LSTICK_DOWN"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_UP
+  action: "GAMEPAD_LSTICK_UP"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_CLICK
+  action: "GAMEPAD_LSTICK_CLICK"
+}
+gamepad_trigger {
+  input: GAMEPAD_RSTICK_LEFT
+  action: "GAMEPAD_RSTICK_LEFT"
+}
+gamepad_trigger {
+  input: GAMEPAD_RSTICK_RIGHT
+  action: "GAMEPAD_RSTICK_RIGHT"
+}
+gamepad_trigger {
+  input: GAMEPAD_RSTICK_DOWN
+  action: "GAMEPAD_RSTICK_DOWN"
+}
+gamepad_trigger {
+  input: GAMEPAD_RSTICK_UP
+  action: "GAMEPAD_RSTICK_UP"
+}
+gamepad_trigger {
+  input: GAMEPAD_RSTICK_CLICK
+  action: "GAMEPAD_RSTICK_CLICK"
+}
+gamepad_trigger {
+  input: GAMEPAD_LTRIGGER
+  action: "GAMEPAD_LTRIGGER"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSHOULDER
+  action: "GAMEPAD_LSHOULDER"
+}
+gamepad_trigger {
+  input: GAMEPAD_LPAD_LEFT
+  action: "GAMEPAD_LPAD_LEFT"
+}
+gamepad_trigger {
+  input: GAMEPAD_LPAD_RIGHT
+  action: "GAMEPAD_LPAD_RIGHT"
+}
+gamepad_trigger {
+  input: GAMEPAD_LPAD_UP
+  action: "GAMEPAD_LPAD_UP"
+}
+gamepad_trigger {
+  input: GAMEPAD_LPAD_DOWN
+  action: "GAMEPAD_LPAD_DOWN"
+}
+gamepad_trigger {
+  input: GAMEPAD_RPAD_LEFT
+  action: "GAMEPAD_RPAD_LEFT"
+}
+gamepad_trigger {
+  input: GAMEPAD_RPAD_RIGHT
+  action: "GAMEPAD_RPAD_RIGHT"
+}
+gamepad_trigger {
+  input: GAMEPAD_RPAD_UP
+  action: "GAMEPAD_RPAD_UP"
+}
+gamepad_trigger {
+  input: GAMEPAD_RPAD_DOWN
+  action: "GAMEPAD_RPAD_DOWN"
+}
+gamepad_trigger {
+  input: GAMEPAD_RTRIGGER
+  action: "GAMEPAD_RTRIGGER"
+}
+gamepad_trigger {
+  input: GAMEPAD_RSHOULDER
+  action: "GAMEPAD_RSHOULDER"
+}
+gamepad_trigger {
+  input: GAMEPAD_START
+  action: "GAMEPAD_START"
+}
+gamepad_trigger {
+  input: GAMEPAD_BACK
+  action: "GAMEPAD_BACK"
+}
+gamepad_trigger {
+  input: GAMEPAD_GUIDE
+  action: "GAMEPAD_GUIDE"
+}
 touch_trigger {
   input: TOUCH_MULTI
   action: "touch"

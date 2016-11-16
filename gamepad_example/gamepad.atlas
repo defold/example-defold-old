@@ -1,0 +1,6 @@
+images {
+  image: "/gamepad_example/grumbel-Playstation3-Gamepad-800px.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
