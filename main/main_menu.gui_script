@@ -55,7 +55,7 @@ function on_input(self, action_id, action)
 		local nodes = { "hud", "cards", "magic", "worlds", "lifecycle", "input", "modules",
 						"behaviors", "physics", "animation", "model", "material", "camera",
 						"slice9", "mixer", "fireworks", "pie", "clipping", "fonts", "coroutine",
-						"iap", "facebook", "collectionfactory", "push", "layouts", 
+						"iap", "collectionfactory", "push", "layouts", 
 						"sound", "gui_templates", "gui_node_adjust", "gamepad" }
 		for i, n in ipairs(nodes) do
 			if gui.pick_node(gui.get_node(n), x, y) then
