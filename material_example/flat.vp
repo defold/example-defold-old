@@ -3,9 +3,8 @@
 // as "uniform".
 // 
 uniform mediump mat4 view_proj;
-uniform mediump mat4 world;
 
-// position holds the original vertex position.
+// position holds the original vertex position in world space.
 attribute mediump vec4 position;
 
 // texcoord0 contains the texture coordinate for this vertex.
@@ -17,9 +16,6 @@ varying mediump vec2 var_texcoord0;
 
 void main()
 {
-    // Multiply view, projection and world matrices into one.
-    mediump mat4 mvp = view_proj * world;
-
     // The varying var_texcoord0 is at texcoord0 at the position of
     // this vertex.
 	var_texcoord0 = texcoord0;
@@ -27,5 +23,5 @@ void main()
     // Translate the vertex position with the mvp matrix.
     // The vec4(position.xyz, 1.0) ensures that the w component of
     // the position is always 1.0.
-    gl_Position = mvp * vec4(position.xyz, 1.0);
+    gl_Position = view_proj * vec4(position.xyz, 1.0);
 }
