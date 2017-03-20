@@ -1,14 +1,29 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
+	self.touches = {}
 end
 
 function on_input(self, action_id, action)
-	if action_id == hash("touch") and #action.touch > 1 and #action.touch < 4 then
-		-- If there's 2-3 touch point we're gonna spawn magic sparks at each
-		-- point.
+	if action_id == hash("touch") and #action.touch > 0
 		for i, tpoint in ipairs(action.touch) do
+			local id = tpoint.id
 			local pos = vmath.vector3(tpoint.x, tpoint.y, 0)
 			factory.create("#factory", pos)	
+			
+			-- create/get visual indicator for multitouch and set touch id label
+			local indicator = self.touches[id]
+			if not indicator then
+				self.touches[id] = factory.create("#multitouch_factory", pos, nil, { touch_id = id })
+				indicator = self.touches[id]
+			end
+			
+			go.set_position(pos, indicator)
+			
+			-- if touch is released, delete go and nil entry
+			if tpoint.released then
+				go.delete(indicator)
+				self.touches[id] = nil
+			end
 		end
 	end
 end

@@ -1,0 +1,5 @@
+go.property("touch_id", 0)
+function init(self)
+    local touch_id = go.get(nil, "touch_id")
+    label.set_text("#id", "Touch " .. tostring(touch_id))
+end

@@ -1,5 +1,9 @@
 images {
   image: "/input_example/images/wizard.png"
 }
+images {
+  image: "/input_example/images/multi_touch_indicator.png"
+}
 margin: 0
 extrude_borders: 0
+inner_padding: 0
