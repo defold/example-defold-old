@@ -4,7 +4,7 @@ function init(self)
 end
 
 function on_input(self, action_id, action)
-	if action_id == hash("touch") and #action.touch > 0
+	if action_id == hash("touch") and #action.touch > 0 then
 		for i, tpoint in ipairs(action.touch) do
 			local id = tpoint.id
 			local pos = vmath.vector3(tpoint.x, tpoint.y, 0)
