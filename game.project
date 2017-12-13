@@ -1,5 +1,5 @@
 [project]
-title = Defold examples
+title = Defold Examples
 version = 1.0
 write_log = 1
 compress_archive = 0
@@ -36,15 +36,31 @@ include_dirs = physics_example,modules_example
 [ios]
 bundle_identifier = com.defold.examples
 infoplist = 
-app_icon_120x120 = 
-app_icon_180x180 = 
-app_icon_152x152 = 
-app_icon_144x144 = 
-app_icon_114x114 = 
-app_icon_76x76 = 
-app_icon_57x57 = 
-app_icon_72x72 = 
+app_icon_120x120 = /icon_assets/120x120.png
+app_icon_180x180 = /icon_assets/180x180.png
+app_icon_152x152 = /icon_assets/152x152.png
+app_icon_144x144 = /icon_assets/114x114.png
+app_icon_114x114 = /icon_assets/114x114.png
+app_icon_76x76 = /icon_assets/76x76.png
+app_icon_57x57 = /icon_assets/57x57.png
+app_icon_72x72 = /icon_assets/72x72.png
 pre_renderered_icons = 0
+launch_image_2436x1125 = /launchimages_assets/ios_launch_2436x1125.png
+launch_image_1125x2436 = /launchimages_assets/ios_launch_1125x2436.png
+launch_image_2732x2048 = /launchimages_assets/ios_launch_2732x2048.png
+launch_image_2048x2732 = /launchimages_assets/ios_launch_2048x2732.png
+launch_image_2048x1536 = /launchimages_assets/ios_launch_2048x1536.png
+launch_image_2208x1242 = /launchimages_assets/ios_launch_2208x1242.png
+launch_image_1242x2208 = /launchimages_assets/ios_launch_1242x2208.png
+launch_image_1024x768 = /launchimages_assets/ios_launch_1024x768.png
+launch_image_1536x2048 = /launchimages_assets/ios_launch_1536x2048.png
+launch_image_768x1024 = /launchimages_assets/ios_launch_768x1024.png
+launch_image_1334x750 = /launchimages_assets/ios_launch_1334x750.png
+launch_image_750x1334 = /launchimages_assets/ios_launch_750x1334.png
+launch_image_640x1136 = /launchimages_assets/ios_launch_640x1136.png
+launch_image_640x960 = /launchimages_assets/ios_launch_640x960.png
+launch_image_320x480 = /launchimages_assets/ios_launch_320x480.png
+app_icon_167x167 = /icon_assets/167x167.png
 
 [android]
 package = com.defold.examples
