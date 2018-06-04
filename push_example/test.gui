@@ -68,12 +68,16 @@ nodes {
   line_break: false
   layer: ""
   inherit_alpha: true
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 0.0
   shadow_alpha: 0.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -131,12 +135,16 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 0.0
   shadow_alpha: 0.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -249,12 +257,16 @@ nodes {
   parent: "local10"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -367,12 +379,16 @@ nodes {
   parent: "local30"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -485,12 +501,16 @@ nodes {
   parent: "get"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -602,12 +622,16 @@ nodes {
   parent: "getall"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -719,12 +743,16 @@ nodes {
   parent: "cancel"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -837,192 +865,18 @@ nodes {
   parent: "cancel_all"
   layer: ""
   inherit_alpha: false
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
+  size_mode: SIZE_MODE_MANUAL
 }
 material: "/builtins/materials/gui.material"
-layouts {
-  name: "Landscape"
-  nodes {
-    position {
-      x: 366.001
-      y: 646.112
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 250.0
-      y: 50.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 0.59607846
-      y: 0.7803922
-      z: 0.8980393
-      w: 1.0
-    }
-    type: TYPE_BOX
-    blend_mode: BLEND_MODE_ALPHA
-    texture: ""
-    id: "local10"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    adjust_mode: ADJUST_MODE_FIT
-    layer: ""
-    inherit_alpha: true
-    slice9 {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 0.0
-    }
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 0.5
-    overridden_fields: 1
-    template_node_child: false
-    size_mode: SIZE_MODE_MANUAL
-  }
-  nodes {
-    position {
-      x: 687.297
-      y: 646.112
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 270.0
-      y: 50.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 0.59607846
-      y: 0.7803922
-      z: 0.8980393
-      w: 1.0
-    }
-    type: TYPE_BOX
-    blend_mode: BLEND_MODE_ALPHA
-    texture: ""
-    id: "get"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    adjust_mode: ADJUST_MODE_FIT
-    layer: ""
-    inherit_alpha: true
-    slice9 {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 0.0
-    }
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 0.5
-    overridden_fields: 1
-    template_node_child: false
-    size_mode: SIZE_MODE_MANUAL
-  }
-  nodes {
-    position {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 0.8
-      y: 0.8
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 50.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Get Scheduled"
-    font: "headline"
-    id: "text_get"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.36078432
-      y: 0.34901962
-      z: 0.36862746
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    parent: "get"
-    layer: ""
-    inherit_alpha: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
-    overridden_fields: 8
-    overridden_fields: 18
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-  }
-}
 layouts {
   name: "Portrait"
   nodes {
@@ -1080,6 +934,9 @@ layouts {
     line_break: false
     layer: ""
     inherit_alpha: true
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
     outline_alpha: 0.0
     shadow_alpha: 0.0
@@ -1087,11 +944,12 @@ layouts {
     template_node_child: false
     text_leading: 1.0
     text_tracking: 0.0
+    size_mode: SIZE_MODE_MANUAL
   }
   nodes {
     position {
       x: 384.0
-      y: 419.435
+      y: 450.18994
       z: 0.0
       w: 1.0
     }
@@ -1127,7 +985,7 @@ layouts {
     id: "payload"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_TOP
-    pivot: PIVOT_CENTER
+    pivot: PIVOT_N
     outline {
       x: 1.0
       y: 1.0
@@ -1144,13 +1002,18 @@ layouts {
     line_break: true
     layer: ""
     inherit_alpha: true
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
     alpha: 1.0
     outline_alpha: 0.0
     shadow_alpha: 0.0
     overridden_fields: 1
+    overridden_fields: 14
     template_node_child: false
     text_leading: 1.0
     text_tracking: 0.0
+    size_mode: SIZE_MODE_MANUAL
   }
   nodes {
     position {
@@ -1484,6 +1347,147 @@ layouts {
     overridden_fields: 1
     overridden_fields: 4
     template_node_child: false
+    size_mode: SIZE_MODE_MANUAL
+  }
+}
+layouts {
+  name: "Landscape"
+  nodes {
+    position {
+      x: 512.0
+      y: 385.50186
+      z: 0.0
+      w: 1.0
+    }
+    rotation {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+    }
+    scale {
+      x: 1.0
+      y: 1.0
+      z: 1.0
+      w: 1.0
+    }
+    size {
+      x: 1000.0
+      y: 500.0
+      z: 0.0
+      w: 1.0
+    }
+    color {
+      x: 1.0
+      y: 1.0
+      z: 1.0
+      w: 1.0
+    }
+    type: TYPE_TEXT
+    blend_mode: BLEND_MODE_ALPHA
+    text: "payload\n"
+  ""
+    font: "headline"
+    id: "payload"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_TOP
+    pivot: PIVOT_N
+    outline {
+      x: 1.0
+      y: 1.0
+      z: 1.0
+      w: 1.0
+    }
+    shadow {
+      x: 1.0
+      y: 1.0
+      z: 1.0
+      w: 1.0
+    }
+    adjust_mode: ADJUST_MODE_FIT
+    line_break: true
+    layer: ""
+    inherit_alpha: true
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
+    alpha: 1.0
+    outline_alpha: 0.0
+    shadow_alpha: 0.0
+    overridden_fields: 1
+    overridden_fields: 14
+    template_node_child: false
+    text_leading: 1.0
+    text_tracking: 0.0
+    size_mode: SIZE_MODE_MANUAL
+  }
+  nodes {
+    position {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+    }
+    rotation {
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+    }
+    scale {
+      x: 0.8
+      y: 0.8
+      z: 1.0
+      w: 1.0
+    }
+    size {
+      x: 200.0
+      y: 50.0
+      z: 0.0
+      w: 1.0
+    }
+    color {
+      x: 1.0
+      y: 1.0
+      z: 1.0
+      w: 1.0
+    }
+    type: TYPE_TEXT
+    blend_mode: BLEND_MODE_ALPHA
+    text: "Get Scheduled"
+    font: "headline"
+    id: "text_get"
+    xanchor: XANCHOR_NONE
+    yanchor: YANCHOR_NONE
+    pivot: PIVOT_CENTER
+    outline {
+      x: 0.36078432
+      y: 0.34901962
+      z: 0.36862746
+      w: 1.0
+    }
+    shadow {
+      x: 1.0
+      y: 1.0
+      z: 1.0
+      w: 1.0
+    }
+    adjust_mode: ADJUST_MODE_FIT
+    line_break: false
+    parent: "get"
+    layer: ""
+    inherit_alpha: false
+    clipping_mode: CLIPPING_MODE_NONE
+    clipping_visible: true
+    clipping_inverted: false
+    alpha: 1.0
+    outline_alpha: 1.0
+    shadow_alpha: 1.0
+    overridden_fields: 8
+    overridden_fields: 18
+    template_node_child: false
+    text_leading: 1.0
+    text_tracking: 0.0
     size_mode: SIZE_MODE_MANUAL
   }
 }
