@@ -35,7 +35,6 @@ include_dirs = physics_example,modules_example
 
 [ios]
 bundle_identifier = com.defold.examples
-infoplist = 
 app_icon_120x120 = /icon_assets/120x120.png
 app_icon_180x180 = /icon_assets/180x180.png
 app_icon_152x152 = /icon_assets/152x152.png
@@ -65,7 +64,6 @@ app_icon_167x167 = /icon_assets/167x167.png
 [android]
 package = com.defold.examples
 app_icon_32x32 = /main/images/icon_32.png
-manifest = 
 gcm_sender_id = 125341512319
 
 [osx]
