@@ -2,7 +2,67 @@ name: "byproxy"
 scale_along_z: 0
 embedded_instances {
   id: "collider"
-  data: "components {\n  id: \"script\"\n  component: \"/lifecycle_example/collider.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"collisionobject\"\n  type: \"collisionobject\"\n  data: \"collision_shape: \\\"\\\"\\ntype: COLLISION_OBJECT_TYPE_KINEMATIC\\nmass: 0.0\\nfriction: 0.1\\nrestitution: 0.5\\ngroup: \\\"default\\\"\\nmask: \\\"default\\\"\\nembedded_collision_shape {\\n  shapes {\\n    shape_type: TYPE_SPHERE\\n    position {\\n      x: -15.205812\\n      y: 0.0\\n      z: 0.0\\n    }\\n    rotation {\\n      x: 0.0\\n      y: 0.0\\n      z: 0.0\\n      w: 1.0\\n    }\\n    index: 0\\n    count: 1\\n  }\\n  data: 25.0\\n}\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/lifecycle_example/collider.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collisionobject\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_KINEMATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"default\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_SPHERE\\n"
+  "    position {\\n"
+  "      x: -15.205812\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 1\\n"
+  "  }\\n"
+  "  data: 25.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 0.0
     y: 0.0
@@ -14,11 +74,60 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }
 embedded_instances {
   id: "collider1"
-  data: "embedded_components {\n  id: \"collisionobject\"\n  type: \"collisionobject\"\n  data: \"collision_shape: \\\"\\\"\\ntype: COLLISION_OBJECT_TYPE_KINEMATIC\\nmass: 0.0\\nfriction: 0.1\\nrestitution: 0.5\\ngroup: \\\"default\\\"\\nmask: \\\"default\\\"\\nembedded_collision_shape {\\n  shapes {\\n    shape_type: TYPE_SPHERE\\n    position {\\n      x: -17.68502\\n      y: 0.0\\n      z: 0.0\\n    }\\n    rotation {\\n      x: 0.0\\n      y: 0.0\\n      z: 0.0\\n      w: 1.0\\n    }\\n    index: 0\\n    count: 1\\n  }\\n  data: 25.0\\n}\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "embedded_components {\n"
+  "  id: \"collisionobject\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_KINEMATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"default\\\"\\n"
+  "mask: \\\"default\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_SPHERE\\n"
+  "    position {\\n"
+  "      x: -17.68502\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 1\\n"
+  "  }\\n"
+  "  data: 25.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 34.8742
     y: 0.0
@@ -30,11 +139,30 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }
 embedded_instances {
   id: "inproxy"
-  data: "components {\n  id: \"script\"\n  component: \"/lifecycle_example/inproxy.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/lifecycle_example/inproxy.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 0.0
     y: 0.0
@@ -46,5 +174,9 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }

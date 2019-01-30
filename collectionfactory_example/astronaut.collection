@@ -13,7 +13,11 @@ instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }
 instances {
   id: "probe2"
@@ -29,14 +33,71 @@ instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }
 scale_along_z: 0
 embedded_instances {
   id: "astronaut"
   children: "probe1"
   children: "probe2"
-  data: "components {\n  id: \"script\"\n  component: \"/collectionfactory_example/astronaut.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"factory\"\n  type: \"factory\"\n  data: \"prototype: \\\"/collectionfactory_example/probe.go\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\ndefault_animation: \\\"astronaut\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 0.0\n    y: -5.4433\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/collectionfactory_example/astronaut.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"factory\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/collectionfactory_example/probe.go\\\"\\n"
+  "load_dynamically: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/collectionfactory_example/sprites.atlas\\\"\\n"
+  "default_animation: \\\"astronaut\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: -5.4433\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 0.0
     y: 229.9794
@@ -48,5 +109,9 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }

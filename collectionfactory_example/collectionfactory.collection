@@ -103,6 +103,7 @@ embedded_instances {
   "  id: \"factory\"\n"
   "  type: \"collectionfactory\"\n"
   "  data: \"prototype: \\\"/collectionfactory_example/astronaut.collection\\\"\\n"
+  "load_dynamically: false\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"

@@ -16,7 +16,11 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/magic_example/magic_sprites.atlas\"\ndefault_animation: \"magic\"\n"
+  data: "tile_set: \"/magic_example/magic_sprites.atlas\"\n"
+  "default_animation: \"magic\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
+  ""
   position {
     x: 0.0
     y: 0.0

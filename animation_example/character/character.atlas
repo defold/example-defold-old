@@ -79,18 +79,6 @@ images {
 images {
   image: "/animation_example/character/images/torso.png"
 }
-animations {
-  id: "torso"
-  images {
-    image: "/animation_example/character/images/torso.png"
-  }
-  images {
-    image: "/animation_example/character/images/rear_shin.png"
-  }
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 30
-  flip_horizontal: 0
-  flip_vertical: 0
-}
 margin: 0
 extrude_borders: 0
+inner_padding: 0

@@ -1,7 +1,11 @@
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/cards_example/cards_sprites.atlas\"\ndefault_animation: \"heart\"\n"
+  data: "tile_set: \"/cards_example/cards_sprites.atlas\"\n"
+  "default_animation: \"heart\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
+  ""
   position {
     x: 0.0
     y: 0.0

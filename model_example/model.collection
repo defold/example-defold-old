@@ -2,7 +2,44 @@ name: "default"
 scale_along_z: 0
 embedded_instances {
   id: "model"
-  data: "components {\n  id: \"script\"\n  component: \"/model_example/book.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"model\"\n  type: \"model\"\n  data: \"mesh: \\\"/model_example/assets/book_of_defold.dae\\\"\\nmaterial: \\\"/model_example/textured.material\\\"\\ntextures: \\\"/model_example/assets/book_of_defold_1024.png\\\"\\n\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/model_example/book.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"model\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/model_example/assets/book_of_defold.dae\\\"\\n"
+  "material: \\\"/model_example/textured.material\\\"\\n"
+  "textures: \\\"/model_example/assets/book_of_defold_1024.png\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 381.07205
     y: 334.78375
@@ -14,5 +51,9 @@ embedded_instances {
     z: -0.39652896
     w: 0.15397313
   }
-  scale: 71.7155
+  scale3 {
+    x: 71.7155
+    y: 71.7155
+    z: 71.7155
+  }
 }
