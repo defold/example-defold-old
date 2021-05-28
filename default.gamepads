@@ -5481,7 +5481,8 @@ driver
     map { input: GAMEPAD_RTRIGGER type: GAMEPAD_TYPE_BUTTON index: 9 }
     map { input: GAMEPAD_RSHOULDER type: GAMEPAD_TYPE_BUTTON index: 5 }
     map { input: GAMEPAD_START type: GAMEPAD_TYPE_BUTTON index: 15 }
-    map { input: GAMEPAD_GUIDE type: GAMEPAD_TYPE_BUTTON index: 16 }
+    map { input: GAMEPAD_BACK type: GAMEPAD_TYPE_BUTTON index: 16 }
+    map { input: GAMEPAD_GUIDE type: GAMEPAD_TYPE_BUTTON index: 19 }
 }
 
 driver
@@ -5512,5 +5513,6 @@ driver
     map { input: GAMEPAD_RTRIGGER type: GAMEPAD_TYPE_BUTTON index: 9 }
     map { input: GAMEPAD_RSHOULDER type: GAMEPAD_TYPE_BUTTON index: 5 }
     map { input: GAMEPAD_START type: GAMEPAD_TYPE_BUTTON index: 15 }
-    map { input: GAMEPAD_GUIDE type: GAMEPAD_TYPE_BUTTON index: 16 }
+    map { input: GAMEPAD_BACK type: GAMEPAD_TYPE_BUTTON index: 16 }
+    map { input: GAMEPAD_GUIDE type: GAMEPAD_TYPE_BUTTON index: 19 }
 }
