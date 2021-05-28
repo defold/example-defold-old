@@ -48,6 +48,7 @@ end
 
 gamepad.new = function(gui_tree, index, name)
 
+    gui.set_text(gui_tree["gamepad_template/id"], index)
     gui.set_text(gui_tree["gamepad_template/name"], name)
     local gp = {}
     gp.gui_tree = gui_tree
