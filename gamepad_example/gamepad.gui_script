@@ -1,6 +1,13 @@
 local gamepad = require "gamepad_example.gamepad"
 
-local SIZE = 220
+local SIZE_Y = 340
+
+local positions = {
+    vmath.vector3(-110, 0, 0),
+    vmath.vector3(-110, -SIZE_Y, 0),
+    vmath.vector3(310, 0, 0),
+    vmath.vector3(310, -SIZE_Y, 0)
+}
 
 function init(self)
     msg.post(".", "acquire_input_focus")
@@ -27,7 +34,7 @@ function on_input(self, action_id, action)
 
         local new_gamepad = gamepad.new(templated_tree, gamepad_id, action.gamepad_name or "")
         self.gamepads[gamepad_id] = new_gamepad
-        gui.set_position(templated_tree["gamepad_template/root"], vmath.vector3(0, -(gamepad_id - 1) * SIZE, 0))
+        gui.set_position(templated_tree["gamepad_template/root"], positions[gamepad_id])
     end
     
     if (action_id == hash("GAMEPAD_CONNECTED")) then
@@ -38,7 +45,7 @@ function on_input(self, action_id, action)
         
         local new_gamepad = gamepad.new(templated_tree, gamepad_id, action.gamepad_name)
         self.gamepads[gamepad_id] = new_gamepad
-        gui.set_position(templated_tree["gamepad_template/root"], vmath.vector3(0, -(gamepad_id - 1) * SIZE, 0))
+        gui.set_position(templated_tree["gamepad_template/root"], positions[gamepad_id])
     elseif (action_id == hash("GAMEPAD_DISCONNECTED")) then
         print("GAMEPAD_DISCONNECTED", action.gamepad)
         remove_gamepad(self, action.gamepad)
