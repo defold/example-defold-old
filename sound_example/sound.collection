@@ -24,6 +24,9 @@ embedded_instances {
   "looping: 0\\n"
   "group: \\\"master\\\"\\n"
   "gain: 1.0\\n"
+  "pan: 0.0\\n"
+  "speed: 1.0\\n"
+  "loopcount: 0\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
@@ -44,6 +47,9 @@ embedded_instances {
   "looping: 0\\n"
   "group: \\\"master\\\"\\n"
   "gain: 1.0\\n"
+  "pan: 0.0\\n"
+  "speed: 1.0\\n"
+  "loopcount: 0\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
@@ -64,6 +70,9 @@ embedded_instances {
   "looping: 0\\n"
   "group: \\\"master\\\"\\n"
   "gain: 1.0\\n"
+  "pan: 0.0\\n"
+  "speed: 1.0\\n"
+  "loopcount: 0\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
@@ -84,6 +93,9 @@ embedded_instances {
   "looping: 0\\n"
   "group: \\\"master\\\"\\n"
   "gain: 1.0\\n"
+  "pan: 0.0\\n"
+  "speed: 1.0\\n"
+  "loopcount: 0\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
@@ -109,5 +121,9 @@ embedded_instances {
     z: 0.0
     w: 1.0
   }
-  scale: 1.0
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
 }

@@ -130,6 +130,14 @@ gamepad_trigger {
   input: GAMEPAD_GUIDE
   action: "GAMEPAD_GUIDE"
 }
+gamepad_trigger {
+  input: GAMEPAD_CONNECTED
+  action: "GAMEPAD_CONNECTED"
+}
+gamepad_trigger {
+  input: GAMEPAD_DISCONNECTED
+  action: "GAMEPAD_DISCONNECTED"
+}
 touch_trigger {
   input: TOUCH_MULTI
   action: "touch"
