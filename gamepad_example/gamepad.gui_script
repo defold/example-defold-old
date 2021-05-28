@@ -26,6 +26,18 @@ local function remove_gamepad(self, gamepad_id)
 end
 
 function on_input(self, action_id, action)
+    
+    if (action_id == hash("GAMEPAD_CONNECTED")) then
+        local gamepad_id = action.gamepad
+        print("GAMEPAD_CONNECTED", gamepad_id)
+        -- create new template instance
+        local templated_tree = gui.clone_tree(gui.get_node("gamepad_template/root"))
+        
+        local new_gamepad = gamepad.new(templated_tree, gamepad_id, action.gamepad_name)
+        self.gamepads[gamepad_id] = new_gamepad
+        gui.set_position(templated_tree["gamepad_template/root"], positions[gamepad_id])
+    end
+
     -- for cases when this instance do not exist when game starts
     if (action.gamepad ~= nil and self.gamepads[action.gamepad] == nil) then
         local gamepad_id = action.gamepad
@@ -39,16 +51,7 @@ function on_input(self, action_id, action)
         gui.set_position(templated_tree["gamepad_template/root"], positions[gamepad_id])
     end
     
-    if (action_id == hash("GAMEPAD_CONNECTED")) then
-        local gamepad_id = action.gamepad
-        print("GAMEPAD_CONNECTED", gamepad_id)
-        -- create new template instance
-        local templated_tree = gui.clone_tree(gui.get_node("gamepad_template/root"))
-        
-        local new_gamepad = gamepad.new(templated_tree, gamepad_id, action.gamepad_name)
-        self.gamepads[gamepad_id] = new_gamepad
-        gui.set_position(templated_tree["gamepad_template/root"], positions[gamepad_id])
-    elseif (action_id == hash("GAMEPAD_DISCONNECTED")) then
+    if (action_id == hash("GAMEPAD_DISCONNECTED")) then
         print("GAMEPAD_DISCONNECTED", gamepad_id)
         remove_gamepad(self, action.gamepad)
     end
