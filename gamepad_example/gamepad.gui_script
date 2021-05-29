@@ -1,22 +1,57 @@
 local gamepad = require "gamepad_example.gamepad"
 
+local SIZE_Y = 340
+
+local positions = {
+    [0] = vmath.vector3(310, -SIZE_Y, 0),
+    [1] = vmath.vector3(-110, 0, 0),
+    [2] = vmath.vector3(-110, -SIZE_Y, 0),
+    [3] = vmath.vector3(310, 0, 0),
+    [4] = vmath.vector3(310, -SIZE_Y, 0)
+}
+
 function init(self)
-	msg.post(".", "acquire_input_focus")
+    msg.post(".", "acquire_input_focus")
     self.gamepads = {}
-    self.y = 0
+end
+
+local function remove_gamepad(self, gamepad_id)
+    local gamepad = self.gamepads[gamepad_id]
+    if gamepad then
+        self.gamepads[gamepad_id] = nil
+        for k, v in pairs(gamepad.gui_tree) do
+            gui.delete_node(v)
+        end
+    end
+end
+
+local function create_gamepad(self, gamepad_id, name)
+    local templated_tree = gui.clone_tree(gui.get_node("gamepad_template/root"))
+
+    local new_gamepad = gamepad.new(templated_tree, gamepad_id, name or "")
+    self.gamepads[gamepad_id] = new_gamepad
+    gui.set_position(templated_tree["gamepad_template/root"], positions[gamepad_id])
 end
 
 function on_input(self, action_id, action)
+    
+    if (action_id == hash("GAMEPAD_CONNECTED")) then
+        local gamepad_id = action.gamepad
+        print("GAMEPAD_CONNECTED", gamepad_id)
+        create_gamepad(self, gamepad_id, action.gamepad_name)
+    end
+
+    -- for cases when this instance do not exist when game starts
     if (action.gamepad ~= nil and self.gamepads[action.gamepad] == nil) then
         local gamepad_id = action.gamepad
-        
-        -- create new template instance
-        local templated_tree = gui.clone_tree(gui.get_node("gamepad_template/root"))
-        gui.set_position(templated_tree["gamepad_template/root"], vmath.vector3(0, self.y, 0))
-        self.y = self.y - 200
-        
-        local new_gamepad = gamepad.new(templated_tree, gamepad_id)
-        self.gamepads[gamepad_id] = new_gamepad
+        print("GAMEPAD_CONNECTED manually", gamepad_id)
+        remove_gamepad(self, gamepad_id)
+        create_gamepad(self, gamepad_id, action.gamepad_name)
+    end
+    
+    if (action_id == hash("GAMEPAD_DISCONNECTED")) then
+        print("GAMEPAD_DISCONNECTED", gamepad_id)
+        remove_gamepad(self, action.gamepad)
     end
     
     for k,v in pairs(self.gamepads) do
