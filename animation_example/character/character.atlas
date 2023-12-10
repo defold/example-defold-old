@@ -1,84 +1,166 @@
 images {
-  image: "/animation_example/character/images/eye_indifferent.png"
+  image: "/animation_example/character/images/crosshair.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/eye_surprised.png"
+  image: "/animation_example/character/images/eye-indifferent.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_bracer.png"
+  image: "/animation_example/character/images/eye-surprised.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_fist_closed.png"
+  image: "/animation_example/character/images/front-bracer.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_fist_open.png"
+  image: "/animation_example/character/images/front-fist-closed.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_foot.png"
+  image: "/animation_example/character/images/front-fist-open.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_foot_bend1.png"
+  image: "/animation_example/character/images/front-foot.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_foot_bend2.png"
+  image: "/animation_example/character/images/front-shin.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_shin.png"
+  image: "/animation_example/character/images/front-thigh.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/front_thigh.png"
-}
-images {
-  image: "/animation_example/character/images/front_upper_arm.png"
+  image: "/animation_example/character/images/front-upper-arm.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/animation_example/character/images/goggles.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/animation_example/character/images/gun.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/animation_example/character/images/head.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/mouth_grind.png"
+  image: "/animation_example/character/images/hoverboard-board.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/mouth_oooo.png"
+  image: "/animation_example/character/images/hoverboard-thruster.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/mouth_smile.png"
+  image: "/animation_example/character/images/hoverglow-small.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/muzzle.png"
+  image: "/animation_example/character/images/mouth-grind.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/mouth-oooo.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/mouth-smile.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/muzzle-glow.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/muzzle-ring.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/muzzle01.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/muzzle02.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/muzzle03.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/muzzle04.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/muzzle05.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/animation_example/character/images/neck.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/rear_bracer.png"
+  image: "/animation_example/character/images/portal-bg.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/rear_foot.png"
+  image: "/animation_example/character/images/portal-flare1.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/rear_foot_bend1.png"
+  image: "/animation_example/character/images/portal-flare2.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/rear_foot_bend2.png"
+  image: "/animation_example/character/images/portal-flare3.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/rear_shin.png"
+  image: "/animation_example/character/images/portal-shade.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/rear_thigh.png"
+  image: "/animation_example/character/images/portal-streaks1.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/animation_example/character/images/rear_upper_arm.png"
+  image: "/animation_example/character/images/portal-streaks2.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/rear-bracer.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/rear-foot.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/rear-shin.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/rear-thigh.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/animation_example/character/images/rear-upper-arm.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/animation_example/character/images/torso.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 margin: 0
 extrude_borders: 0
 inner_padding: 0
+max_page_width: 0
+max_page_height: 0
+rename_patterns: ""

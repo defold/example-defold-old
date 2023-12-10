@@ -1,39 +1,39 @@
 local max_blend = 3
 function init(self)
-	self.blend = 0.2
-	msg.post("/hud", "show_blend", { value = self.blend })
+    self.blend = 0.2
+    msg.post("/hud", "show_blend", { value = self.blend })
 end
 
 function on_message(self, message_id, message, sender)
- 	if message_id == hash("play_anim") then
- 		-- Switch anim
-		spine.play("#spinemodel", message.anim, go.PLAYBACK_LOOP_FORWARD, self.blend)
-	elseif message_id == hash("spine_event") then
-		-- Receiving animation event from Spine. Play footsteps.
-		if message.event_id == hash("footstep") and message.integer == 0 then
-			msg.post("#sound_footstep_right", "play_sound")		
-		elseif message.event_id == hash("footstep") and message.integer == 1 then
-			msg.post("#sound_footstep_left", "play_sound")
-		end
- 	elseif message_id == hash("increase_blend") then
- 		if self.blend <= max_blend then
-	 		self.blend = self.blend + 0.05
-	 	end
-		if self.blend > max_blend then
-			self.blend = max_blend
-		end
-		-- Update the HUD text
- 		msg.post("/hud", "show_blend", { value = self.blend })
- 	elseif message_id == hash("decrease_blend") then
- 		if self.blend > 0 then
-	 		self.blend = self.blend - 0.05
-	 	end
-	 	if self.blend < 0.05 then
-	 		self.blend = 0
-	 	end
-		-- Update the HUD text
- 		msg.post("/hud", "show_blend", { value = self.blend })
- 	end
+    if message_id == hash("play_anim") then
+        -- Switch anim
+        spine.play_anim("#spinemodel", message.anim, go.PLAYBACK_LOOP_FORWARD, self.blend)
+    elseif message_id == hash("spine_event") then
+        -- Receiving animation event from Spine. Play footsteps.
+        if message.event_id == hash("footstep") and message.integer == 0 then
+            msg.post("#sound_footstep_right", "play_sound")		
+        elseif message.event_id == hash("footstep") and message.integer == 1 then
+            msg.post("#sound_footstep_left", "play_sound")
+        end
+    elseif message_id == hash("increase_blend") then
+        if self.blend <= max_blend then
+            self.blend = self.blend + 0.05
+        end
+        if self.blend > max_blend then
+            self.blend = max_blend
+        end
+        -- Update the HUD text
+        msg.post("/hud", "show_blend", { value = self.blend })
+    elseif message_id == hash("decrease_blend") then
+        if self.blend > 0 then
+            self.blend = self.blend - 0.05
+        end
+        if self.blend < 0.05 then
+            self.blend = 0
+        end
+        -- Update the HUD text
+        msg.post("/hud", "show_blend", { value = self.blend })
+    end
 end
 
 function on_reload(self)

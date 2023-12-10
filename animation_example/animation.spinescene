@@ -1,2 +1,2 @@
-spine_json: "/animation_example/character/character.json"
+spine_json: "/animation_example/character/spineboy-pro.spinejson"
 atlas: "/animation_example/character/character.atlas"

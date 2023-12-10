@@ -4,6 +4,7 @@ version = 1.0
 write_log = 1
 compress_archive = 0
 dependencies#0 = https://github.com/defold/extension-webview/archive/master.zip
+dependencies#1 = https://github.com/defold/extension-spine/archive/refs/tags/2.13.0.zip
 
 [bootstrap]
 main_collection = /main/main.collectionc
