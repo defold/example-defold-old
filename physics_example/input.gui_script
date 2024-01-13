@@ -1,35 +1,35 @@
 function init(self)
-	msg.post(nil, "acquire_input_focus")
+    msg.post(".", "acquire_input_focus")
 end
 
 function on_input(self, action_id, action)
-	-- Touch/mouse input
-	if action_id == hash("mouse_press") then
-		local x = action.x
-		local y = action.y
+    -- Touch/mouse input
+    if action_id == hash("mouse_press") then
+        local x = action.x
+        local y = action.y
 
-		-- Get the nodes we're gonna test against.
-		local leftnode = gui.get_node("left")
-		local rightnode = gui.get_node("right")
-		local jumpnode = gui.get_node("jump")
-		-- Test if user has touched one of the valid text nodes.
-		if gui.pick_node(leftnode, x, y) then
-			msg.post("player#script", "move_left")
-		elseif gui.pick_node(rightnode, x, y) then
-			msg.post("player#script", "move_right")
-		elseif gui.pick_node(jumpnode, x, y) then
-			msg.post("player#script", "jump")
-		end
-	-- Keyboard input
-	elseif action_id == hash("move_left") and action.value == 1 then
-		msg.post("player#script", "move_left")
-	elseif action_id == hash("move_right") and action.value == 1 then
-		msg.post("player#script", "move_right")
-	elseif action_id == hash("move_up") and action.value == 1 then
-		msg.post("player#script", "move_up")
-	elseif action_id == hash("move_down") and action.value == 1 then
-		msg.post("player#script", "move_down")
-	elseif action_id == hash("jump") and action.pressed then
-		msg.post("player#script", "jump")
-	end
+        -- Get the nodes we're gonna test against.
+        local leftnode = gui.get_node("left")
+        local rightnode = gui.get_node("right")
+        local jumpnode = gui.get_node("jump")
+        -- Test if user has touched one of the valid text nodes.
+        if gui.pick_node(leftnode, x, y) then
+            msg.post("player#script", "move_left")
+        elseif gui.pick_node(rightnode, x, y) then
+            msg.post("player#script", "move_right")
+        elseif gui.pick_node(jumpnode, x, y) then
+            msg.post("player#script", "jump")
+        end
+    -- Keyboard input
+    elseif action_id == hash("move_left") and action.value == 1 then
+        msg.post("player#script", "move_left")
+    elseif action_id == hash("move_right") and action.value == 1 then
+        msg.post("player#script", "move_right")
+    elseif action_id == hash("move_up") and action.value == 1 then
+        msg.post("player#script", "move_up")
+    elseif action_id == hash("move_down") and action.value == 1 then
+        msg.post("player#script", "move_down")
+    elseif action_id == hash("jump") and action.pressed then
+        msg.post("player#script", "jump")
+    end
 end

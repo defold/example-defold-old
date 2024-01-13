@@ -15,7 +15,7 @@ local STATE_ONGROUND = hash("onground")
 local STATE_INAIR = hash("inair")
 
 function init(self)
-	msg.post(nil, "acquire_input_focus")
+	msg.post(".", "acquire_input_focus")
 	msg.post("player_camera#camera", "acquire_camera_focus")
 
 	-- Tell render script to use view-only camera

@@ -1,46 +1,46 @@
 function init(self)
-	msg.post(".", "acquire_input_focus")
+    msg.post(".", "acquire_input_focus")
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("show_blend") then
-		local blendnode = gui.get_node("blend")
-		gui.set_text(blendnode, message.value .. " s")
-	end
+    if message_id == hash("show_blend") then
+        local blendnode = gui.get_node("blend")
+        gui.set_text(blendnode, message.value .. " s")
+    end
 end
 
 function on_input(self, action_id, action)
-	-- Touch/mouse input
-	if  action_id == hash("mouse_press") then
-		local x = action.x
-		local y = action.y
+    -- Touch/mouse input
+    if  action_id == hash("mouse_press") then
+        local x = action.x
+        local y = action.y
 
-		-- Blend controls
-		local plusnode = gui.get_node("plus")
-		local minusnode = gui.get_node("minus")
-		if gui.pick_node(plusnode, x, y) then
-			-- increase the current blending
-			msg.post("hero#script", "increase_blend")
-		elseif gui.pick_node(minusnode, x, y) then
-			-- decrease the current blending
-			msg.post("hero#script", "decrease_blend")
-		end
-		
-		-- Animation choice buttons react on press only
-		if action.pressed then
-			local idlenode = gui.get_node("idle")
-			local walknode = gui.get_node("walk")
-			local runnode = gui.get_node("run")
-			local jumpnode = gui.get_node("jump")
-			if gui.pick_node(idlenode, x, y) then
-				msg.post("hero#script", "play_anim", { anim = "idle" })
-			elseif gui.pick_node(walknode, x, y) then
-				msg.post("hero#script", "play_anim", { anim = "walk" })
-			elseif gui.pick_node(runnode, x, y) then
-				msg.post("hero#script", "play_anim", { anim = "run" })
-			elseif gui.pick_node(jumpnode, x, y) then
-				msg.post("hero#script", "play_anim", { anim = "jump" })
-			end
-		end
-	end
+        -- Blend controls
+        local plusnode = gui.get_node("plus")
+        local minusnode = gui.get_node("minus")
+        if gui.pick_node(plusnode, x, y) then
+            -- increase the current blending
+            msg.post("hero#script", "increase_blend")
+        elseif gui.pick_node(minusnode, x, y) then
+            -- decrease the current blending
+            msg.post("hero#script", "decrease_blend")
+        end
+        
+        -- Animation choice buttons react on press only
+        if action.pressed then
+            local idlenode = gui.get_node("idle")
+            local walknode = gui.get_node("walk")
+            local runnode = gui.get_node("run")
+            local jumpnode = gui.get_node("jump")
+            if gui.pick_node(idlenode, x, y) then
+                msg.post("hero#script", "play_anim", { anim = "idle" })
+            elseif gui.pick_node(walknode, x, y) then
+                msg.post("hero#script", "play_anim", { anim = "walk" })
+            elseif gui.pick_node(runnode, x, y) then
+                msg.post("hero#script", "play_anim", { anim = "run" })
+            elseif gui.pick_node(jumpnode, x, y) then
+                msg.post("hero#script", "play_anim", { anim = "jump" })
+            end
+        end
+    end
 end

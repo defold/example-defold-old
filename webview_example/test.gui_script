@@ -1,81 +1,81 @@
 local function msg_ok(msg)
-	gui.set_color(gui.get_node("message"), vmath.vector4(0,1,0,1))
-	gui.set_text(gui.get_node("message"), msg)
+    gui.set_color(gui.get_node("message"), vmath.vector4(0,1,0,1))
+    gui.set_text(gui.get_node("message"), msg)
 end
 
 local function msg_err(msg)
-	gui.set_color(gui.get_node("message"), vmath.vector4(1,0,0,1))
-	gui.set_text(gui.get_node("message"), msg)
+    gui.set_color(gui.get_node("message"), vmath.vector4(1,0,0,1))
+    gui.set_text(gui.get_node("message"), msg)
 end
 
 local function check_availability()
-	if not webview then
-		return false
-	end
+    if not webview then
+        return false
+    end
 
-	return true
+    return true
 end
 
 local function webview_callback(self, webview_id, request_id, type, data)
-	if type == webview.CALLBACK_RESULT_URL_OK then
-		print("webview.CALLBACK_RESULT_URL_OK")
-		-- the page is now loaded, let's show it
-		--webview.set_visible(webview_id, 1)
-	elseif type == webview.CALLBACK_RESULT_URL_ERROR then
-		print("Failed to load url: " .. data["url"])
-		print("Error: " .. data["error"])
-	elseif type == webview.CALLBACK_RESULT_URL_LOADING then
-		print("webview.CALLBACK_RESULT_URL_LOADING")
-	elseif type == webview.CALLBACK_RESULT_EVAL_OK then
-		print("Eval ok. Result: " .. data['result'])
-	elseif type == webview.CALLBACK_RESULT_EVAL_ERROR then
-		print("Eval not ok. Request # " .. request_id)
-	end
+    if type == webview.CALLBACK_RESULT_URL_OK then
+        print("webview.CALLBACK_RESULT_URL_OK")
+        -- the page is now loaded, let's show it
+        --webview.set_visible(webview_id, 1)
+    elseif type == webview.CALLBACK_RESULT_URL_ERROR then
+        print("Failed to load url: " .. data["url"])
+        print("Error: " .. data["error"])
+    elseif type == webview.CALLBACK_RESULT_URL_LOADING then
+        print("webview.CALLBACK_RESULT_URL_LOADING")
+    elseif type == webview.CALLBACK_RESULT_EVAL_OK then
+        print("Eval ok. Result: " .. data['result'])
+    elseif type == webview.CALLBACK_RESULT_EVAL_ERROR then
+        print("Eval not ok. Request # " .. request_id)
+    end
 end
 
 local function msg_pcall(err_str, ok_str, ...)
-	local success, res = pcall(...)
-	if not success then
-		msg_err(err_str .. "\n" .. tostring(res))
-		error(res)
-	else
-		msg_ok(ok_str .. "\n" .. tostring(res))
-		return res
-	end
+    local success, res = pcall(...)
+    if not success then
+        msg_err(err_str .. "\n" .. tostring(res))
+        error(res)
+    else
+        msg_ok(ok_str .. "\n" .. tostring(res))
+        return res
+    end
 end
 
 function init(self)
-	msg.post(nil, "acquire_input_focus")
-	
-	if not check_availability() then
-		gui.set_enabled(gui.get_node("root"), false)
-		msg_err("WebView not supported on this platform!")
-	else
-		msg_ok("WebView available.")
-	end
+    msg.post(".", "acquire_input_focus")
+    
+    if not check_availability() then
+        gui.set_enabled(gui.get_node("root"), false)
+        msg_err("WebView not supported on this platform!")
+    else
+        msg_ok("WebView available.")
+    end
 
-	self.webview_id = msg_pcall("create error:", "create ok:", webview.create, webview_callback)
-	msg_pcall("set_position error:", "set_position ok:", webview.set_position, self.webview_id, 0, 0, -1, 300)
+    self.webview_id = msg_pcall("create error:", "create ok:", webview.create, webview_callback)
+    msg_pcall("set_position error:", "set_position ok:", webview.set_position, self.webview_id, 0, 0, -1, 300)
 end
 
 function on_input(self, action_id, action)
-	if action_id == hash("mouse_press") and action.pressed == true then
-		if not check_availability() then
-			return
-		end
-		local x = action.x
-		local y = action.y
-		
-		-- Test if user has touched local button
-		if gui.pick_node(gui.get_node("open"), x, y) then
-			msg_pcall("open error:", "open ok:", webview.open, self.webview_id, "https://www.defold.com", {hidden = false})
-			
-		elseif gui.pick_node(gui.get_node("show"), x, y) then
-			msg_pcall("show error:", "show ok:", webview.set_visible, self.webview_id, 1)
-			
-		elseif gui.pick_node(gui.get_node("hide"), x, y) then
-			msg_pcall("hide error:", "hide ok:", webview.set_visible, self.webview_id, 0)
-			
-		end
-	end
+    if action_id == hash("mouse_press") and action.pressed == true then
+        if not check_availability() then
+            return
+        end
+        local x = action.x
+        local y = action.y
+        
+        -- Test if user has touched local button
+        if gui.pick_node(gui.get_node("open"), x, y) then
+            msg_pcall("open error:", "open ok:", webview.open, self.webview_id, "https://www.defold.com", {hidden = false})
+            
+        elseif gui.pick_node(gui.get_node("show"), x, y) then
+            msg_pcall("show error:", "show ok:", webview.set_visible, self.webview_id, 1)
+            
+        elseif gui.pick_node(gui.get_node("hide"), x, y) then
+            msg_pcall("hide error:", "hide ok:", webview.set_visible, self.webview_id, 0)
+            
+        end
+    end
 end

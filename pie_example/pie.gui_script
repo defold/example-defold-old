@@ -1,31 +1,31 @@
 function init(self)
-	local pacman = gui.get_node("pacman")
-	local square = gui.get_node("square")
-	local funky = gui.get_node("funky")
-	
-	gui.animate(pacman, "fill_angle", 360, gui.EASING_LINEAR, 0.5, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)	
-	gui.animate(pacman, "rotation.z", 0, gui.EASING_LINEAR, 0.5, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)	
+    local pacman = gui.get_node("pacman")
+    local square = gui.get_node("square")
+    local funky = gui.get_node("funky")
+    
+    gui.animate(pacman, "fill_angle", 360, gui.EASING_LINEAR, 0.5, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)	
+    gui.animate(pacman, "rotation.z", 0, gui.EASING_LINEAR, 0.5, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)	
 
-	gui.animate(square, "inner_radius", 80, gui.EASING_INOUTSINE, 2, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)	
+    gui.animate(square, "inner_radius", 80, gui.EASING_INOUTSINE, 2, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)	
 
-	gui.animate(funky, "fill_angle", 0, gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_LOOP_FORWARD)
-	gui.animate(funky, "rotation.z", 360, gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
-	gui.animate(funky, "inner_radius", 75, gui.EASING_INOUTSINE, 2, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
-	funky_switch()
+    gui.animate(funky, "fill_angle", 0, gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_LOOP_FORWARD)
+    gui.animate(funky, "rotation.z", 360, gui.EASING_LINEAR, 3, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
+    gui.animate(funky, "inner_radius", 75, gui.EASING_INOUTSINE, 2, 0, nil, gui.PLAYBACK_LOOP_PINGPONG)
+    funky_switch()
 end
 
 local state = hash("square")
 function funky_switch()
-	local funky = gui.get_node("funky")
-	local size = nil
-	if state == hash("square") then
-		gui.set_outer_bounds(funky, gui.PIEBOUNDS_ELLIPSE)
-		state = hash("circle")
-		size = vmath.vector3(150, 300, 0)
-	else
-		gui.set_outer_bounds(funky, gui.PIEBOUNDS_RECTANGLE)
-		state = hash("square")	
-		size = vmath.vector3(300, 150, 0)
-	end
-	gui.animate(funky, gui.PROP_SIZE, size, gui.EASING_INOUTSINE, 3, 0, funky_switch, gui.PLAYBACK_ONCE_FORWARD)
+    local funky = gui.get_node("funky")
+    local size = nil
+    if state == hash("square") then
+        gui.set_outer_bounds(funky, gui.PIEBOUNDS_ELLIPSE)
+        state = hash("circle")
+        size = vmath.vector3(150, 300, 0)
+    else
+        gui.set_outer_bounds(funky, gui.PIEBOUNDS_RECTANGLE)
+        state = hash("square")	
+        size = vmath.vector3(300, 150, 0)
+    end
+    gui.animate(funky, gui.PROP_SIZE, size, gui.EASING_INOUTSINE, 3, 0, funky_switch, gui.PLAYBACK_ONCE_FORWARD)
 end

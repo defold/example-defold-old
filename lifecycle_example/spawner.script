@@ -1,57 +1,57 @@
 function init(self)
-	print("Spawner init()")
-	msg.post(".", "acquire_input_focus")
-	print("Spawner creating spawn.")
-	factory.create("#factory", vmath.vector3(100, 100, 0), vmath.quat_rotation_z(0))
-	print("Spawner proxy load collection.")
-	msg.post("#collectionproxy", "load")
-	msg.post("#timestepproxy", "load")
-	self.count = 0
+    print("Spawner init()")
+    msg.post(".", "acquire_input_focus")
+    print("Spawner creating spawn.")
+    factory.create("#factory", vmath.vector3(100, 100, 0), vmath.quat_rotation_z(0))
+    print("Spawner proxy load collection.")
+    msg.post("#collectionproxy", "load")
+    msg.post("#timestepproxy", "load")
+    self.count = 0
 end
 
 function final(self)
-	print("Spawner final()")
-	print("*** And that concludes the application lifecycle.")
-	print("*** Review the console output for the whole run.")
+    print("Spawner final()")
+    print("*** And that concludes the application lifecycle.")
+    print("*** Review the console output for the whole run.")
 end
 
 function update(self, dt)
-	print("Spawner update()")
-	self.count = self.count + 1
-	print("Spawner tracks that this is FRAME " .. self.count)
+    print("Spawner update()")
+    self.count = self.count + 1
+    print("Spawner tracks that this is FRAME " .. self.count)
 
-	if self.count == 5 then
-		-- Unload proxies
-		msg.post("#collectionproxy", "disable")
-		msg.post("#collectionproxy", "final")
-		msg.post("#collectionproxy", "unload")
-		msg.post("#timestepproxy", "unload")
-	end
-	
-	if self.count >= 10 then
-		msg.post("#", "shutdown")
-	end
+    if self.count == 5 then
+        -- Unload proxies
+        msg.post("#collectionproxy", "disable")
+        msg.post("#collectionproxy", "final")
+        msg.post("#collectionproxy", "unload")
+        msg.post("#timestepproxy", "unload")
+    end
+    
+    if self.count >= 10 then
+        msg.post("#", "shutdown")
+    end
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("hello") then
-		print("Spawner message 'hello' received from:")
-		print(sender)
-	elseif message_id == hash("shutdown") then
-		print("Spawner message 'shutdown' received.")
-  		msg.post("@system:", "exit", { code = 0 })
-	elseif message_id == hash("proxy_loaded") and sender.fragment == hash("collectionproxy") then
-		print("Spawner received proxy_loaded from 'collectionproxy'. Init and enable.")
-		msg.post("#collectionproxy", "init")
-		msg.post("#collectionproxy", "enable")
-	elseif message_id == hash("proxy_loaded") and sender.fragment == hash("timestepproxy") then
-		print("Spawner received proxy_loaded from 'timestepproxy'. Init and enable.")
-		msg.post("#timestepproxy", "init")
-		msg.post("#timestepproxy", "enable")
-		msg.post("#timestepproxy", "set_time_step", {factor = 0.2, mode = 1})
-  	end
+    if message_id == hash("hello") then
+        print("Spawner message 'hello' received from:")
+        print(sender)
+    elseif message_id == hash("shutdown") then
+        print("Spawner message 'shutdown' received.")
+        sys.exit(0)
+    elseif message_id == hash("proxy_loaded") and sender.fragment == hash("collectionproxy") then
+        print("Spawner received proxy_loaded from 'collectionproxy'. Init and enable.")
+        msg.post("#collectionproxy", "init")
+        msg.post("#collectionproxy", "enable")
+    elseif message_id == hash("proxy_loaded") and sender.fragment == hash("timestepproxy") then
+        print("Spawner received proxy_loaded from 'timestepproxy'. Init and enable.")
+        msg.post("#timestepproxy", "init")
+        msg.post("#timestepproxy", "enable")
+        msg.post("#timestepproxy", "set_time_step", {factor = 0.2, mode = 1})
+    end
 end
 
 function on_input(self, action_id, action)
-	print("Spawner on_input()")
+    print("Spawner on_input()")
 end

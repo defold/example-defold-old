@@ -2,6 +2,7 @@ name: "textured"
 tags: "model"
 vertex_program: "/model_example/textured.vp"
 fragment_program: "/model_example/textured.fp"
+vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
   name: "view_proj"
   type: CONSTANT_TYPE_VIEWPROJ
@@ -16,4 +17,12 @@ fragment_constants {
     w: 1.0
   }
 }
-textures: "DIFFUSE_TEXTURE"
+samplers {
+  name: "diffuse_texture"
+  wrap_u: WRAP_MODE_CLAMP_TO_EDGE
+  wrap_v: WRAP_MODE_CLAMP_TO_EDGE
+  filter_min: FILTER_MODE_MIN_LINEAR
+  filter_mag: FILTER_MODE_MAG_LINEAR
+  max_anisotropy: 1.0
+}
+max_page_count: 0

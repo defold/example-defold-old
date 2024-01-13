@@ -1,63 +1,63 @@
 function init(self)
-	-- We begin with one heart node and one star node in the GUI.
-	-- The idea is to clone these and fill up the lines with hearts x 10 and stars x 10
-	
-	-- Storage for the nodes
-	self.heart_nodes = {}
-	self.star_nodes = {}
-	
-	-- These are our start nodes that we're gonna clone.
-	local heart_node = gui.get_node("heart")
-	local star_node = gui.get_node("star")
-	
-	-- Store all nodes in a table for easy access
-	table.insert(self.heart_nodes, heart_node)
-	-- Start with the nodes disabled
-	gui.set_enabled(heart_node, false)
+    -- We begin with one heart node and one star node in the GUI.
+    -- The idea is to clone these and fill up the lines with hearts x 10 and stars x 10
+    
+    -- Storage for the nodes
+    self.heart_nodes = {}
+    self.star_nodes = {}
+    
+    -- These are our start nodes that we're gonna clone.
+    local heart_node = gui.get_node("heart")
+    local star_node = gui.get_node("star")
+    
+    -- Store all nodes in a table for easy access
+    table.insert(self.heart_nodes, heart_node)
+    -- Start with the nodes disabled
+    gui.set_enabled(heart_node, false)
 
-	-- Let's fill the table up with 9 clones.
-	for i = 1, 9 do
-		local clone = gui.clone(heart_node)
-		local pos = gui.get_position(heart_node)
-		-- Separate them by 32 px
-		pos.x = pos.x + i * 32
-		gui.set_position(clone, pos)
-		table.insert(self.heart_nodes, clone)
-		gui.set_enabled(clone, false)
-	end	
+    -- Let's fill the table up with 9 clones.
+    for i = 1, 9 do
+        local clone = gui.clone(heart_node)
+        local pos = gui.get_position(heart_node)
+        -- Separate them by 32 px
+        pos.x = pos.x + i * 32
+        gui.set_position(clone, pos)
+        table.insert(self.heart_nodes, clone)
+        gui.set_enabled(clone, false)
+    end	
 
-	-- And now do the whole thing again but for stars.
-	table.insert(self.star_nodes, star_node)
-	gui.set_enabled(star_node, false)
-	for i = 1, 9 do
-		local clone = gui.clone(star_node)
-		local pos = gui.get_position(star_node)
-		pos.x = pos.x + i * 32
-		gui.set_position(clone, pos)
-		table.insert(self.star_nodes, clone)
-		gui.set_enabled(clone, false)
-	end	
+    -- And now do the whole thing again but for stars.
+    table.insert(self.star_nodes, star_node)
+    gui.set_enabled(star_node, false)
+    for i = 1, 9 do
+        local clone = gui.clone(star_node)
+        local pos = gui.get_position(star_node)
+        pos.x = pos.x + i * 32
+        gui.set_position(clone, pos)
+        table.insert(self.star_nodes, clone)
+        gui.set_enabled(clone, false)
+    end	
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("set_stats") then	
-		-- Update the score GUI node
-		gui.set_text(gui.get_node("score"), message.score)
+    if message_id == hash("set_stats") then	
+        -- Update the score GUI node
+        gui.set_text(gui.get_node("score"), message.score)
 
-		-- Disable all the heart and star nodes
-		for i = 1, 10 do
-			gui.set_enabled(self.heart_nodes[i], false)
-			gui.set_enabled(self.star_nodes[i], false)
-		end
+        -- Disable all the heart and star nodes
+        for i = 1, 10 do
+            gui.set_enabled(self.heart_nodes[i], false)
+            gui.set_enabled(self.star_nodes[i], false)
+        end
 
-		-- Enable the right number of heart nodes
-		for i = 1, message.health do
-			gui.set_enabled(self.heart_nodes[i], true)
-		end		
+        -- Enable the right number of heart nodes
+        for i = 1, message.health do
+            gui.set_enabled(self.heart_nodes[i], true)
+        end		
 
-		-- Enable the right number of star nodes
-		for i = 1, message.stars do
-			gui.set_enabled(self.star_nodes[i], true)
-		end						
-	end
+        -- Enable the right number of star nodes
+        for i = 1, message.stars do
+            gui.set_enabled(self.star_nodes[i], true)
+        end						
+    end
 end

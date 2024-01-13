@@ -18,7 +18,7 @@ void main()
 {
     // The varying var_texcoord0 is at texcoord0 at the position of
     // this vertex.
-	var_texcoord0 = texcoord0;
+    var_texcoord0 = texcoord0;
 
     // Translate the vertex position with the mvp matrix.
     // The vec4(position.xyz, 1.0) ensures that the w component of

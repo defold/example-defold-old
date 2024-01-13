@@ -1,9 +1,9 @@
 function init(self)
-	-- Create all controls for the curve
-	for n = 1,64 do
-		local pos = vmath.vector3(n * 16, 100, 0)
-		gui.new_box_node(pos, vmath.vector3(10, 10, 0))
-	end
+    -- Create all controls for the curve
+    for n = 1,64 do
+        local pos = vmath.vector3(n * 16, 100, 0)
+        gui.new_box_node(pos, vmath.vector3(10, 10, 0))
+    end
 end
 
 function final(self)

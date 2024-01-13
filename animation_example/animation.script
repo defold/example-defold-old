@@ -7,11 +7,11 @@ end
 function on_message(self, message_id, message, sender)
     if message_id == hash("play_anim") then
         -- Switch anim
-        spine.play_anim("#spinemodel", message.anim, go.PLAYBACK_LOOP_FORWARD, self.blend)
+        spine.play_anim("#spinemodel", message.anim, go.PLAYBACK_LOOP_FORWARD, {blend_duration = self.blend})
     elseif message_id == hash("spine_event") then
         -- Receiving animation event from Spine. Play footsteps.
         if message.event_id == hash("footstep") and message.integer == 0 then
-            msg.post("#sound_footstep_right", "play_sound")		
+            msg.post("#sound_footstep_right", "play_sound")
         elseif message.event_id == hash("footstep") and message.integer == 1 then
             msg.post("#sound_footstep_left", "play_sound")
         end

@@ -1,29 +1,29 @@
 function init(self)
-	msg.post(nil, "acquire_input_focus")
+    msg.post(".", "acquire_input_focus")
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("show_blur") then
-		local blurnode = gui.get_node("blur")
-		gui.set_text(blurnode, message.value)
-	end
+    if message_id == hash("show_blur") then
+        local blurnode = gui.get_node("blur")
+        gui.set_text(blurnode, message.value)
+    end
 end
 
 function on_input(self, action_id, action)
-	-- Touch/mouse input
-	if action_id == hash("mouse_press") then
-		local x = action.x
-		local y = action.y
+    -- Touch/mouse input
+    if action_id == hash("mouse_press") then
+        local x = action.x
+        local y = action.y
 
-		-- Blend controls
-		local plusnode = gui.get_node("plus")
-		local minusnode = gui.get_node("minus")
-		if gui.pick_node(plusnode, x, y) then
-			-- increase the current blending
-			msg.post("blurbook#script", "increase_blur")
-		elseif gui.pick_node(minusnode, x, y) then
-			-- decrease the current blending
-			msg.post("blurbook#script", "decrease_blur")
-		end
-	end
+        -- Blend controls
+        local plusnode = gui.get_node("plus")
+        local minusnode = gui.get_node("minus")
+        if gui.pick_node(plusnode, x, y) then
+            -- increase the current blending
+            msg.post("blurbook#script", "increase_blur")
+        elseif gui.pick_node(minusnode, x, y) then
+            -- decrease the current blending
+            msg.post("blurbook#script", "decrease_blur")
+        end
+    end
 end
