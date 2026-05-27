@@ -61,6 +61,3 @@ images {
 images {
   image: "/spine_run_example/cat_run/images/right_ear.png"
 }
-margin: 0
-extrude_borders: 0
-inner_padding: 0

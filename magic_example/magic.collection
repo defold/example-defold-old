@@ -5,15 +5,11 @@ instances {
   position {
     x: 532.8165
     y: 343.81543
-    z: 0.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
     z: -0.57286745
     w: 0.819648
   }
-  scale: 1.0
 }
 instances {
   id: "wizard"
@@ -23,13 +19,6 @@ instances {
     y: 429.94473
     z: 1.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 collection_instances {
   id: "interior"
@@ -37,46 +26,30 @@ collection_instances {
   position {
     x: 719.20245
     y: 780.6863
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 scale_along_z: 0
 embedded_instances {
   id: "input"
-  data: "components {\n  id: \"gui\"\n  component: \"/magic_example/input.gui\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"gui\"\n"
+  "  component: \"/magic_example/input.gui\"\n"
+  "}\n"
+  ""
   position {
     x: 522.06775
     y: 689.8863
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 embedded_instances {
   id: "main"
-  data: "components {\n  id: \"script\"\n  component: \"/magic_example/main.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/magic_example/main.script\"\n"
+  "}\n"
+  ""
   position {
     x: 132.01881
     y: 327.39716
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }

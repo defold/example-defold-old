@@ -1,35 +1,20 @@
 script: "/magic_example/instructions.gui_script"
 fonts {
   name: "system_font"
-  font: "/builtins/fonts/system_font.font"
-}
-background_color {
-  w: 1.0
+  font: "/builtins/fonts/default.font"
 }
 nodes {
   position {
     x: 72.08046
     y: 107.183525
-    w: 1.0
-  }
-  rotation {
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    w: 1.0
   }
   color {
     x: 0.5058824
     z: 0.023529414
-    w: 1.0
   }
   type: TYPE_TEXT
   text: "Press \'left\' and \'right\' to move."
@@ -40,40 +25,26 @@ nodes {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
 }
 nodes {
   position {
     x: 74.057686
     y: 53.93436
-    w: 1.0
-  }
-  rotation {
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    w: 1.0
   }
   color {
     x: 0.14509805
     y: 0.38431376
     z: 0.14901961
-    w: 1.0
   }
   type: TYPE_TEXT
   text: "Press 3 to cast spell \"summon animal\" - press 4 to cast spell \"colorchange\""
@@ -84,39 +55,25 @@ nodes {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
 }
 nodes {
   position {
     x: 72.08046
     y: 80.387474
-    w: 1.0
-  }
-  rotation {
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    w: 1.0
   }
   color {
     x: 0.5058824
     z: 0.023529414
-    w: 1.0
   }
   type: TYPE_TEXT
   text: "Press 1 to order wand \"come to hand\" - press 2 to order wand \"sit\""
@@ -127,40 +84,26 @@ nodes {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
 }
 nodes {
   position {
     x: 74.057686
     y: 27.138308
-    w: 1.0
-  }
-  rotation {
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    w: 1.0
   }
   color {
     x: 0.14509805
     y: 0.38431376
     z: 0.14901961
-    w: 1.0
   }
   type: TYPE_TEXT
   text: "Press 5 to cast spell \"jail me\""
@@ -171,12 +114,11 @@ nodes {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
 }
+material: "/builtins/materials/gui.material"

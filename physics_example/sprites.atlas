@@ -13,9 +13,6 @@ animations {
     image: "/physics_example/images/p1_stand.png"
   }
   playback: PLAYBACK_NONE
-  fps: 30
-  flip_horizontal: 0
-  flip_vertical: 0
 }
 animations {
   id: "run_right"
@@ -53,9 +50,6 @@ animations {
     image: "/physics_example/images/p1_walk11.png"
   }
   playback: PLAYBACK_LOOP_FORWARD
-  fps: 30
-  flip_horizontal: 0
-  flip_vertical: 0
 }
 animations {
   id: "run_left"
@@ -93,9 +87,7 @@ animations {
     image: "/physics_example/images/p1_walk11.png"
   }
   playback: PLAYBACK_LOOP_FORWARD
-  fps: 30
   flip_horizontal: 1
-  flip_vertical: 0
 }
 animations {
   id: "jump_right"
@@ -103,9 +95,6 @@ animations {
     image: "/physics_example/images/p1_jump.png"
   }
   playback: PLAYBACK_NONE
-  fps: 30
-  flip_horizontal: 0
-  flip_vertical: 0
 }
 animations {
   id: "walk_right"
@@ -144,8 +133,6 @@ animations {
   }
   playback: PLAYBACK_LOOP_FORWARD
   fps: 15
-  flip_horizontal: 0
-  flip_vertical: 0
 }
 animations {
   id: "walk_left"
@@ -185,7 +172,6 @@ animations {
   playback: PLAYBACK_LOOP_FORWARD
   fps: 15
   flip_horizontal: 1
-  flip_vertical: 0
 }
 animations {
   id: "idle_left"
@@ -193,9 +179,7 @@ animations {
     image: "/physics_example/images/p1_stand.png"
   }
   playback: PLAYBACK_NONE
-  fps: 30
   flip_horizontal: 1
-  flip_vertical: 0
 }
 animations {
   id: "jump_left"
@@ -203,9 +187,5 @@ animations {
     image: "/physics_example/images/p1_jump.png"
   }
   playback: PLAYBACK_NONE
-  fps: 30
   flip_horizontal: 1
-  flip_vertical: 0
 }
-margin: 0
-extrude_borders: 0

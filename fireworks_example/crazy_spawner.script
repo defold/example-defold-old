@@ -16,8 +16,8 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("fire_big") or message_id == hash("fire_small") then	
-		local pos = vmath.vector3(math.random() * sys.get_config("display.width"),
-									math.random() * sys.get_config("display.height"), 0)	
+		local pos = vmath.vector3(math.random() * sys.get_config_int("display.width"),
+									math.random() * sys.get_config_int("display.height"), 0)
 		factory.create("#fireworksfactory", pos, nil, { style = message_id } )
 	end
 end

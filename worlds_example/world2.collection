@@ -7,17 +7,6 @@ instances {
     y: 455.37366
     z: 10.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
 instances {
   id: "worldswitch"
@@ -26,12 +15,6 @@ instances {
     x: 483.1389
     y: 306.0
     z: -1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   component_properties {
     id: "script"
@@ -46,11 +29,6 @@ instances {
       type: PROPERTY_TYPE_HASH
     }
   }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
 scale_along_z: 0
 embedded_instances {
@@ -58,17 +36,6 @@ embedded_instances {
   data: "components {\n"
   "  id: \"tilemap\"\n"
   "  component: \"/worlds_example/world2.tilemap\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"collisionobject\"\n"
@@ -80,37 +47,11 @@ embedded_instances {
   "restitution: 0.5\\n"
   "group: \\\"world\\\"\\n"
   "mask: \\\"player\\\"\\n"
-  "linear_damping: 0.0\\n"
-  "angular_damping: 0.0\\n"
-  "locked_rotation: false\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 500.0
-    y: 0.0
     z: -0.1
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }

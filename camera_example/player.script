@@ -22,7 +22,7 @@ function on_input(self, action_id, action)
 		-- Set the desired player target to click position
 		-- Input is given in screen space so we need to translate that to world space
  		local camera_position = go.get_position("/camera")
-  		local screen_center = vmath.vector3(tonumber(sys.get_config("display.width", "0")) / 2, tonumber(sys.get_config("display.height", "0")) / 2, 0)
+		local screen_center = vmath.vector3(sys.get_config_int("display.width", 0) / 2, sys.get_config_int("display.height", 0) / 2, 0)
  		
 		self.target.x = action.x + camera_position.x - screen_center.x
 		self.target.y = action.y + camera_position.y - screen_center.y

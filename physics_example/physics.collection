@@ -2,22 +2,6 @@ name: "default"
 instances {
   id: "level"
   prototype: "/physics_example/level.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
 instances {
   id: "player"
@@ -25,17 +9,6 @@ instances {
   position {
     x: 240.64995
     y: 311.69385
-    z: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
     z: 1.0
   }
 }
@@ -47,17 +20,6 @@ instances {
     y: 331.69363
     z: 0.5
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
 instances {
   id: "star1"
@@ -66,17 +28,6 @@ instances {
     x: 1385.9502
     y: 373.25607
     z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }
 instances {
@@ -87,17 +38,6 @@ instances {
     y: 464.64365
     z: 0.5
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
 instances {
   id: "star3"
@@ -107,17 +47,6 @@ instances {
     y: 527.191
     z: 0.5
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
 scale_along_z: 0
 embedded_instances {
@@ -125,25 +54,11 @@ embedded_instances {
   data: "components {\n"
   "  id: \"script\"\n"
   "  component: \"/physics_example/deathtrigger.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"collisionobject\"\n"
   "  type: \"collisionobject\"\n"
-  "  data: \"collision_shape: \\\"\\\"\\n"
-  "type: COLLISION_OBJECT_TYPE_TRIGGER\\n"
+  "  data: \"type: COLLISION_OBJECT_TYPE_TRIGGER\\n"
   "mass: 0.0\\n"
   "friction: 0.1\\n"
   "restitution: 0.5\\n"
@@ -155,13 +70,8 @@ embedded_instances {
   "    position {\\n"
   "      x: 32.87392\\n"
   "      y: -439.3151\\n"
-  "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
   "    }\\n"
   "    index: 0\\n"
   "    count: 3\\n"
@@ -171,13 +81,8 @@ embedded_instances {
   "    position {\\n"
   "      x: -1117.7389\\n"
   "      y: -436.51556\\n"
-  "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
   "    }\\n"
   "    index: 3\\n"
   "    count: 3\\n"
@@ -187,13 +92,8 @@ embedded_instances {
   "    position {\\n"
   "      x: 2975.195\\n"
   "      y: 134.59152\\n"
-  "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
   "    }\\n"
   "    index: 6\\n"
   "    count: 3\\n"
@@ -208,22 +108,7 @@ embedded_instances {
   "  data: 51.83953\\n"
   "  data: 10.0\\n"
   "}\\n"
-  "linear_damping: 0.0\\n"
-  "angular_damping: 0.0\\n"
-  "locked_rotation: false\\n"
-  "bullet: false\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   ""
   position {
@@ -231,53 +116,17 @@ embedded_instances {
     y: 18.37984
     z: 0.5
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
 embedded_instances {
   id: "gui"
   data: "components {\n"
   "  id: \"gui\"\n"
   "  component: \"/physics_example/input.gui\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 360.40707
     y: 466.41565
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }
 embedded_instances {
@@ -285,36 +134,11 @@ embedded_instances {
   data: "components {\n"
   "  id: \"camera\"\n"
   "  component: \"/physics_example/player_camera.camera\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 1178.3759
     y: 150.41437
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }
 embedded_instances {
@@ -322,8 +146,7 @@ embedded_instances {
   data: "embedded_components {\n"
   "  id: \"collisionobject\"\n"
   "  type: \"collisionobject\"\n"
-  "  data: \"collision_shape: \\\"\\\"\\n"
-  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "  data: \"type: COLLISION_OBJECT_TYPE_STATIC\\n"
   "mass: 0.0\\n"
   "friction: 0.1\\n"
   "restitution: 0.5\\n"
@@ -336,11 +159,8 @@ embedded_instances {
   "    position {\\n"
   "      x: 12.45047\\n"
   "      y: -35.121784\\n"
-  "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
   "      z: 0.38268343\\n"
   "      w: 0.9238795\\n"
   "    }\\n"
@@ -352,11 +172,8 @@ embedded_instances {
   "    position {\\n"
   "      x: -852.8212\\n"
   "      y: -218.88644\\n"
-  "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
   "      z: -0.38268343\\n"
   "      w: 0.9238795\\n"
   "    }\\n"
@@ -368,11 +185,8 @@ embedded_instances {
   "    position {\\n"
   "      x: -1077.9951\\n"
   "      y: -105.10684\\n"
-  "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
   "      z: 0.38268343\\n"
   "      w: 0.9238795\\n"
   "    }\\n"
@@ -384,11 +198,8 @@ embedded_instances {
   "    position {\\n"
   "      x: -1217.9364\\n"
   "      y: -175.75029\\n"
-  "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
   "      z: 0.38268343\\n"
   "      w: 0.9238795\\n"
   "    }\\n"
@@ -408,38 +219,12 @@ embedded_instances {
   "  data: 25.0\\n"
   "  data: 10.0\\n"
   "}\\n"
-  "linear_damping: 0.0\\n"
-  "angular_damping: 0.0\\n"
-  "locked_rotation: false\\n"
-  "bullet: false\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 2077.9673
     y: 523.3558
     z: 0.5
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }

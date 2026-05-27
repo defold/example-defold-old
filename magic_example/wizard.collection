@@ -3,18 +3,6 @@ instances {
   id: "wizard"
   prototype: "/magic_example/wizard.go"
   children: "wand"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 instances {
   id: "wand"
@@ -24,12 +12,5 @@ instances {
     y: 87.24828
     z: -1.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 scale_along_z: 0

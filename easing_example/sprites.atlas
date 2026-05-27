@@ -1,6 +1,3 @@
 images {
   image: "/easing_example/images/orange_star.png"
 }
-margin: 0
-extrude_borders: 0
-inner_padding: 0

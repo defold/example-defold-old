@@ -3,976 +3,199 @@ fonts {
   name: "headline"
   font: "/main/font/headline.font"
 }
-background_color {
-  x: 0.0
-  y: 0.0
-  z: 0.0
-  w: 1.0
-}
 nodes {
   position {
     x: 512.0
     y: 384.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 200.0
-    z: 0.0
-    w: 1.0
   }
   color {
     x: 0.38823533
     y: 0.38823533
     z: 0.38823533
-    w: 1.0
   }
   type: TYPE_PIE
-  blend_mode: BLEND_MODE_ALPHA
-  texture: ""
   id: "pie"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
   inherit_alpha: true
-  outerBounds: PIEBOUNDS_ELLIPSE
-  innerRadius: 0.0
-  perimeterVertices: 32
   pieFillAngle: 270.0
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
     y: 384.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Center of screen"
   font: "headline"
   id: "text"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  outline {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
-  layer: ""
   inherit_alpha: true
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  outline_alpha: 1.0
-  shadow_alpha: 1.0
-  template_node_child: false
-  text_leading: 1.0
-  text_tracking: 0.0
-  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 512.0
     y: 704.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Top center"
   font: "headline"
   id: "text1"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  outline {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
-  layer: ""
   inherit_alpha: true
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  outline_alpha: 1.0
-  shadow_alpha: 1.0
-  template_node_child: false
-  text_leading: 1.0
-  text_tracking: 0.0
-  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 896.0
     y: 64.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Lower right"
   font: "headline"
   id: "text2"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  outline {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
-  layer: ""
   inherit_alpha: true
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  outline_alpha: 1.0
-  shadow_alpha: 1.0
-  template_node_child: false
-  text_leading: 1.0
-  text_tracking: 0.0
-  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
     x: 128.0
     y: 64.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   size {
     x: 200.0
     y: 100.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
   }
   type: TYPE_TEXT
-  blend_mode: BLEND_MODE_ALPHA
   text: "Lower left"
   font: "headline"
   id: "text3"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  outline {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
   shadow {
     x: 1.0
     y: 1.0
     z: 1.0
-    w: 1.0
   }
-  adjust_mode: ADJUST_MODE_FIT
-  line_break: false
-  layer: ""
   inherit_alpha: true
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  outline_alpha: 1.0
-  shadow_alpha: 1.0
-  template_node_child: false
-  text_leading: 1.0
-  text_tracking: 0.0
-  size_mode: SIZE_MODE_MANUAL
 }
 material: "/builtins/materials/gui.material"
-layouts {
-  name: "Portrait"
-  nodes {
-    position {
-      x: 384.0
-      y: 512.0
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 200.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 0.38823533
-      y: 0.38823533
-      z: 0.38823533
-      w: 1.0
-    }
-    type: TYPE_PIE
-    blend_mode: BLEND_MODE_ALPHA
-    texture: ""
-    id: "pie"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    adjust_mode: ADJUST_MODE_FIT
-    layer: ""
-    inherit_alpha: true
-    outerBounds: PIEBOUNDS_ELLIPSE
-    innerRadius: 0.0
-    perimeterVertices: 32
-    pieFillAngle: 270.0
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    overridden_fields: 1
-    template_node_child: false
-    size_mode: SIZE_MODE_MANUAL
-  }
-  nodes {
-    position {
-      x: 384.0
-      y: 512.0
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Center of screen"
-    font: "headline"
-    id: "text"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
-    overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
-  }
-  nodes {
-    position {
-      x: 384.0
-      y: 996.9297
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Top center"
-    font: "headline"
-    id: "text1"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
-    overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
-  }
-  nodes {
-    position {
-      x: 663.4942
-      y: 29.449694
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Lower right"
-    font: "headline"
-    id: "text2"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
-    overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
-  }
-  nodes {
-    position {
-      x: 89.30366
-      y: 30.831707
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Lower left"
-    font: "headline"
-    id: "text3"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
-    overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
-  }
-}
 layouts {
   name: "Landscape"
   nodes {
     position {
       x: 512.0
       y: 384.0
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 200.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 0.38823533
-      y: 0.38823533
-      z: 0.38823533
-      w: 1.0
     }
     type: TYPE_PIE
-    blend_mode: BLEND_MODE_ALPHA
-    texture: ""
     id: "pie"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    adjust_mode: ADJUST_MODE_FIT
-    layer: ""
-    inherit_alpha: true
-    outerBounds: PIEBOUNDS_ELLIPSE
-    innerRadius: 0.0
-    perimeterVertices: 32
-    pieFillAngle: 270.0
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
     overridden_fields: 1
-    template_node_child: false
-    size_mode: SIZE_MODE_MANUAL
   }
   nodes {
     position {
       x: 512.0
       y: 384.0
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
     }
     type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Center of screen"
-    font: "headline"
     id: "text"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
     overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
   }
   nodes {
     position {
       x: 512.0
       y: 741.31433
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
     }
     type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Top center"
-    font: "headline"
     id: "text1"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
     overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
   }
   nodes {
     position {
       x: 920.941
       y: 28.067682
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
     }
     type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Lower right"
-    font: "headline"
     id: "text2"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
     overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
   }
   nodes {
     position {
       x: 93.26324
       y: 29.263239
-      z: 0.0
-      w: 1.0
-    }
-    rotation {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    scale {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    size {
-      x: 200.0
-      y: 100.0
-      z: 0.0
-      w: 1.0
-    }
-    color {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
     }
     type: TYPE_TEXT
-    blend_mode: BLEND_MODE_ALPHA
-    text: "Lower left"
-    font: "headline"
     id: "text3"
-    xanchor: XANCHOR_NONE
-    yanchor: YANCHOR_NONE
-    pivot: PIVOT_CENTER
-    outline {
-      x: 0.0
-      y: 0.0
-      z: 0.0
-      w: 1.0
-    }
-    shadow {
-      x: 1.0
-      y: 1.0
-      z: 1.0
-      w: 1.0
-    }
-    adjust_mode: ADJUST_MODE_FIT
-    line_break: false
-    layer: ""
-    inherit_alpha: true
-    clipping_mode: CLIPPING_MODE_NONE
-    clipping_visible: true
-    clipping_inverted: false
-    alpha: 1.0
-    outline_alpha: 1.0
-    shadow_alpha: 1.0
     overridden_fields: 1
-    template_node_child: false
-    text_leading: 1.0
-    text_tracking: 0.0
-    size_mode: SIZE_MODE_MANUAL
   }
 }
-adjust_reference: ADJUST_REFERENCE_LEGACY
-max_nodes: 512
+layouts {
+  name: "Portrait"
+  nodes {
+    position {
+      x: 384.0
+      y: 512.0
+    }
+    type: TYPE_PIE
+    id: "pie"
+    overridden_fields: 1
+  }
+  nodes {
+    position {
+      x: 384.0
+      y: 512.0
+    }
+    type: TYPE_TEXT
+    id: "text"
+    overridden_fields: 1
+  }
+  nodes {
+    position {
+      x: 384.0
+      y: 996.9297
+    }
+    type: TYPE_TEXT
+    id: "text1"
+    overridden_fields: 1
+  }
+  nodes {
+    position {
+      x: 663.4942
+      y: 29.449694
+    }
+    type: TYPE_TEXT
+    id: "text2"
+    overridden_fields: 1
+  }
+  nodes {
+    position {
+      x: 89.30366
+      y: 30.831707
+    }
+    type: TYPE_TEXT
+    id: "text3"
+    overridden_fields: 1
+  }
+}

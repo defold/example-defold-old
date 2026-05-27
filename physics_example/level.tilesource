@@ -1,10 +1,8 @@
 image: "/physics_example/images/tiles_spritesheet.png"
 tile_width: 68
 tile_height: 68
-tile_margin: 0
 tile_spacing: 4
 collision: "/physics_example/images/tiles_spritesheet.png"
-material_tag: "tile"
 convex_hulls {
   index: 0
   count: 8

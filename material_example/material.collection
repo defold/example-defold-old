@@ -5,27 +5,11 @@ embedded_instances {
   data: "components {\n"
   "  id: \"script\"\n"
   "  component: \"/material_example/book.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"model\"\n"
   "  type: \"model\"\n"
-  "  data: \"mesh: \\\"/material_example/assets/book_of_defold.dae\\\"\\n"
-  "skeleton: \\\"\\\"\\n"
-  "animations: \\\"\\\"\\n"
-  "default_animation: \\\"\\\"\\n"
+  "  data: \"mesh: \\\"/material_example/assets/book_of_defold.gltf\\\"\\n"
   "materials {\\n"
   "  name: \\\"default\\\"\\n"
   "  material: \\\"/material_example/blurry.material\\\"\\n"
@@ -35,29 +19,12 @@ embedded_instances {
   "  }\\n"
   "}\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 698.7791
     y: 353.78677
     z: -500.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   scale3 {
     x: 50.0
@@ -70,27 +37,11 @@ embedded_instances {
   data: "components {\n"
   "  id: \"script\"\n"
   "  component: \"/material_example/book.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"model\"\n"
   "  type: \"model\"\n"
-  "  data: \"mesh: \\\"/material_example/assets/book_of_defold.dae\\\"\\n"
-  "skeleton: \\\"\\\"\\n"
-  "animations: \\\"\\\"\\n"
-  "default_animation: \\\"\\\"\\n"
+  "  data: \"mesh: \\\"/material_example/assets/book_of_defold.gltf\\\"\\n"
   "materials {\\n"
   "  name: \\\"default\\\"\\n"
   "  material: \\\"/material_example/flat.material\\\"\\n"
@@ -100,29 +51,12 @@ embedded_instances {
   "  }\\n"
   "}\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 275.1465
     y: 385.84546
     z: 500.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   scale3 {
     x: 71.7155
@@ -135,35 +69,11 @@ embedded_instances {
   data: "components {\n"
   "  id: \"gui\"\n"
   "  component: \"/material_example/input.gui\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 467.9235
     y: 438.585
     z: 0.101435706
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }

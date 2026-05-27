@@ -9,3 +9,4 @@ build
 builtins
 /.internal
 log.txt
+/.editor_settings

@@ -19,7 +19,7 @@ function on_message(self, message_id, message, sender)
         end
         -- Update the HUD text
         msg.post("/hud", "show_blur", { value = self.blur })
-        sprite.set_constant("/blurbook#model", "blur", vmath.vector4(self.blur, 0, 0, 0))
+        go.set("/blurbook#model", "blur", vmath.vector4(self.blur, 0, 0, 0))
     elseif message_id == hash("decrease_blur") then
         if self.blur > 0 then
             self.blur = self.blur - 0.0001
@@ -29,7 +29,7 @@ function on_message(self, message_id, message, sender)
         end
         -- Update the HUD text
         msg.post("/hud", "show_blur", { value = self.blur })
-        sprite.set_constant("/blurbook#model", "blur", vmath.vector4(self.blur, 0, 0, 0))
+        go.set("/blurbook#model", "blur", vmath.vector4(self.blur, 0, 0, 0))
     end
 end
 
@@ -39,12 +39,11 @@ function on_input(self, action_id, action)
         -- Where did the user press/touch and how large is the screen?
         local x = action.x
         local y = action.y
-        local width = sys.get_config("display.width")
-        local height = sys.get_config("display.height")
+        local width = sys.get_config_int("display.width")
+        local height = sys.get_config_int("display.height")
 
         -- Set the tint shader constant according to the
         -- interaction position.
-        -- sprite.set_constant("#model", "tint", vmath.vector4(1 / width * (width - x), 1 / height * y, 1, 1))
+        -- go.set("#model", "tint", vmath.vector4(1 / width * (width - x), 1 / height * y, 1, 1))
     end
 end
-

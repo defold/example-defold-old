@@ -5,65 +5,18 @@ embedded_instances {
   data: "components {\n"
   "  id: \"script\"\n"
   "  component: \"/animation_example/animation.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"sound_footstep_left\"\n"
   "  type: \"sound\"\n"
   "  data: \"sound: \\\"/animation_example/character/sounds/sound_1_footstep_left.wav\\\"\\n"
-  "looping: 0\\n"
-  "group: \\\"master\\\"\\n"
-  "gain: 1.0\\n"
-  "pan: 0.0\\n"
-  "speed: 1.0\\n"
-  "loopcount: 0\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"sound_footstep_right\"\n"
   "  type: \"sound\"\n"
   "  data: \"sound: \\\"/animation_example/character/sounds/sound_2_footstep_right.wav\\\"\\n"
-  "looping: 0\\n"
-  "group: \\\"master\\\"\\n"
-  "gain: 1.0\\n"
-  "pan: 0.0\\n"
-  "speed: 1.0\\n"
-  "loopcount: 0\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"spinemodel\"\n"
@@ -71,38 +24,13 @@ embedded_instances {
   "  data: \"spine_scene: \\\"/animation_example/animation.spinescene\\\"\\n"
   "default_animation: \\\"idle\\\"\\n"
   "skin: \\\"\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "create_go_bones: false\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 308.78937
     y: 24.23376
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }
 embedded_instances {
@@ -110,35 +38,10 @@ embedded_instances {
   data: "components {\n"
   "  id: \"gui\"\n"
   "  component: \"/animation_example/input.gui\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   ""
   position {
     x: 424.31693
     y: 385.41003
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }

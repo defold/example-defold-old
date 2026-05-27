@@ -42,7 +42,7 @@ function on_message(self, message_id, message, sender)
 		end		
 	elseif message_id == hash("delete_all") then
 		for i, s in pairs(self.all_spawned) do
-			go.delete_all(s)
+			go.delete(s)
 		end
 	end
 end

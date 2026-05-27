@@ -5,15 +5,7 @@ instances {
   position {
     x: 252.92262
     y: 233.88544
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 instances {
   id: "blue_butterfly1"
@@ -21,15 +13,7 @@ instances {
   position {
     x: 662.22217
     y: 205.32965
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 instances {
   id: "blue_butterfly2"
@@ -37,15 +21,7 @@ instances {
   position {
     x: 541.2
     y: 530.32166
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 instances {
   id: "fly_randomly"
@@ -53,15 +29,7 @@ instances {
   position {
     x: 447.44754
     y: 168.93085
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 instances {
   id: "yellow_butterfly"
@@ -69,15 +37,7 @@ instances {
   position {
     x: 435.95868
     y: 247.71165
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 instances {
   id: "yellow_butterfly1"
@@ -85,15 +45,7 @@ instances {
   position {
     x: 367.02545
     y: 424.96848
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 instances {
   id: "yellow_butterfly2"
@@ -101,15 +53,7 @@ instances {
   position {
     x: 629.6282
     y: 420.04468
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 collection_instances {
   id: "green_butterfly"
@@ -117,15 +61,7 @@ collection_instances {
   position {
     x: 364.443
     y: 562.76086
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 collection_instances {
   id: "green_butterfly1"
@@ -133,15 +69,7 @@ collection_instances {
   position {
     x: 533.9842
     y: 311.98123
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 collection_instances {
   id: "green_butterfly2"
@@ -149,14 +77,6 @@ collection_instances {
   position {
     x: 715.88776
     y: 562.76086
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 scale_along_z: 0

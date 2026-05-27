@@ -1,5 +1,5 @@
 function init(self)
-	self.max_particles = tonumber(sys.get_config("particle_fx.max_particle_count"))
+	self.max_particles = sys.get_config_int("particle_fx.max_particle_count")
 	self.particles = 0
 end
 

@@ -8,12 +8,14 @@ instances {
     z: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
     z: 0.0799147
     w: 0.99680173
   }
-  scale: 0.82787496
+  scale3 {
+    x: 0.82787496
+    y: 0.82787496
+    z: 0.82787496
+  }
 }
 instances {
   id: "heart2"
@@ -24,12 +26,14 @@ instances {
     z: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
     z: -0.009999833
     w: 0.99995
   }
-  scale: 0.6127186
+  scale3 {
+    x: 0.6127186
+    y: 0.6127186
+    z: 0.6127186
+  }
 }
 instances {
   id: "heart3"
@@ -40,12 +44,14 @@ instances {
     z: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
     z: 0.0799147
     w: 0.99680173
   }
-  scale: 0.4836248
+  scale3 {
+    x: 0.4836248
+    y: 0.4836248
+    z: 0.4836248
+  }
 }
 instances {
   id: "heart4"
@@ -56,29 +62,39 @@ instances {
     z: 1.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
     z: -0.059964005
     w: 0.99820054
   }
-  scale: 0.82787496
+  scale3 {
+    x: 0.82787496
+    y: 0.82787496
+    z: 0.82787496
+  }
 }
 scale_along_z: 0
 embedded_instances {
   id: "pot"
-  data: "embedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/cards_example/cards_sprites.atlas\\\"\\ndefault_animation: \\\"pot\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: -6.5084743\n    y: -129.245\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"pot\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/cards_example/cards_sprites.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: -6.5084743\n"
+  "    y: -129.245\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 7.285178
     y: 92.52176
     z: 0.5
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
 }
 embedded_instances {
   id: "tree"
@@ -86,17 +102,24 @@ embedded_instances {
   children: "heart2"
   children: "heart3"
   children: "heart4"
-  data: "components {\n  id: \"script\"\n  component: \"/cards_example/hearttree.script\"\n  position {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\nembedded_components {\n  id: \"sprite\"\n  type: \"sprite\"\n  data: \"tile_set: \\\"/cards_example/cards_sprites.atlas\\\"\\ndefault_animation: \\\"tree\\\"\\nmaterial: \\\"/builtins/materials/sprite.material\\\"\\nblend_mode: BLEND_MODE_ALPHA\\n\"\n  position {\n    x: 5.8281426\n    y: 113.44093\n    z: 0.0\n  }\n  rotation {\n    x: 0.0\n    y: 0.0\n    z: 0.0\n    w: 1.0\n  }\n}\n"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale: 1.0
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/cards_example/hearttree.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"tree\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/cards_example/cards_sprites.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 5.8281426\n"
+  "    y: 113.44093\n"
+  "  }\n"
+  "}\n"
+  ""
 }
